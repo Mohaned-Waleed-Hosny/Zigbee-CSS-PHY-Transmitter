@@ -118,9 +118,9 @@ binaryData = [PHR,incomingStream];
 %-***********************************************************************-%
 %-------------------------------------------------------------------------%
 % ###################### file Input Output ############################## %
-% fid = fopen('preambleSFD.txt', 'wt' );
-% fprintf(fid, '%d%d%d%d\n', fliplr (transpose((preamble_SFD+1)/2)));
-% fclose (fid);
+fid_raw = fopen('data_before_padding.txt', 'wt');
+fprintf(fid_raw, '%d\n', binaryData);
+fclose(fid_raw);
 % ###################### file Input Output ############################## %
 %-------------------------------------------------------------------------%
 
@@ -151,6 +151,13 @@ end
 %-------------------------------------------------------------------------%
 binaryData = [binaryData,zeros(1,paddingBy)];
 % % ###################### file Input Output ############################## %
+
+fid_padded = fopen('data_after_padding.txt', 'wt');
+fprintf(fid_padded, '%d\n', binaryData);
+fclose(fid_padded);
+
+
+
 paddingfile = 8 - mod(length (binaryData),8);
 binaryData2file = [ binaryData, zeros(1,paddingfile) ];
 fid = fopen('payload.txt', 'wt' );
@@ -172,8 +179,13 @@ binaryDataLengthBits=payloadLength*8 + paddingBy + PHRlength;
 I = binaryData (1:2:binaryDataLengthBits-1);
 Q = binaryData (2:2:binaryDataLengthBits);
 %-***********************************************************************-%
-%-------------------------------------------------------------------------% 
-%=========================================================================%
+fidI = fopen('I_matlab.txt', 'wt');
+fprintf(fidI, '%d\n', I);
+fclose(fidI);
+
+fidQ = fopen('Q_matlab.txt', 'wt');
+fprintf(fidQ, '%d\n', Q);
+fclose(fidQ);%=========================================================================%
 % 6.5a.2.3 Serial-to-parallel mapping (S/P)
 %=========================================================================%
 %-------------------------------------------------------------------------%
