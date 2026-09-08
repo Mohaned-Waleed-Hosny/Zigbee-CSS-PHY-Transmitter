@@ -20,7 +20,7 @@ module bit_interleaver (
     reg [5:0] perm [0:63];
 
     initial begin
-        // مصفوفة التوزيع المأخوذة مباشرة من bitInterleaver.m
+        // Array of interleaver taken directly from bitInterleaver.m
         perm[0]=0; perm[1]=1; perm[2]=2; perm[3]=3; perm[4]=52; perm[5]=53; perm[6]=54; perm[7]=55;
         perm[8]=8; perm[9]=9; perm[10]=10; perm[11]=11; perm[12]=60; perm[13]=61; perm[14]=62; perm[15]=63;
         perm[16]=16; perm[17]=17; perm[18]=18; perm[19]=19; perm[20]=36; perm[21]=37; perm[22]=38; perm[23]=39;

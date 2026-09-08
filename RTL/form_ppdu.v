@@ -29,7 +29,7 @@ module form_ppdu (
         sfd_250k[8]=0; sfd_250k[9]=0; sfd_250k[10]=1; sfd_250k[11]=0; sfd_250k[12]=0; sfd_250k[13]=0; sfd_250k[14]=1; sfd_250k[15]=1;
     end
 
-    // الكتابة في الـ FIFO
+    // Writing to the FIFO
     always @(posedge clk) begin
         if (start_frame) begin
             wr_ptr <= 0;
@@ -50,7 +50,7 @@ module form_ppdu (
         end
     end
 
-    // إخراج الإطار المتسلسل Preamble -> SFD -> Payload
+    // Output serialized Preamble -> SFD -> Payload frame
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             total_out_cnt <= 0; rd_ptr <= 0; valid_out <= 0;
