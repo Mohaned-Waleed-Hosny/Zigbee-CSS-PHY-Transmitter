@@ -179,13 +179,14 @@ binaryDataLengthBits=payloadLength*8 + paddingBy + PHRlength;
 I = binaryData (1:2:binaryDataLengthBits-1);
 Q = binaryData (2:2:binaryDataLengthBits);
 %-***********************************************************************-%
-fidI = fopen('I_matlab.txt', 'wt');
+% Dynamically named DEMUX Output
+fidI = fopen(sprintf('I_matlab_rate%d.txt', dataRate), 'wt');
 fprintf(fidI, '%d\n', I);
 fclose(fidI);
-
-fidQ = fopen('Q_matlab.txt', 'wt');
+fidQ = fopen(sprintf('Q_matlab_rate%d.txt', dataRate), 'wt');
 fprintf(fidQ, '%d\n', Q);
-fclose(fidQ);%=========================================================================%
+fclose(fidQ);
+%=========================================================================%
 % 6.5a.2.3 Serial-to-parallel mapping (S/P)
 %=========================================================================%
 %-------------------------------------------------------------------------%
@@ -237,6 +238,25 @@ global Q_path_mapped_biOrthogonal;
 I_path_mapped_biOrthogonal=(codeword(I_path_dec+1,:));
 Q_path_mapped_biOrthogonal=(codeword(Q_path_dec+1,:));
 %-***********************************************************************-%
+% --- Dynamically Named Symbol Mapper Output ---
+% Applying (> 0) during file print keeps text outputs binary (0,1) for Verilog 
+% while preserving bipolar values natively for downstream math
+fid_map_I = fopen(sprintf('I_mapped_matlab_rate%d.txt', dataRate), 'wt');
+mapped_I_bin = (I_path_mapped_biOrthogonal > 0);
+for row = 1:size(mapped_I_bin, 1)
+    fprintf(fid_map_I, '%d', mapped_I_bin(row, :));
+    fprintf(fid_map_I, '\n');
+end
+fclose(fid_map_I);
+
+fid_map_Q = fopen(sprintf('Q_mapped_matlab_rate%d.txt', dataRate), 'wt');
+mapped_Q_bin = (Q_path_mapped_biOrthogonal > 0);
+for row = 1:size(mapped_Q_bin, 1)
+    fprintf(fid_map_Q, '%d', mapped_Q_bin(row, :));
+    fprintf(fid_map_Q, '\n');
+end
+fclose(fid_map_Q);
+%-***********************************************************************-%
 %-------------------------------------------------------------------------%
 %=========================================================================%
 % 6.5a.2.9 Bit interleaver
@@ -262,6 +282,19 @@ else
     % ------------------------------------------------------------------- %
 end
 %-***********************************************************************-%
+% --- Dynamically Named Bit Interleaver Output ---
+fid_int_I = fopen(sprintf('I_interleaved_matlab_rate%d.txt', dataRate), 'wt');
+for col = 1:size(I_path_mapped_biOrthogonal, 2)
+    fprintf(fid_int_I, '%d', (I_path_mapped_biOrthogonal(:, col) > 0));
+    fprintf(fid_int_I, '\n');
+end
+fclose(fid_int_I);
+fid_int_Q = fopen(sprintf('Q_interleaved_matlab_rate%d.txt', dataRate), 'wt');
+for col = 1:size(Q_path_mapped_biOrthogonal, 2)
+    fprintf(fid_int_Q, '%d', (Q_path_mapped_biOrthogonal(:, col) > 0));
+    fprintf(fid_int_Q, '\n');
+end
+fclose(fid_int_Q);
 %-------------------------------------------------------------------------%
 %=========================================================================%
 % 6.5a.2.5 Parallel-to-serial converter (P/S) and QPSK symbol mapping
@@ -287,6 +320,13 @@ Q_path_binaryData = ...
 % (I and Q) of the QPSK mapper.
 I_path = [preamble_SFD,I_path_binaryData]';
 Q_path = [preamble_SFD,Q_path_binaryData]';
+% --- Dynamically Named PPDU Framer Output ---
+fid_ppdu_I = fopen(sprintf('I_ppdu_matlab_rate%d.txt', dataRate), 'wt');
+fprintf(fid_ppdu_I, '%d\n', (I_path > 0));
+fclose(fid_ppdu_I);
+fid_ppdu_Q = fopen(sprintf('Q_ppdu_matlab_rate%d.txt', dataRate), 'wt');
+fprintf(fid_ppdu_Q, '%d\n', (Q_path > 0));
+fclose(fid_ppdu_Q);
 %-------------------------------------------------------------------------%
 % QPSK symbol mapping
 %-------------------------------------------------------------------------%
