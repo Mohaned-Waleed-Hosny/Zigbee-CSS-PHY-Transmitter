@@ -60,15 +60,15 @@ module demux_iq_tb;
         bit_in = 0;
         valid_in = 0;
 
-        $readmemb("../Test_Vectors/I_matlab.txt", expected_I);
-        $readmemb("../Test_Vectors/Q_matlab.txt", expected_Q);
+        $readmemb("../Test_Vectors/Phase_1_Start_Demux/I_matlab.txt", expected_I);
+        $readmemb("../Test_Vectors/Phase_1_Start_Demux/Q_matlab.txt", expected_Q);
 
-        file_in = $fopen("../Test_Vectors/data_after_padding.txt", "r");
-        file_I  = $fopen("../Test_Vectors/I_verilog.txt", "w");
-        file_Q  = $fopen("../Test_Vectors/Q_verilog.txt", "w");
+        file_in = $fopen("../Test_Vectors/Phase_1_Start_Demux/data_after_padding.txt", "r");
+        file_I  = $fopen("../Test_Vectors/Phase_1_Start_Demux/I_verilog.txt", "w");
+        file_Q  = $fopen("../Test_Vectors/Phase_1_Start_Demux/Q_verilog.txt", "w");
 
         if (file_in == 0) begin
-            $display("../Test_Vectors/data_after_padding.txt not found!");
+            $display("../Test_Vectors/Phase_1_Start_Demux/data_after_padding.txt not found!");
             $finish;
         end
 

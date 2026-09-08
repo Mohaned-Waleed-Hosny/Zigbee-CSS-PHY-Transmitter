@@ -48,12 +48,12 @@ module zero_padding_tb;
         valid_in = 0;
         start_frame = 0;
 
-        file_in  = $fopen("../Test_Vectors/data_before_padding.txt", "r");
-        file_out = $fopen("../Test_Vectors/data_after_padding_verilog.txt", "w");
+        file_in  = $fopen("../Test_Vectors/Phase_1_Start_Demux/data_before_padding.txt", "r");
+        file_out = $fopen("../Test_Vectors/Phase_1_Start_Demux/data_after_padding_verilog.txt", "w");
 
         if (file_in == 0) begin
-            $display("../Test_Vectors/data_before_padding.txt not found!");
-           #100;
+            $display("../Test_Vectors/Phase_1_Start_Demux/data_before_padding.txt not found!");
+            #100;
             $stop;
         end
 

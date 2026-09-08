@@ -58,7 +58,7 @@ module tb_top_system_250k;
         start_frame = 0;
         idx_iq = 0;
 
-        $readmemb("../Test_Vectors/data_before_padding.txt", raw_bits);
+        $readmemb("../Test_Vectors/Phase_1_Start_Demux/data_before_padding.txt", raw_bits);
 
         #40;
         reset = 0;

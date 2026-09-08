@@ -63,12 +63,12 @@ module tb_top_system;
         idx_iq = 0;
         error_count = 0;
 
-        $readmemb("../Test_Vectors/data_before_padding.txt", raw_bits);
-        $readmemb("../Test_Vectors/I_matlab.txt", expected_I);
-        $readmemb("../Test_Vectors/Q_matlab.txt", expected_Q);
+        $readmemb("../Test_Vectors/Phase_1_Start_Demux/data_before_padding.txt", raw_bits);
+        $readmemb("../Test_Vectors/Phase_1_Start_Demux/I_matlab.txt", expected_I);
+        $readmemb("../Test_Vectors/Phase_1_Start_Demux/Q_matlab.txt", expected_Q);
 
-        file_i = $fopen("../Test_Vectors/I_verilog_top.txt", "w");
-        file_q = $fopen("../Test_Vectors/Q_verilog_top.txt", "w");
+        file_i = $fopen("../Test_Vectors/Phase_1_Start_Demux/I_verilog_top.txt", "w");
+        file_q = $fopen("../Test_Vectors/Phase_1_Start_Demux/Q_verilog_top.txt", "w");
 
         #40;
         reset = 0;
