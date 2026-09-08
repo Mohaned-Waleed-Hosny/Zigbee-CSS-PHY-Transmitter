@@ -53,7 +53,7 @@ numSyncPassedPackets=zeros(numDataRatesToSimulate,numSNRlevelsToSimulate);
 sumFreqOffsetHz=zeros(numDataRatesToSimulate,numSNRlevelsToSimulate);
 sumSNR_estimationErrordB_Squared = zeros(numDataRatesToSimulate,numSNRlevelsToSimulate);
 sumFreqOffsetHzSquared=zeros(numDataRatesToSimulate,numSNRlevelsToSimulate);
-[CIRmatrix ] = CIRselection( selectedCIRindex );
+%[CIRmatrix ] = CIRselection( selectedCIRindex );
 
 %profile on
 %-------------------------------------------------------------------------%
@@ -109,6 +109,21 @@ energyPerSubChirp=sum(sum(abs(chirpSequence_Tx).^2))/4;
 %-------------------------------------------------------------------------%
 %-------------------------------------------------------------------------%
 %-------------------------------------------------------------------------%
+
+% ------------------------------------------------------------------------- %
+% --- ADDED CODE: Generate dummy data and call the Tx function ---
+% ------------------------------------------------------------------------- %
+% 1. Create a dummy payload (e.g., 10 bytes = 80 bits)
+dummyPayloadBytes = 10;
+incomingStream = randi([0 1], 1, dummyPayloadBytes * 8);
+
+% 2. Call the transmitter function to trigger the .txt file generations
+% Note: Change the function name to ChirpSpreadSpectrum_Tx_3 if that is 
+% the exact name of your modified function file.
+TxchirpSequences = ChirpSpreadSpectrum_Tx(incomingStream, dataRate, chirpSequence);
+% ------------------------------------------------------------------------- %
+
+
 end
 
 
