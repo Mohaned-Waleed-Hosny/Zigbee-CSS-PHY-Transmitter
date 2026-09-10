@@ -4,6 +4,6 @@
 
 vlib work
 vlog ../RTL/*.v ../testbenches/*.v
-vsim work.tb_part2
+vsim work.tb_qpsk_mapper
 add wave *
 run -all
