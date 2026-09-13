@@ -126,4 +126,54 @@ TxchirpSequences = ChirpSpreadSpectrum_Tx(incomingStream, dataRate, chirpSequenc
 
 end
 
+%% === DQPSK encoder standalone golden-vector export (added by Salama) ===
+% Self-contained: does not depend on, or affect, anything above this line.
+% Generates deterministic Xn stimulus cycling through all 4 rotation
+% cases, computes the matching Sn golden output using the standard's own
+% recurrence (Sn = Xn * Sn-4, S0=S1=S2=S3=exp(j*pi/4)), and exports both
+% as 2-bit signed binary vectors for the Verilog testbench to read in
+% with $readmemb.
 
+numSymbols_dqpsk = 24;   % two full passes through all 4 rotation cases
+
+XnTable_dqpsk = [ 1+0j, 0+1j, -1+0j, 0-1j ];   % k=0,1,2,3 base cases
+Xn_dqpsk = XnTable_dqpsk( mod(0:numSymbols_dqpsk-1, 4) + 1 );
+
+Sn_dqpsk = zeros(1, numSymbols_dqpsk);
+Sdelay_dqpsk = exp(1j*pi/4) * ones(1,4);   % [Sn-1 Sn-2 Sn-3 Sn-4]
+
+for n = 1:numSymbols_dqpsk
+    Sn4_dqpsk        = Sdelay_dqpsk(4);
+    Sn_dqpsk(n)      = Xn_dqpsk(n) * Sn4_dqpsk;
+    Sdelay_dqpsk     = [Sn_dqpsk(n) Sdelay_dqpsk(1:3)];
+end
+
+Xn_re_dqpsk = fi(real(Xn_dqpsk), 1, 2, 0);
+Xn_im_dqpsk = fi(imag(Xn_dqpsk), 1, 2, 0);
+Sn_re_dqpsk = fi(real(Sn_dqpsk), 1, 2, 0);
+Sn_im_dqpsk = fi(imag(Sn_dqpsk), 1, 2, 0);
+
+fid = fopen('xn_real_tb.txt', 'wt');
+for n = 1:numSymbols_dqpsk
+    fprintf(fid, '%s\n', bin(Xn_re_dqpsk(n)));
+end
+fclose(fid);
+
+fid = fopen('xn_imag_tb.txt', 'wt');
+for n = 1:numSymbols_dqpsk
+    fprintf(fid, '%s\n', bin(Xn_im_dqpsk(n)));
+end
+fclose(fid);
+
+fid = fopen('sn_real_expected.txt', 'wt');
+for n = 1:numSymbols_dqpsk
+    fprintf(fid, '%s\n', bin(Sn_re_dqpsk(n)));
+end
+fclose(fid);
+
+fid = fopen('sn_imag_expected.txt', 'wt');
+for n = 1:numSymbols_dqpsk
+    fprintf(fid, '%s\n', bin(Sn_im_dqpsk(n)));
+end
+fclose(fid);
+%% === end DQPSK encoder export ===
