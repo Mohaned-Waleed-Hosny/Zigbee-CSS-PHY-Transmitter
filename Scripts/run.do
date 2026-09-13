@@ -4,6 +4,6 @@
 
 vlib work
 vlog ../RTL/*.v ../testbenches/*.v
-vsim work.tb_dqpsk_encoder
+vsim work.tb_csk_generator
 add wave *
 run -all

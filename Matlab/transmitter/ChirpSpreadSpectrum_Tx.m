@@ -362,6 +362,14 @@ for i =1: 4 : numDQPSKinputs
     %---------------------------------------------------------------------%
 end
 %-------------------------------------------------------------------------%
+% --- Dynamically Named DQPSK (Differential Encoder) Output ---
+fid_S_real = fopen(sprintf('S_real_matlab_rate%d.txt', dataRate), 'wt');
+fprintf(fid_S_real, '%d\n', real(DQPSK_output));
+fclose(fid_S_real);
+fid_S_imag = fopen(sprintf('S_imag_matlab_rate%d.txt', dataRate), 'wt');
+fprintf(fid_S_imag, '%d\n', imag(DQPSK_output));
+fclose(fid_S_imag);
+%-------------------------------------------------------------------------%
 % DQPSK output must be normalized. In reality, only the phase is needed. 
 % It can be represented in units of PI and added to the complex phase when
 % doing chirp modulation

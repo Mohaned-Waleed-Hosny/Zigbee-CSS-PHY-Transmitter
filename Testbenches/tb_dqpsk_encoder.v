@@ -45,8 +45,7 @@ module tb_dqpsk_encoder;
             $finish;
         end
 
-        // Plain signed-decimal parser: replaces $readmemb, which requires
-        // literal binary digits and cannot handle a '-' sign in the file.
+       
         more_data   = 1'b1;
         num_symbols = 0;
         while (more_data && num_symbols < 8192) begin

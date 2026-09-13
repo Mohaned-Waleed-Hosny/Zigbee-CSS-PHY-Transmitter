@@ -177,3 +177,27 @@ for n = 1:numSymbols_dqpsk
 end
 fclose(fid);
 %% === end DQPSK encoder export ===
+
+%% === Universal CSK ROM (m=1) export for Verilog ===
+% Self-contained: generates the base m=1 sequence (152 samples containing
+% all 4 fundamental subchirps), quantizes them to 6-bit signed fixed-point, 
+% and exports them as binary text strings for Verilog $readmemb.
+disp('Generating Universal CSK ROM (m=1) for Verilog...');
+
+csk_base_seq = chirpSequenceGenerator(1, samplingFreqMhz);
+
+csk_re_fi = fi(real(csk_base_seq(1:152)), 1, 6, 0);
+csk_im_fi = fi(imag(csk_base_seq(1:152)), 1, 6, 0);
+
+fid_rom_i = fopen('csk_rom_i.txt', 'wt');
+fid_rom_q = fopen('csk_rom_q.txt', 'wt');
+
+for n = 1:152
+    fprintf(fid_rom_i, '%s\n', bin(csk_re_fi(n)));
+    fprintf(fid_rom_q, '%s\n', bin(csk_im_fi(n)));
+end
+
+fclose(fid_rom_i);
+fclose(fid_rom_q);
+disp('Successfully generated csk_rom_i.txt and csk_rom_q.txt');
+%% === end Universal CSK ROM export ===
