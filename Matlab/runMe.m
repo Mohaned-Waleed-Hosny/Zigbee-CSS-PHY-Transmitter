@@ -201,3 +201,37 @@ fclose(fid_rom_i);
 fclose(fid_rom_q);
 disp('Successfully generated csk_rom_i.txt and csk_rom_q.txt');
 %% === end Universal CSK ROM export ===
+
+%% === dqpsk_csk_multiplier unit-test vectors ===
+% Reuses Sn_dqpsk/numSymbols_dqpsk from the "DQPSK encoder standalone
+% golden-vector export" block above. i_c/q_c come from chirpSequence_Tx
+% (the real fixed-point chirp samples already computed earlier in this
+% script) -- NOT from TxchirpSequences, since that's already post-multiply.
+MAX_VECTORS = 64;
+numVec = min(MAX_VECTORS, numSymbols_dqpsk);
+
+ic_flat = real(chirpSequence_Tx(:));   % already 6-bit-range fixed-point ints
+qc_flat = imag(chirpSequence_Tx(:));
+numVec  = min(numVec, length(ic_flat));
+
+% round(): Sn_dqpsk's magnitude-1 normalization (exp(j*pi/4) init) means
+% these land on +/-0.7071 exactly, not +/-1 -- must round to an integer
+% before writing with %d, or fprintf silently switches to %e notation
+% and desyncs every $fscanf read after the first one.
+s_real_vec = round(real(Sn_dqpsk(1:numVec))).';
+s_imag_vec = round(imag(Sn_dqpsk(1:numVec))).';
+ic_vec     = ic_flat(1:numVec);
+qc_vec     = qc_flat(1:numVec);
+
+css_real_vec = s_real_vec.*ic_vec - s_imag_vec.*qc_vec;  % same formula as
+css_imag_vec = s_real_vec.*qc_vec + s_imag_vec.*ic_vec;  % dqpsk_csk_multiplier.v
+
+fid = fopen('s_real_mult_tb.txt','wt');    fprintf(fid,'%d\n', s_real_vec); fclose(fid);
+fid = fopen('s_imag_mult_tb.txt','wt');    fprintf(fid,'%d\n', s_imag_vec); fclose(fid);
+fid = fopen('ic_mult_tb.txt','wt');        fprintf(fid,'%d\n', ic_vec);     fclose(fid);
+fid = fopen('qc_mult_tb.txt','wt');        fprintf(fid,'%d\n', qc_vec);     fclose(fid);
+fid = fopen('css_real_expected.txt','wt'); fprintf(fid,'%d\n', css_real_vec); fclose(fid);
+fid = fopen('css_imag_expected.txt','wt'); fprintf(fid,'%d\n', css_imag_vec); fclose(fid);
+
+fprintf('mult tb export: %d vectors\n', numVec);
+%% === end dqpsk_csk_multiplier unit-test export ===

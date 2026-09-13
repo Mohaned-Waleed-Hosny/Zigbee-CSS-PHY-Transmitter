@@ -5,6 +5,6 @@
 vlib work
 vlog ../RTL/*.v
 vlog ../testbenches/*.v
-vsim work.tb_csk_waveform_selector
+vsim work.tb_dqpsk_csk_multiplier
 add wave *
 run -all
