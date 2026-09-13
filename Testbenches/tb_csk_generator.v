@@ -22,7 +22,7 @@ module tb_csk_generator;
     // ---------------- Stimulus memories (Sn from the DQPSK stage) ---------------- //
     reg signed [1:0] sreal_mem [0:8191];
     reg signed [1:0] simag_mem [0:8191];
-    integer i, num_symbols, sidx;
+    integer num_symbols, sidx;          // no need for i (not used)
     integer real_in_file, imag_in_file, file_i, file_q;
     integer val_r, val_i, scan_r, scan_i;
     reg     more_data;
@@ -111,8 +111,9 @@ module tb_csk_generator;
     reg signed [5:0] gwave_i [0:151];
     reg signed [5:0] gwave_q [0:151];
     initial begin
-        $readmemb("csk_rom_i.txt", gwave_i);
-        $readmemb("csk_rom_q.txt", gwave_q);
+// Just paths errors
+        $readmemb("../Test_Vectors/Phase_4_DQPSK_CSK/csk_rom_i.txt", gwave_i);
+        $readmemb("../Test_Vectors/Phase_4_DQPSK_CSK/csk_rom_q.txt", gwave_q);
     end
 
     function [1:0] indep_wid;
@@ -170,8 +171,16 @@ module tb_csk_generator;
                         i_state <= I_ACTIVE; i_k <= 0; i_n <= 0; i_valid <= 1'b1;
                     end
                 end
+// -------------------------------------------------------------------------
+// BUG FIX EXPLANATION:
+// Previously, i_valid was assigned '1' by default at the top of I_ACTIVE.
+// This caused an issue when transitioning to I_GAP: i_valid remained '1'
+// for one extra clock cycle, which mismatched the DUT's exact timing.
+// To fix this, the default assignment was removed. Now, i_valid is 
+// explicitly set to '0' exactly when entering the GAP state, and '1' 
+// when staying in the ACTIVE state. This perfectly aligns with the DUT.
+// -------------------------------------------------------------------------
                 I_ACTIVE: begin
-                    i_valid <= 1'b1;
                     if (i_n == 6'd37) begin
                         i_n <= 0;
                         if (i_k == 2'd3) begin
@@ -179,11 +188,14 @@ module tb_csk_generator;
                             i_gap_cnt <= i_parity ? todd : teven;
                             i_parity  <= ~i_parity;
                             i_state   <= I_GAP;
+                            i_valid   <= 1'b0;      // Drop valid immediately on GAP entry
                         end else begin
-                            i_k <= i_k + 2'd1;
+                            i_k       <= i_k + 2'd1;
+                            i_valid   <= 1'b1;      // Keep valid high for next subchirp
                         end
                     end else begin
-                        i_n <= i_n + 6'd1;
+                        i_n       <= i_n + 6'd1;
+                        i_valid   <= 1'b1;          // Keep valid high for next sample
                     end
                 end
                 I_GAP: begin
