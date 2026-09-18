@@ -1,0 +1,27 @@
+-- begin_signature
+-- form_ppdu
+-- end_signature
+WIDTH=1;
+DEPTH=16;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	15 :	1;
+	14 :	1;
+	13 :	0;
+	12 :	0;
+	11 :	0;
+	10 :	1;
+	9 :	0;
+	8 :	0;
+	7 :	0;
+	6 :	1;
+	5 :	0;
+	4 :	1;
+	3 :	1;
+	2 :	1;
+	1 :	1;
+	0 :	0;
+END;

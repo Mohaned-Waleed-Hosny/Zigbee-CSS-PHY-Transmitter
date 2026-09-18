@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Thu Sep 17 06:48:46 2026
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : css_phy_tx_top_wrapper
+Top-level Entity Name : css_phy_tx_top_wrapper
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 5794
+Total pins : 31
+Total virtual pins : 0
+Total block memory bits : 3,872
+Total DSP Blocks : 1
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

@@ -1,0 +1,133 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Tx_real[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_real[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_real[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_real[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_real[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_real[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_real[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_real[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_imag[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_imag[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_imag[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_imag[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_imag[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_imag[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_imag[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Tx_imag[7]",
+					"strict" : false
+				},
+				{
+					"name" : "done_Tx",
+					"strict" : false
+				},
+				{
+					"name" : "busy",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "start_Tx",
+					"strict" : false
+				},
+				{
+					"name" : "data_rate",
+					"strict" : false
+				},
+				{
+					"name" : "payloadLength[7]",
+					"strict" : false
+				},
+				{
+					"name" : "payloadLength[6]",
+					"strict" : false
+				},
+				{
+					"name" : "payloadLength[5]",
+					"strict" : false
+				},
+				{
+					"name" : "payloadLength[4]",
+					"strict" : false
+				},
+				{
+					"name" : "payloadLength[3]",
+					"strict" : false
+				},
+				{
+					"name" : "payloadLength[2]",
+					"strict" : false
+				},
+				{
+					"name" : "payloadLength[1]",
+					"strict" : false
+				},
+				{
+					"name" : "payloadLength[0]",
+					"strict" : false
+				},
+				{
+					"name" : "payload_wr_en",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

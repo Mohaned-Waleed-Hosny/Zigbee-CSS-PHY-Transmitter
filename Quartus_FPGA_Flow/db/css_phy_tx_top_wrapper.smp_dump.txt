@@ -1,0 +1,18 @@
+
+State Machine - |css_phy_tx_top_wrapper|css_phy_tx_top:u_css_phy_tx_top|csk_sequencer:u_csk_sequencer|state
+Name state.SC_IDLE state.SC_GAP state.SC_SUBCHIRP 
+state.SC_IDLE 0 0 0 
+state.SC_SUBCHIRP 1 0 1 
+state.SC_GAP 1 1 0 
+
+State Machine - |css_phy_tx_top_wrapper|css_phy_tx_top:u_css_phy_tx_top|zero_padding:u_zero_padding|state
+Name state.IDLE state.PADDING state.DATA 
+state.IDLE 0 0 0 
+state.DATA 1 0 1 
+state.PADDING 1 1 0 
+
+State Machine - |css_phy_tx_top_wrapper|css_phy_tx_top:u_css_phy_tx_top|controller:u_controller|feed_state
+Name feed_state.F_IDLE feed_state.F_SEND feed_state.F_START 
+feed_state.F_IDLE 0 0 0 
+feed_state.F_START 1 0 1 
+feed_state.F_SEND 1 1 0 
