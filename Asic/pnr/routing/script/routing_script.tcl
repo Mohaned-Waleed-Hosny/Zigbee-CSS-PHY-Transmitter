@@ -116,8 +116,6 @@ check_legality
 
 
 ##################### Outputs ######################
-set_clock_uncertainty 0.5 [get_clocks {SCAN_CLK CLK}]
-
 
 write_verilog "../results/${design}_post_route_netlist.v"
 write_sdc -output "../results/${design}_post_route.sdc"
