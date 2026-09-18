@@ -1,58 +1,0 @@
-<Database>
-Name/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/pnr/routing/run/check_design.ems
-Creation TimeFri Sep 18 07:44:29 2026
-Modified TimeFri Sep 18 07:44:37 2026
-Design Namecss_phy_tx_top_routing
-Library Namecss_phy_tx_top.dlib
-</Database>
-<RuleCount>
-DFT-0111
-NEX-0481
-TCK-00126
-TCK-0023
-TCK-0129
-</RuleCount>
-<UserDefinedRules>
-</UserDefinedRules>
-<Messages>
-DFT-011reason10
-NEX-048portNameVSS_110
-TCK-002cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39pinSpareCell_3_0/CLK1[ get_pin { SpareCell_3_0/CLK } ]6
-TCK-002cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39pinSpareCell_3_1/CLK1[ get_pin { SpareCell_3_1/CLK } ]6
-TCK-002cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39pinSpareCell_3_2/CLK1[ get_pin { SpareCell_3_2/CLK } ]6
-TCK-001cornerdefault1[ get_corners { default } ]40endpointtest_so21[ get_port { test_so2 } ]7modedefault1[ get_modes { default } ]39reasonno check10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointtest_so31[ get_port { test_so3 } ]7modedefault1[ get_modes { default } ]39reasonno check10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointtest_so41[ get_port { test_so4 } ]7modedefault1[ get_modes { default } ]39reasonno check10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointtest_so51[ get_port { test_so5 } ]7modedefault1[ get_modes { default } ]39reasonno check10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointtest_so71[ get_port { test_so7 } ]7modedefault1[ get_modes { default } ]39reasonno check10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointtest_so81[ get_port { test_so8 } ]7modedefault1[ get_modes { default } ]39reasonno check10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointtest_so91[ get_port { test_so9 } ]7modedefault1[ get_modes { default } ]39reasonno check10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointtest_so101[ get_port { test_so10 } ]7modedefault1[ get_modes { default } ]39reasonno check10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_0/D1[ get_pin { SpareCell_3_0/D } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_0/SI1[ get_pin { SpareCell_3_0/SI } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_0/SE1[ get_pin { SpareCell_3_0/SE } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_1/D1[ get_pin { SpareCell_3_1/D } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_1/SI1[ get_pin { SpareCell_3_1/SI } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_1/SE1[ get_pin { SpareCell_3_1/SE } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_2/D1[ get_pin { SpareCell_3_2/D } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_2/SI1[ get_pin { SpareCell_3_2/SI } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointSpareCell_3_2/SE1[ get_pin { SpareCell_3_2/SE } ]6modedefault1[ get_modes { default } ]39reasoncase constant10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointdqpsk_mem_imag_reg[965][0]/SI1[ get_pin { dqpsk_mem_imag_reg[965][0]/SI } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointdqpsk_mem_imag_reg[477][1]/SI1[ get_pin { dqpsk_mem_imag_reg[477][1]/SI } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointdqpsk_mem_real_reg[428][1]/SI1[ get_pin { dqpsk_mem_real_reg[428][1]/SI } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointdqpsk_mem_real_reg[916][0]/SI1[ get_pin { dqpsk_mem_real_reg[916][0]/SI } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointu_controller/payload_ram_reg[88][7]/SI1[ get_pin { u_controller/payload_ram_reg[88][7]/SI } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointu_form_ppdu/i_fifo_reg[8][45]/SI1[ get_pin { u_form_ppdu/i_fifo_reg[8][45]/SI } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointu_form_ppdu/i_fifo_reg[23][59]/SI1[ get_pin { u_form_ppdu/i_fifo_reg[23][59]/SI } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointu_form_ppdu/q_fifo_reg[7][7]/SI1[ get_pin { u_form_ppdu/q_fifo_reg[7][7]/SI } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
-TCK-001cornerdefault1[ get_corners { default } ]40endpointu_form_ppdu/q_fifo_reg[22][21]/SI1[ get_pin { u_form_ppdu/q_fifo_reg[22][21]/SI } ]6modedefault1[ get_modes { default } ]39reasonno arrival path10
-TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39porttest_si21[ get_port { test_si2 } ]7
-TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39porttest_si31[ get_port { test_si3 } ]7
-TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39porttest_si41[ get_port { test_si4 } ]7
-TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39porttest_si51[ get_port { test_si5 } ]7
-TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39porttest_si61[ get_port { test_si6 } ]7
-TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39porttest_si71[ get_port { test_si7 } ]7
-TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39porttest_si81[ get_port { test_si8 } ]7
-TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39porttest_si91[ get_port { test_si9 } ]7
-TCK-012cornerdefault1[ get_corners { default } ]40modedefault1[ get_modes { default } ]39porttest_si101[ get_port { test_si10 } ]7
-</Messages>
