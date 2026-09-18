@@ -1,0 +1,151 @@
+Loading db file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/std_cells/saed90nm_max.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : css_phy_tx_top
+Version: O-2018.06-SP1
+Date   : Fri Sep 18 01:21:57 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed90nm_max (File: /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/std_cells/saed90nm_max.db)
+
+
+Operating Conditions: WORST   Library: saed90nm_max
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+css_phy_tx_top         540000            saed90nm_max
+mux2X1_0               ForQA             saed90nm_max
+mux2X1_1               ForQA             saed90nm_max
+controller_test_1      70000             saed90nm_max
+zero_padding_test_1    8000              saed90nm_max
+demux_iq_test_1        8000              saed90nm_max
+symbol_mapper_test_1   8000              saed90nm_max
+bit_interleaver_test_1 16000             saed90nm_max
+form_ppdu_test_1       280000            saed90nm_max
+qpsk_mapper_test_1     8000              saed90nm_max
+dqpsk_encoder_test_1   8000              saed90nm_max
+csk_sequencer_test_1   8000              saed90nm_max
+csk_waveform_selector  ForQA             saed90nm_max
+csk_waveform_rom_test_1
+                       8000              saed90nm_max
+dqpsk_csk_multiplier_test_1
+                       8000              saed90nm_max
+css_phy_tx_top_DW01_inc_0
+                       ForQA             saed90nm_max
+css_phy_tx_top_DW01_inc_1
+                       ForQA             saed90nm_max
+css_phy_tx_top_DW_div_uns_0
+                       8000              saed90nm_max
+css_phy_tx_top_DW_div_uns_1
+                       8000              saed90nm_max
+css_phy_tx_top_DW_div_uns_2
+                       8000              saed90nm_max
+css_phy_tx_top_DW_div_uns_3
+                       8000              saed90nm_max
+css_phy_tx_top_DW01_inc_2
+                       ForQA             saed90nm_max
+controller_DW01_inc_0  ForQA             saed90nm_max
+controller_DW01_inc_1  ForQA             saed90nm_max
+controller_DW01_inc_2  ForQA             saed90nm_max
+controller_DW_div_uns_0
+                       8000              saed90nm_max
+controller_DW_div_uns_1
+                       8000              saed90nm_max
+controller_DW_div_uns_2
+                       8000              saed90nm_max
+controller_DW_div_uns_3
+                       8000              saed90nm_max
+zero_padding_DW_div_uns_0
+                       8000              saed90nm_max
+zero_padding_DW_div_uns_1
+                       8000              saed90nm_max
+zero_padding_DW01_inc_2
+                       8000              saed90nm_max
+zero_padding_DW_div_uns_3
+                       8000              saed90nm_max
+form_ppdu_DW01_inc_0   ForQA             saed90nm_max
+form_ppdu_DW01_inc_1   ForQA             saed90nm_max
+csk_sequencer_DW01_inc_1
+                       ForQA             saed90nm_max
+csk_sequencer_DW01_inc_2
+                       ForQA             saed90nm_max
+dqpsk_csk_multiplier_DW01_add_0
+                       8000              saed90nm_max
+dqpsk_csk_multiplier_DW01_sub_0
+                       8000              saed90nm_max
+
+
+Global Operating Voltage = 0.7  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+css_phy_tx_top                            3.927      N/A 5.28e+10 5.28e+04 100.0
+  add_344 (css_phy_tx_top_DW01_inc_2)  5.39e-04 4.00e-03 7.37e+05    0.741   0.0
+  rem_302 (css_phy_tx_top_DW_div_uns_3)
+                                       1.58e-02 4.95e-02 2.47e+06    2.536   0.0
+  rem_301 (css_phy_tx_top_DW_div_uns_2)
+                                       1.20e-02 4.33e-02 1.95e+06    2.003   0.0
+  div_313 (css_phy_tx_top_DW_div_uns_1)
+                                       1.84e-02 5.01e-02 2.38e+06    2.453   0.0
+  div_310 (css_phy_tx_top_DW_div_uns_0)
+                                       1.34e-02 4.89e-02 2.29e+06    2.357   0.0
+  r112 (css_phy_tx_top_DW01_inc_1)     4.49e-04 4.74e-03 7.88e+05    0.793   0.0
+  add_451 (css_phy_tx_top_DW01_inc_0)  2.54e-04 2.71e-03 7.89e+05    0.792   0.0
+  u_dqpsk_csk_multiplier (dqpsk_csk_multiplier_test_1)
+                                       3.29e-02 7.75e-02 6.23e+06    6.342   0.0
+    sub_38 (dqpsk_csk_multiplier_DW01_sub_0)
+                                       6.13e-03 1.10e-02 8.63e+05    0.881   0.0
+    add_39 (dqpsk_csk_multiplier_DW01_add_0)
+                                       3.25e-03 2.33e-02 7.73e+05    0.800   0.0
+  u_csk_rom (csk_waveform_rom_test_1)  2.37e-02      N/A 7.09e+07   70.885   0.1
+  u_csk_selector (csk_waveform_selector)
+                                       1.11e-03 3.14e-03 2.51e+05    0.256   0.0
+  u_csk_sequencer (csk_sequencer_test_1)
+                                       2.47e-02 5.50e-02 8.85e+06    8.933   0.0
+    add_81 (csk_sequencer_DW01_inc_2)  8.65e-04 7.23e-03 7.84e+05    0.792   0.0
+    r98 (csk_sequencer_DW01_inc_1)     4.35e-04 7.20e-03 7.84e+05    0.792   0.0
+  u_dqpsk (dqpsk_encoder_test_1)       1.37e-02 2.13e-02 3.54e+06    3.578   0.0
+  u_qpsk (qpsk_mapper_test_1)          3.54e-03 3.40e-03 7.86e+05    0.793   0.0
+  u_form_ppdu (form_ppdu_test_1)          0.949      N/A 2.34e+10 2.34e+04  44.3
+    r113 (form_ppdu_DW01_inc_1)        1.14e-03 1.37e-02 8.66e+05    0.881   0.0
+    r114 (form_ppdu_DW01_inc_0)        6.08e-04 5.04e-03 8.68e+05    0.873   0.0
+  u_interleaver (bit_interleaver_test_1)
+                                       9.60e-02    0.122 3.17e+07   31.939   0.1
+  u_symbol_mapper (symbol_mapper_test_1)
+                                       8.78e-02    0.126 2.38e+07   23.993   0.0
+  u_demux (demux_iq_test_1)            2.35e-03 5.33e-03 8.05e+05    0.813   0.0
+  u_zero_padding (zero_padding_test_1) 7.82e-02    0.248 1.66e+07   16.887   0.0
+    rem_59 (zero_padding_DW_div_uns_3) 1.23e-02 4.43e-02 2.01e+06    2.069   0.0
+    r106 (zero_padding_DW01_inc_2)     3.94e-03 2.60e-02 1.19e+06    1.221   0.0
+    rem_61 (zero_padding_DW_div_uns_1) 1.19e-02 4.42e-02 2.01e+06    2.069   0.0
+    rem_67 (zero_padding_DW_div_uns_0) 1.51e-02 4.67e-02 2.48e+06    2.542   0.0
+  u_controller (controller_test_1)        0.519      N/A 5.84e+09 5.83e+03  11.1
+    rem_101 (controller_DW_div_uns_3)  1.16e-02 4.27e-02 1.83e+06    1.888   0.0
+    rem_102 (controller_DW_div_uns_2)  1.59e-02 4.54e-02 2.31e+06    2.367   0.0
+    div_108 (controller_DW_div_uns_1)  1.16e-02 4.24e-02 1.96e+06    2.011   0.0
+    div_109 (controller_DW_div_uns_0)  1.59e-02 4.87e-02 2.22e+06    2.287   0.0
+    add_159 (controller_DW01_inc_2)    1.79e-03 1.60e-02 9.49e+05    0.967   0.0
+    add_164 (controller_DW01_inc_1)    1.06e-03 1.59e-02 9.49e+05    0.966   0.0
+    add_189 (controller_DW01_inc_0)    6.25e-04 7.73e-03 7.86e+05    0.794   0.0
+  rst_mux (mux2X1_1)                      0.000 5.45e-04 5.81e+04 5.87e-02   0.0
+  clk_mux (mux2X1_0)                      0.000 6.13e-03 5.81e+04 6.43e-02   0.0
+1

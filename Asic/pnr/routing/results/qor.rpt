@@ -1,0 +1,63 @@
+****************************************
+Report : qor
+        -summary
+Design : css_phy_tx_top
+Version: O-2018.06-SP1
+Date   : Fri Sep 18 09:30:41 2026
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 enabled
+Timing Window Analysis:                    enabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     enabled
+Advanced Receiver Model:                   disabled
+************************************************************
+Information: Corner default: no PVT mismatches. (PVT-032)
+Information: The stitching and editing of coupling caps is turned ON for design 'css_phy_tx_top.dlib:css_phy_tx_top_routing.design'. (TIM-125)
+Information: Design css_phy_tx_top_routing has 62295 nets, 0 global routed, 62293 detail routed. (NEX-024)
+Information: The RC mode used is DR for design 'css_phy_tx_top'. (NEX-022)
+---extraction options---
+Corner: default
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ late_ccap_scale               : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+ early_ccap_scale              : 1
+Global options:
+ late_ccap_threshold       : 0.003pf
+ late_ccap_ratio           : 0.03
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 1
+ extract.connect_open           : true
+ extract.incremental_extraction : true
+ extract.enable_coupling_cap    : true
+Extracting design: css_phy_tx_top_routing 
+Information: coupling capacitance is created explicitly. (NEX-029)
+Information: 62293 nets are successfully extracted. (NEX-028)
+Information: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 62293, routed nets = 62293, across physical hierarchy nets = 0, parasitics cached nets = 62293, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+Design             (Setup)           672.44           0.00              0
+
+Design             (Hold)              0.61           0.00              0
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                         781518.64
+Cell Area (netlist and physical only):       926521.34
+Nets with DRC Violations:        0
+1

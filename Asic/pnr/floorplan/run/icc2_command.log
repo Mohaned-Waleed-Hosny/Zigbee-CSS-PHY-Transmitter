@@ -1,0 +1,8 @@
+#@ # 
+#@ # Running icc2_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
+#@ # Date:   Fri Sep 18 03:33:42 2026
+#@ # Run by: ICer@IC_EDA
+#@ 
+
+source -echo -verbose ../script/floor_script.tcl
+exit

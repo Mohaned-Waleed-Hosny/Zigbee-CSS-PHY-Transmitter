@@ -1,0 +1,917 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : css_phy_tx_top
+Version: O-2018.06-SP1
+Date   : Fri Sep 18 01:21:50 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WORST   Library: saed90nm_max
+Wire Load Model Mode: enclosed
+
+  Startpoint: data_rate (input port clocked by CLK)
+  Endpoint: u_form_ppdu/q_fifo_reg[1][31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  data_rate (in)                                          0.04     300.04 r
+  u_form_ppdu/data_rate (form_ppdu_test_1)                0.00     300.04 r
+  u_form_ppdu/U10078/ZN (INVX0)                          17.91     317.95 f
+  u_form_ppdu/U10179/ZN (INVX0)                           0.51     318.46 r
+  u_form_ppdu/U1459/Z (NBUFFX2)                           4.73     323.20 r
+  u_form_ppdu/U1402/ZN (INVX0)                           53.39     376.59 f
+  u_form_ppdu/U10177/ZN (INVX0)                           9.40     385.99 r
+  u_form_ppdu/U1521/Z (NBUFFX2)                          30.06     416.05 r
+  u_form_ppdu/U9894/QN (AOI21X1)                         71.27     487.32 f
+  u_form_ppdu/U10172/ZN (INVX0)                           1.98     489.30 r
+  u_form_ppdu/U9411/Z (NBUFFX2)                          69.02     558.32 r
+  u_form_ppdu/U2188/Q (AO22X1)                           38.83     597.15 r
+  u_form_ppdu/q_fifo_reg[1][31]/D (SDFFX1)                0.32     597.47 r
+  data arrival time                                                597.47
+
+  clock CLK (rise edge)                                1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/q_fifo_reg[1][31]/CLK (SDFFX1)              0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -597.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                      400.37
+
+
+  Startpoint: data_rate (input port clocked by CLK)
+  Endpoint: u_form_ppdu/q_fifo_reg[2][31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  data_rate (in)                                          0.04     300.04 r
+  u_form_ppdu/data_rate (form_ppdu_test_1)                0.00     300.04 r
+  u_form_ppdu/U10078/ZN (INVX0)                          17.91     317.95 f
+  u_form_ppdu/U10179/ZN (INVX0)                           0.51     318.46 r
+  u_form_ppdu/U1459/Z (NBUFFX2)                           4.73     323.20 r
+  u_form_ppdu/U1402/ZN (INVX0)                           53.39     376.59 f
+  u_form_ppdu/U10177/ZN (INVX0)                           9.40     385.99 r
+  u_form_ppdu/U1521/Z (NBUFFX2)                          30.06     416.05 r
+  u_form_ppdu/U9894/QN (AOI21X1)                         71.27     487.32 f
+  u_form_ppdu/U10172/ZN (INVX0)                           1.98     489.30 r
+  u_form_ppdu/U9412/Z (NBUFFX2)                          69.02     558.32 r
+  u_form_ppdu/U2117/Q (AO22X1)                           38.83     597.15 r
+  u_form_ppdu/q_fifo_reg[2][31]/D (SDFFX1)                0.32     597.47 r
+  data arrival time                                                597.47
+
+  clock CLK (rise edge)                                1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/q_fifo_reg[2][31]/CLK (SDFFX1)              0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -597.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                      400.37
+
+
+  Startpoint: data_rate (input port clocked by CLK)
+  Endpoint: u_form_ppdu/q_fifo_reg[3][31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  data_rate (in)                                          0.04     300.04 r
+  u_form_ppdu/data_rate (form_ppdu_test_1)                0.00     300.04 r
+  u_form_ppdu/U10078/ZN (INVX0)                          17.91     317.95 f
+  u_form_ppdu/U10179/ZN (INVX0)                           0.51     318.46 r
+  u_form_ppdu/U1459/Z (NBUFFX2)                           4.73     323.20 r
+  u_form_ppdu/U1402/ZN (INVX0)                           53.39     376.59 f
+  u_form_ppdu/U10177/ZN (INVX0)                           9.40     385.99 r
+  u_form_ppdu/U1521/Z (NBUFFX2)                          30.06     416.05 r
+  u_form_ppdu/U9894/QN (AOI21X1)                         71.27     487.32 f
+  u_form_ppdu/U10172/ZN (INVX0)                           1.98     489.30 r
+  u_form_ppdu/U9411/Z (NBUFFX2)                          69.02     558.32 r
+  u_form_ppdu/U2050/Q (AO22X1)                           38.83     597.15 r
+  u_form_ppdu/q_fifo_reg[3][31]/D (SDFFX1)                0.32     597.47 r
+  data arrival time                                                597.47
+
+  clock CLK (rise edge)                                1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/q_fifo_reg[3][31]/CLK (SDFFX1)              0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -597.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                      400.37
+
+
+  Startpoint: data_rate (input port clocked by CLK)
+  Endpoint: u_form_ppdu/q_fifo_reg[4][31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  data_rate (in)                                          0.04     300.04 r
+  u_form_ppdu/data_rate (form_ppdu_test_1)                0.00     300.04 r
+  u_form_ppdu/U10078/ZN (INVX0)                          17.91     317.95 f
+  u_form_ppdu/U10179/ZN (INVX0)                           0.51     318.46 r
+  u_form_ppdu/U1459/Z (NBUFFX2)                           4.73     323.20 r
+  u_form_ppdu/U1402/ZN (INVX0)                           53.39     376.59 f
+  u_form_ppdu/U10177/ZN (INVX0)                           9.40     385.99 r
+  u_form_ppdu/U1521/Z (NBUFFX2)                          30.06     416.05 r
+  u_form_ppdu/U9894/QN (AOI21X1)                         71.27     487.32 f
+  u_form_ppdu/U10172/ZN (INVX0)                           1.98     489.30 r
+  u_form_ppdu/U9412/Z (NBUFFX2)                          69.02     558.32 r
+  u_form_ppdu/U1984/Q (AO22X1)                           38.83     597.15 r
+  u_form_ppdu/q_fifo_reg[4][31]/D (SDFFX1)                0.32     597.47 r
+  data arrival time                                                597.47
+
+  clock CLK (rise edge)                                1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/q_fifo_reg[4][31]/CLK (SDFFX1)              0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -597.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                      400.37
+
+
+  Startpoint: data_rate (input port clocked by CLK)
+  Endpoint: u_form_ppdu/q_fifo_reg[17][31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  data_rate (in)                                          0.04     300.04 r
+  u_form_ppdu/data_rate (form_ppdu_test_1)                0.00     300.04 r
+  u_form_ppdu/U10078/ZN (INVX0)                          17.91     317.95 f
+  u_form_ppdu/U10179/ZN (INVX0)                           0.51     318.46 r
+  u_form_ppdu/U1459/Z (NBUFFX2)                           4.73     323.20 r
+  u_form_ppdu/U1402/ZN (INVX0)                           53.39     376.59 f
+  u_form_ppdu/U10177/ZN (INVX0)                           9.40     385.99 r
+  u_form_ppdu/U1521/Z (NBUFFX2)                          30.06     416.05 r
+  u_form_ppdu/U9894/QN (AOI21X1)                         71.27     487.32 f
+  u_form_ppdu/U10172/ZN (INVX0)                           1.98     489.30 r
+  u_form_ppdu/U9414/Z (NBUFFX2)                          69.02     558.32 r
+  u_form_ppdu/U1075/Q (AO22X1)                           38.83     597.15 r
+  u_form_ppdu/q_fifo_reg[17][31]/D (SDFFX1)               0.32     597.47 r
+  data arrival time                                                597.47
+
+  clock CLK (rise edge)                                1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/q_fifo_reg[17][31]/CLK (SDFFX1)             0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -597.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                      400.37
+
+
+  Startpoint: data_rate (input port clocked by CLK)
+  Endpoint: u_form_ppdu/q_fifo_reg[25][31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  data_rate (in)                                          0.04     300.04 r
+  u_form_ppdu/data_rate (form_ppdu_test_1)                0.00     300.04 r
+  u_form_ppdu/U10078/ZN (INVX0)                          17.91     317.95 f
+  u_form_ppdu/U10179/ZN (INVX0)                           0.51     318.46 r
+  u_form_ppdu/U1459/Z (NBUFFX2)                           4.73     323.20 r
+  u_form_ppdu/U1402/ZN (INVX0)                           53.39     376.59 f
+  u_form_ppdu/U10177/ZN (INVX0)                           9.40     385.99 r
+  u_form_ppdu/U1521/Z (NBUFFX2)                          30.06     416.05 r
+  u_form_ppdu/U9894/QN (AOI21X1)                         71.27     487.32 f
+  u_form_ppdu/U10172/ZN (INVX0)                           1.98     489.30 r
+  u_form_ppdu/U9413/Z (NBUFFX2)                          69.02     558.32 r
+  u_form_ppdu/U520/Q (AO22X1)                            38.83     597.15 r
+  u_form_ppdu/q_fifo_reg[25][31]/D (SDFFX1)               0.32     597.47 r
+  data arrival time                                                597.47
+
+  clock CLK (rise edge)                                1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/q_fifo_reg[25][31]/CLK (SDFFX1)             0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -597.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                      400.37
+
+
+  Startpoint: data_rate (input port clocked by CLK)
+  Endpoint: u_form_ppdu/q_fifo_reg[7][31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  data_rate (in)                                          0.04     300.04 r
+  u_form_ppdu/data_rate (form_ppdu_test_1)                0.00     300.04 r
+  u_form_ppdu/U10078/ZN (INVX0)                          17.91     317.95 f
+  u_form_ppdu/U10179/ZN (INVX0)                           0.51     318.46 r
+  u_form_ppdu/U1459/Z (NBUFFX2)                           4.73     323.20 r
+  u_form_ppdu/U1402/ZN (INVX0)                           53.39     376.59 f
+  u_form_ppdu/U10177/ZN (INVX0)                           9.40     385.99 r
+  u_form_ppdu/U1521/Z (NBUFFX2)                          30.06     416.05 r
+  u_form_ppdu/U9894/QN (AOI21X1)                         71.27     487.32 f
+  u_form_ppdu/U10172/ZN (INVX0)                           1.98     489.30 r
+  u_form_ppdu/U9412/Z (NBUFFX2)                          69.02     558.32 r
+  u_form_ppdu/U1826/Q (AO22X1)                           38.83     597.15 r
+  u_form_ppdu/q_fifo_reg[7][31]/D (SDFFX1)                0.32     597.47 r
+  data arrival time                                                597.47
+
+  clock CLK (rise edge)                                1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/q_fifo_reg[7][31]/CLK (SDFFX1)              0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -597.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                      400.37
+
+
+  Startpoint: data_rate (input port clocked by CLK)
+  Endpoint: u_form_ppdu/q_fifo_reg[15][31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  data_rate (in)                                          0.04     300.04 r
+  u_form_ppdu/data_rate (form_ppdu_test_1)                0.00     300.04 r
+  u_form_ppdu/U10078/ZN (INVX0)                          17.91     317.95 f
+  u_form_ppdu/U10179/ZN (INVX0)                           0.51     318.46 r
+  u_form_ppdu/U1459/Z (NBUFFX2)                           4.73     323.20 r
+  u_form_ppdu/U1402/ZN (INVX0)                           53.39     376.59 f
+  u_form_ppdu/U10177/ZN (INVX0)                           9.40     385.99 r
+  u_form_ppdu/U1521/Z (NBUFFX2)                          30.06     416.05 r
+  u_form_ppdu/U9894/QN (AOI21X1)                         71.27     487.32 f
+  u_form_ppdu/U10172/ZN (INVX0)                           1.98     489.30 r
+  u_form_ppdu/U9412/Z (NBUFFX2)                          69.02     558.32 r
+  u_form_ppdu/U1222/Q (AO22X1)                           38.83     597.15 r
+  u_form_ppdu/q_fifo_reg[15][31]/D (SDFFX1)               0.32     597.47 r
+  data arrival time                                                597.47
+
+  clock CLK (rise edge)                                1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/q_fifo_reg[15][31]/CLK (SDFFX1)             0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -597.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                      400.37
+
+
+  Startpoint: data_rate (input port clocked by CLK)
+  Endpoint: u_form_ppdu/q_fifo_reg[0][31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  data_rate (in)                                          0.04     300.04 r
+  u_form_ppdu/data_rate (form_ppdu_test_1)                0.00     300.04 r
+  u_form_ppdu/U10078/ZN (INVX0)                          17.91     317.95 f
+  u_form_ppdu/U10179/ZN (INVX0)                           0.51     318.46 r
+  u_form_ppdu/U1459/Z (NBUFFX2)                           4.73     323.20 r
+  u_form_ppdu/U1402/ZN (INVX0)                           53.39     376.59 f
+  u_form_ppdu/U10177/ZN (INVX0)                           9.40     385.99 r
+  u_form_ppdu/U1521/Z (NBUFFX2)                          30.06     416.05 r
+  u_form_ppdu/U9894/QN (AOI21X1)                         71.27     487.32 f
+  u_form_ppdu/U10172/ZN (INVX0)                           1.98     489.30 r
+  u_form_ppdu/U9412/Z (NBUFFX2)                          69.02     558.32 r
+  u_form_ppdu/U2284/Q (AO22X1)                           38.83     597.15 r
+  u_form_ppdu/q_fifo_reg[0][31]/D (SDFFX1)                0.32     597.47 r
+  data arrival time                                                597.47
+
+  clock CLK (rise edge)                                1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/q_fifo_reg[0][31]/CLK (SDFFX1)              0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -597.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                      400.37
+
+
+  Startpoint: data_rate (input port clocked by CLK)
+  Endpoint: u_form_ppdu/q_fifo_reg[31][31]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                  300.00     300.00 r
+  data_rate (in)                                          0.04     300.04 r
+  u_form_ppdu/data_rate (form_ppdu_test_1)                0.00     300.04 r
+  u_form_ppdu/U10078/ZN (INVX0)                          17.91     317.95 f
+  u_form_ppdu/U10179/ZN (INVX0)                           0.51     318.46 r
+  u_form_ppdu/U1459/Z (NBUFFX2)                           4.73     323.20 r
+  u_form_ppdu/U1402/ZN (INVX0)                           53.39     376.59 f
+  u_form_ppdu/U10177/ZN (INVX0)                           9.40     385.99 r
+  u_form_ppdu/U1521/Z (NBUFFX2)                          30.06     416.05 r
+  u_form_ppdu/U9894/QN (AOI21X1)                         71.27     487.32 f
+  u_form_ppdu/U10172/ZN (INVX0)                           1.98     489.30 r
+  u_form_ppdu/U9414/Z (NBUFFX2)                          69.02     558.32 r
+  u_form_ppdu/U108/Q (AO22X1)                            38.83     597.15 r
+  u_form_ppdu/q_fifo_reg[31][31]/D (SDFFX1)               0.32     597.47 r
+  data arrival time                                                597.47
+
+  clock CLK (rise edge)                                1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/q_fifo_reg[31][31]/CLK (SDFFX1)             0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -597.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                      400.37
+
+
+  Startpoint: u_controller/start_frame_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_form_ppdu/i_fifo_reg[26][8]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_controller/start_frame_reg/CLK (SDFFARX1)             0.00 #     0.00 r
+  u_controller/start_frame_reg/Q (SDFFARX1)               1.20       1.20 f
+  u_controller/start_frame (controller_test_1)            0.00       1.20 f
+  u_form_ppdu/start_frame (form_ppdu_test_1)              0.00       1.20 f
+  u_form_ppdu/U10045/ZN (INVX0)                           1.70       2.90 r
+  u_form_ppdu/U10056/QN (NAND2X0)                         1.49       4.39 f
+  u_form_ppdu/U7100/QN (NOR2X0)                           1.72       6.11 r
+  u_form_ppdu/U540/Z (DELLN1X2)                           7.54      13.65 r
+  u_form_ppdu/U6852/QN (NAND2X1)                         76.94      90.59 f
+  u_form_ppdu/U9783/QN (NAND2X0)                          1.96      92.55 r
+  u_form_ppdu/U9806/Z (NBUFFX2)                          22.74     115.29 r
+  u_form_ppdu/U5775/QN (NAND2X0)                         31.35     146.64 f
+  u_form_ppdu/U4176/ZN (INVX0)                           68.49     215.13 r
+  u_form_ppdu/U2920/Q (AO22X1)                           53.71     268.84 r
+  u_form_ppdu/i_fifo_reg[26][8]/D (SDFFX1)                0.32     269.15 r
+  data arrival time                                                269.15
+
+  clock SCAN_CLK (rise edge)                           1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/i_fifo_reg[26][8]/CLK (SDFFX1)              0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -269.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      728.69
+
+
+  Startpoint: u_controller/start_frame_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_form_ppdu/i_fifo_reg[26][9]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_controller/start_frame_reg/CLK (SDFFARX1)             0.00 #     0.00 r
+  u_controller/start_frame_reg/Q (SDFFARX1)               1.20       1.20 f
+  u_controller/start_frame (controller_test_1)            0.00       1.20 f
+  u_form_ppdu/start_frame (form_ppdu_test_1)              0.00       1.20 f
+  u_form_ppdu/U10045/ZN (INVX0)                           1.70       2.90 r
+  u_form_ppdu/U10056/QN (NAND2X0)                         1.49       4.39 f
+  u_form_ppdu/U7100/QN (NOR2X0)                           1.72       6.11 r
+  u_form_ppdu/U540/Z (DELLN1X2)                           7.54      13.65 r
+  u_form_ppdu/U6852/QN (NAND2X1)                         76.94      90.59 f
+  u_form_ppdu/U9783/QN (NAND2X0)                          1.96      92.55 r
+  u_form_ppdu/U9806/Z (NBUFFX2)                          22.74     115.29 r
+  u_form_ppdu/U5775/QN (NAND2X0)                         31.35     146.64 f
+  u_form_ppdu/U4176/ZN (INVX0)                           68.49     215.13 r
+  u_form_ppdu/U2919/Q (AO22X1)                           53.71     268.84 r
+  u_form_ppdu/i_fifo_reg[26][9]/D (SDFFX1)                0.32     269.15 r
+  data arrival time                                                269.15
+
+  clock SCAN_CLK (rise edge)                           1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/i_fifo_reg[26][9]/CLK (SDFFX1)              0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -269.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      728.69
+
+
+  Startpoint: u_controller/start_frame_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_form_ppdu/i_fifo_reg[26][10]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_controller/start_frame_reg/CLK (SDFFARX1)             0.00 #     0.00 r
+  u_controller/start_frame_reg/Q (SDFFARX1)               1.20       1.20 f
+  u_controller/start_frame (controller_test_1)            0.00       1.20 f
+  u_form_ppdu/start_frame (form_ppdu_test_1)              0.00       1.20 f
+  u_form_ppdu/U10045/ZN (INVX0)                           1.70       2.90 r
+  u_form_ppdu/U10056/QN (NAND2X0)                         1.49       4.39 f
+  u_form_ppdu/U7100/QN (NOR2X0)                           1.72       6.11 r
+  u_form_ppdu/U540/Z (DELLN1X2)                           7.54      13.65 r
+  u_form_ppdu/U6852/QN (NAND2X1)                         76.94      90.59 f
+  u_form_ppdu/U9783/QN (NAND2X0)                          1.96      92.55 r
+  u_form_ppdu/U9806/Z (NBUFFX2)                          22.74     115.29 r
+  u_form_ppdu/U5775/QN (NAND2X0)                         31.35     146.64 f
+  u_form_ppdu/U4176/ZN (INVX0)                           68.49     215.13 r
+  u_form_ppdu/U2918/Q (AO22X1)                           53.71     268.84 r
+  u_form_ppdu/i_fifo_reg[26][10]/D (SDFFX1)               0.32     269.15 r
+  data arrival time                                                269.15
+
+  clock SCAN_CLK (rise edge)                           1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/i_fifo_reg[26][10]/CLK (SDFFX1)             0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -269.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      728.69
+
+
+  Startpoint: u_controller/start_frame_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_form_ppdu/i_fifo_reg[26][11]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_controller/start_frame_reg/CLK (SDFFARX1)             0.00 #     0.00 r
+  u_controller/start_frame_reg/Q (SDFFARX1)               1.20       1.20 f
+  u_controller/start_frame (controller_test_1)            0.00       1.20 f
+  u_form_ppdu/start_frame (form_ppdu_test_1)              0.00       1.20 f
+  u_form_ppdu/U10045/ZN (INVX0)                           1.70       2.90 r
+  u_form_ppdu/U10056/QN (NAND2X0)                         1.49       4.39 f
+  u_form_ppdu/U7100/QN (NOR2X0)                           1.72       6.11 r
+  u_form_ppdu/U540/Z (DELLN1X2)                           7.54      13.65 r
+  u_form_ppdu/U6852/QN (NAND2X1)                         76.94      90.59 f
+  u_form_ppdu/U9783/QN (NAND2X0)                          1.96      92.55 r
+  u_form_ppdu/U9806/Z (NBUFFX2)                          22.74     115.29 r
+  u_form_ppdu/U5775/QN (NAND2X0)                         31.35     146.64 f
+  u_form_ppdu/U4176/ZN (INVX0)                           68.49     215.13 r
+  u_form_ppdu/U2917/Q (AO22X1)                           53.71     268.84 r
+  u_form_ppdu/i_fifo_reg[26][11]/D (SDFFX1)               0.32     269.15 r
+  data arrival time                                                269.15
+
+  clock SCAN_CLK (rise edge)                           1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/i_fifo_reg[26][11]/CLK (SDFFX1)             0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -269.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      728.69
+
+
+  Startpoint: u_controller/start_frame_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_form_ppdu/i_fifo_reg[15][8]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_controller/start_frame_reg/CLK (SDFFARX1)             0.00 #     0.00 r
+  u_controller/start_frame_reg/Q (SDFFARX1)               1.20       1.20 f
+  u_controller/start_frame (controller_test_1)            0.00       1.20 f
+  u_form_ppdu/start_frame (form_ppdu_test_1)              0.00       1.20 f
+  u_form_ppdu/U10045/ZN (INVX0)                           1.70       2.90 r
+  u_form_ppdu/U10056/QN (NAND2X0)                         1.49       4.39 f
+  u_form_ppdu/U7100/QN (NOR2X0)                           1.72       6.11 r
+  u_form_ppdu/U540/Z (DELLN1X2)                           7.54      13.65 r
+  u_form_ppdu/U6852/QN (NAND2X1)                         76.94      90.59 f
+  u_form_ppdu/U9783/QN (NAND2X0)                          1.96      92.55 r
+  u_form_ppdu/U9805/Z (NBUFFX2)                          22.74     115.29 r
+  u_form_ppdu/U5827/QN (NAND2X0)                         31.35     146.64 f
+  u_form_ppdu/U4429/ZN (INVX0)                           68.49     215.13 r
+  u_form_ppdu/U3998/Q (AO22X1)                           53.71     268.84 r
+  u_form_ppdu/i_fifo_reg[15][8]/D (SDFFX1)                0.32     269.15 r
+  data arrival time                                                269.15
+
+  clock SCAN_CLK (rise edge)                           1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/i_fifo_reg[15][8]/CLK (SDFFX1)              0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -269.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      728.69
+
+
+  Startpoint: u_controller/start_frame_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_form_ppdu/i_fifo_reg[15][9]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_controller/start_frame_reg/CLK (SDFFARX1)             0.00 #     0.00 r
+  u_controller/start_frame_reg/Q (SDFFARX1)               1.20       1.20 f
+  u_controller/start_frame (controller_test_1)            0.00       1.20 f
+  u_form_ppdu/start_frame (form_ppdu_test_1)              0.00       1.20 f
+  u_form_ppdu/U10045/ZN (INVX0)                           1.70       2.90 r
+  u_form_ppdu/U10056/QN (NAND2X0)                         1.49       4.39 f
+  u_form_ppdu/U7100/QN (NOR2X0)                           1.72       6.11 r
+  u_form_ppdu/U540/Z (DELLN1X2)                           7.54      13.65 r
+  u_form_ppdu/U6852/QN (NAND2X1)                         76.94      90.59 f
+  u_form_ppdu/U9783/QN (NAND2X0)                          1.96      92.55 r
+  u_form_ppdu/U9805/Z (NBUFFX2)                          22.74     115.29 r
+  u_form_ppdu/U5827/QN (NAND2X0)                         31.35     146.64 f
+  u_form_ppdu/U4429/ZN (INVX0)                           68.49     215.13 r
+  u_form_ppdu/U3997/Q (AO22X1)                           53.71     268.84 r
+  u_form_ppdu/i_fifo_reg[15][9]/D (SDFFX1)                0.32     269.15 r
+  data arrival time                                                269.15
+
+  clock SCAN_CLK (rise edge)                           1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/i_fifo_reg[15][9]/CLK (SDFFX1)              0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -269.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      728.69
+
+
+  Startpoint: u_controller/start_frame_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_form_ppdu/i_fifo_reg[15][10]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_controller/start_frame_reg/CLK (SDFFARX1)             0.00 #     0.00 r
+  u_controller/start_frame_reg/Q (SDFFARX1)               1.20       1.20 f
+  u_controller/start_frame (controller_test_1)            0.00       1.20 f
+  u_form_ppdu/start_frame (form_ppdu_test_1)              0.00       1.20 f
+  u_form_ppdu/U10045/ZN (INVX0)                           1.70       2.90 r
+  u_form_ppdu/U10056/QN (NAND2X0)                         1.49       4.39 f
+  u_form_ppdu/U7100/QN (NOR2X0)                           1.72       6.11 r
+  u_form_ppdu/U540/Z (DELLN1X2)                           7.54      13.65 r
+  u_form_ppdu/U6852/QN (NAND2X1)                         76.94      90.59 f
+  u_form_ppdu/U9783/QN (NAND2X0)                          1.96      92.55 r
+  u_form_ppdu/U9805/Z (NBUFFX2)                          22.74     115.29 r
+  u_form_ppdu/U5827/QN (NAND2X0)                         31.35     146.64 f
+  u_form_ppdu/U4429/ZN (INVX0)                           68.49     215.13 r
+  u_form_ppdu/U3996/Q (AO22X1)                           53.71     268.84 r
+  u_form_ppdu/i_fifo_reg[15][10]/D (SDFFX1)               0.32     269.15 r
+  data arrival time                                                269.15
+
+  clock SCAN_CLK (rise edge)                           1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/i_fifo_reg[15][10]/CLK (SDFFX1)             0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -269.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      728.69
+
+
+  Startpoint: u_controller/start_frame_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_form_ppdu/i_fifo_reg[15][11]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_controller/start_frame_reg/CLK (SDFFARX1)             0.00 #     0.00 r
+  u_controller/start_frame_reg/Q (SDFFARX1)               1.20       1.20 f
+  u_controller/start_frame (controller_test_1)            0.00       1.20 f
+  u_form_ppdu/start_frame (form_ppdu_test_1)              0.00       1.20 f
+  u_form_ppdu/U10045/ZN (INVX0)                           1.70       2.90 r
+  u_form_ppdu/U10056/QN (NAND2X0)                         1.49       4.39 f
+  u_form_ppdu/U7100/QN (NOR2X0)                           1.72       6.11 r
+  u_form_ppdu/U540/Z (DELLN1X2)                           7.54      13.65 r
+  u_form_ppdu/U6852/QN (NAND2X1)                         76.94      90.59 f
+  u_form_ppdu/U9783/QN (NAND2X0)                          1.96      92.55 r
+  u_form_ppdu/U9805/Z (NBUFFX2)                          22.74     115.29 r
+  u_form_ppdu/U5827/QN (NAND2X0)                         31.35     146.64 f
+  u_form_ppdu/U4429/ZN (INVX0)                           68.49     215.13 r
+  u_form_ppdu/U3995/Q (AO22X1)                           53.71     268.84 r
+  u_form_ppdu/i_fifo_reg[15][11]/D (SDFFX1)               0.32     269.15 r
+  data arrival time                                                269.15
+
+  clock SCAN_CLK (rise edge)                           1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/i_fifo_reg[15][11]/CLK (SDFFX1)             0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -269.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      728.69
+
+
+  Startpoint: u_controller/start_frame_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_form_ppdu/q_fifo_reg[26][8]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_controller/start_frame_reg/CLK (SDFFARX1)             0.00 #     0.00 r
+  u_controller/start_frame_reg/Q (SDFFARX1)               1.20       1.20 f
+  u_controller/start_frame (controller_test_1)            0.00       1.20 f
+  u_form_ppdu/start_frame (form_ppdu_test_1)              0.00       1.20 f
+  u_form_ppdu/U10045/ZN (INVX0)                           1.70       2.90 r
+  u_form_ppdu/U10056/QN (NAND2X0)                         1.49       4.39 f
+  u_form_ppdu/U7100/QN (NOR2X0)                           1.72       6.11 r
+  u_form_ppdu/U540/Z (DELLN1X2)                           7.54      13.65 r
+  u_form_ppdu/U6852/QN (NAND2X1)                         76.94      90.59 f
+  u_form_ppdu/U9783/QN (NAND2X0)                          1.96      92.55 r
+  u_form_ppdu/U9806/Z (NBUFFX2)                          22.74     115.29 r
+  u_form_ppdu/U5775/QN (NAND2X0)                         31.35     146.64 f
+  u_form_ppdu/U4176/ZN (INVX0)                           68.49     215.13 r
+  u_form_ppdu/U479/Q (AO22X1)                            53.71     268.84 r
+  u_form_ppdu/q_fifo_reg[26][8]/D (SDFFX1)                0.32     269.15 r
+  data arrival time                                                269.15
+
+  clock SCAN_CLK (rise edge)                           1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/q_fifo_reg[26][8]/CLK (SDFFX1)              0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -269.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      728.69
+
+
+  Startpoint: u_controller/start_frame_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_form_ppdu/q_fifo_reg[26][9]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  css_phy_tx_top     540000                saed90nm_max
+  form_ppdu_test_1   280000                saed90nm_max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_controller/start_frame_reg/CLK (SDFFARX1)             0.00 #     0.00 r
+  u_controller/start_frame_reg/Q (SDFFARX1)               1.20       1.20 f
+  u_controller/start_frame (controller_test_1)            0.00       1.20 f
+  u_form_ppdu/start_frame (form_ppdu_test_1)              0.00       1.20 f
+  u_form_ppdu/U10045/ZN (INVX0)                           1.70       2.90 r
+  u_form_ppdu/U10056/QN (NAND2X0)                         1.49       4.39 f
+  u_form_ppdu/U7100/QN (NOR2X0)                           1.72       6.11 r
+  u_form_ppdu/U540/Z (DELLN1X2)                           7.54      13.65 r
+  u_form_ppdu/U6852/QN (NAND2X1)                         76.94      90.59 f
+  u_form_ppdu/U9783/QN (NAND2X0)                          1.96      92.55 r
+  u_form_ppdu/U9806/Z (NBUFFX2)                          22.74     115.29 r
+  u_form_ppdu/U5775/QN (NAND2X0)                         31.35     146.64 f
+  u_form_ppdu/U4176/ZN (INVX0)                           68.49     215.13 r
+  u_form_ppdu/U478/Q (AO22X1)                            53.71     268.84 r
+  u_form_ppdu/q_fifo_reg[26][9]/D (SDFFX1)                0.32     269.15 r
+  data arrival time                                                269.15
+
+  clock SCAN_CLK (rise edge)                           1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  clock uncertainty                                      -2.00     998.00
+  u_form_ppdu/q_fifo_reg[26][9]/CLK (SDFFX1)              0.00     998.00 r
+  library setup time                                     -0.16     997.84
+  data required time                                               997.84
+  --------------------------------------------------------------------------
+  data required time                                               997.84
+  data arrival time                                               -269.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                      728.69
+
+
+1
