@@ -1,0 +1,524 @@
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do run_matlab_golden.do
+# 
+# ============================================================
+# Clean and create work library
+# ============================================================
+# 
+# if {[file exists work]} {
+#     vdel -lib work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is ik@MOHAMED-ABDELHA.
+# 
+# vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# vmap work work
+# QuestaSim-64 vmap 2021.1 Lib Mapping Utility 2021.01 Jan 19 2021
+# vmap work work 
+# Modifying modelsim.ini
+# 
+# 
+# ============================================================
+# Compile RTL
+# ============================================================
+# 
+# vlog ../new_controller.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:05 on Sep 18,2026
+# vlog -reportprogress 300 ../new_controller.v 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 09:46:05 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../zero_padding.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:05 on Sep 18,2026
+# vlog -reportprogress 300 ../zero_padding.v 
+# -- Compiling module zero_padding
+# 
+# Top level modules:
+# 	zero_padding
+# End time: 09:46:05 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../demux_iq.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:05 on Sep 18,2026
+# vlog -reportprogress 300 ../demux_iq.v 
+# -- Compiling module demux_iq
+# 
+# Top level modules:
+# 	demux_iq
+# End time: 09:46:05 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../symbol_mapper.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:05 on Sep 18,2026
+# vlog -reportprogress 300 ../symbol_mapper.v 
+# -- Compiling module symbol_mapper
+# 
+# Top level modules:
+# 	symbol_mapper
+# End time: 09:46:05 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../bit_interleaver.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:05 on Sep 18,2026
+# vlog -reportprogress 300 ../bit_interleaver.v 
+# -- Compiling module bit_interleaver
+# 
+# Top level modules:
+# 	bit_interleaver
+# End time: 09:46:05 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../form_ppdu.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:06 on Sep 18,2026
+# vlog -reportprogress 300 ../form_ppdu.v 
+# -- Compiling module form_ppdu
+# 
+# Top level modules:
+# 	form_ppdu
+# End time: 09:46:06 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../qpsk_mapper.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:06 on Sep 18,2026
+# vlog -reportprogress 300 ../qpsk_mapper.v 
+# -- Compiling module qpsk_mapper
+# 
+# Top level modules:
+# 	qpsk_mapper
+# End time: 09:46:06 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../dqpsk_encoder.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:06 on Sep 18,2026
+# vlog -reportprogress 300 ../dqpsk_encoder.v 
+# -- Compiling module dqpsk_encoder
+# 
+# Top level modules:
+# 	dqpsk_encoder
+# End time: 09:46:06 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog ../csk_sequencer.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:06 on Sep 18,2026
+# vlog -reportprogress 300 ../csk_sequencer.v 
+# -- Compiling module csk_sequencer
+# 
+# Top level modules:
+# 	csk_sequencer
+# End time: 09:46:06 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../csk_waveform_selector.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:06 on Sep 18,2026
+# vlog -reportprogress 300 ../csk_waveform_selector.v 
+# -- Compiling module csk_waveform_selector
+# 
+# Top level modules:
+# 	csk_waveform_selector
+# End time: 09:46:06 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../csk_waveform_rom.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:06 on Sep 18,2026
+# vlog -reportprogress 300 ../csk_waveform_rom.v 
+# -- Compiling module csk_waveform_rom
+# 
+# Top level modules:
+# 	csk_waveform_rom
+# End time: 09:46:06 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog ../dqpsk_csk_multiplier.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:06 on Sep 18,2026
+# vlog -reportprogress 300 ../dqpsk_csk_multiplier.v 
+# -- Compiling module dqpsk_csk_multiplier
+# 
+# Top level modules:
+# 	dqpsk_csk_multiplier
+# End time: 09:46:06 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog ../css_phy_tx_top.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:06 on Sep 18,2026
+# vlog -reportprogress 300 ../css_phy_tx_top.v 
+# -- Compiling module css_phy_tx_top
+# 
+# Top level modules:
+# 	css_phy_tx_top
+# End time: 09:46:06 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# ============================================================
+# Compile MATLAB Golden Testbench
+# ============================================================
+# 
+# vlog matlab_golden_tb.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:06 on Sep 18,2026
+# vlog -reportprogress 300 matlab_golden_tb.v 
+# -- Compiling module matlab_golden_tb
+# 
+# Top level modules:
+# 	matlab_golden_tb
+# End time: 09:46:07 on Sep 18,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# 
+# ============================================================
+# Run MATLAB Golden Testbench
+# ============================================================
+# 
+# echo ""
+# 
+# echo "============================================================"
+# ============================================================
+# echo "        RUNNING MATLAB GOLDEN REGRESSION"
+#         RUNNING MATLAB GOLDEN REGRESSION
+# echo "============================================================"
+# ============================================================
+# echo ""
+# 
+# 
+# vsim -c work.matlab_golden_tb
+# vsim -c work.matlab_golden_tb 
+# Start time: 09:46:07 on Sep 18,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.matlab_golden_tb(fast)
+# 
+# run -all
+# DQ mismatch rate0 idx=56 RTL=(-1,1) MATLAB=(1,1)
+# DQ mismatch rate0 idx=57 RTL=(-1,-1) MATLAB=(1,1)
+# DQ mismatch rate0 idx=59 RTL=(1,-1) MATLAB=(-1,-1)
+# DQ mismatch rate0 idx=60 RTL=(-1,1) MATLAB=(1,1)
+# DQ mismatch rate0 idx=62 RTL=(1,1) MATLAB=(1,-1)
+# [1455000] TOP CSK START: expected_symbols=112 expected_groups=28
+# [1465000] SEQUENCER START: num_groups=28 m=1
+# [2985000] GROUP END: group_count=0 num_groups=28
+# [4605000] GROUP END: group_count=1 num_groups=28
+# [6825000] GROUP END: group_count=2 num_groups=28
+# [8445000] GROUP END: group_count=3 num_groups=28
+# [10665000] GROUP END: group_count=4 num_groups=28
+# [12285000] GROUP END: group_count=5 num_groups=28
+# [14505000] GROUP END: group_count=6 num_groups=28
+# [16125000] GROUP END: group_count=7 num_groups=28
+# [18345000] GROUP END: group_count=8 num_groups=28
+# [19965000] GROUP END: group_count=9 num_groups=28
+# [22185000] GROUP END: group_count=10 num_groups=28
+# [23805000] GROUP END: group_count=11 num_groups=28
+# [26025000] GROUP END: group_count=12 num_groups=28
+# [27645000] GROUP END: group_count=13 num_groups=28
+# CSS mismatch rate0 idx=2131 RTL=(-1,-1) MATLAB=(-1,1)
+# CSS mismatch rate0 idx=2132 RTL=(-1,1) MATLAB=(1,1)
+# CSS mismatch rate0 idx=2133 RTL=(0,2) MATLAB=(2,0)
+# CSS mismatch rate0 idx=2134 RTL=(1,1) MATLAB=(1,-1)
+# CSS mismatch rate0 idx=2135 RTL=(1,-1) MATLAB=(-1,-1)
+# [29865000] GROUP END: group_count=14 num_groups=28
+# [31485000] GROUP END: group_count=15 num_groups=28
+# [33705000] GROUP END: group_count=16 num_groups=28
+# [35325000] GROUP END: group_count=17 num_groups=28
+# [37545000] GROUP END: group_count=18 num_groups=28
+# [39165000] GROUP END: group_count=19 num_groups=28
+# [41385000] GROUP END: group_count=20 num_groups=28
+# [43005000] GROUP END: group_count=21 num_groups=28
+# [45225000] GROUP END: group_count=22 num_groups=28
+# [46845000] GROUP END: group_count=23 num_groups=28
+# [49065000] GROUP END: group_count=24 num_groups=28
+# [50685000] GROUP END: group_count=25 num_groups=28
+# [52905000] GROUP END: group_count=26 num_groups=28
+# [54525000] GROUP END: group_count=27 num_groups=28
+# ============================================================
+# MATLAB GOLDEN CHECK rate=0 (  1 Mbps)
+# DQPSK: RTL=112 MATLAB=112 mismatches=31
+# CSS  : RTL=4256 MATLAB-derived=4256 mismatches=930
+# X/Z errors=0
+# RESULT: FAIL
+# [58445000] TOP CSK START: expected_symbols=352 expected_groups=88
+# [58455000] SEQUENCER START: num_groups=88 m=1
+# [59975000] GROUP END: group_count=0 num_groups=88
+# [61595000] GROUP END: group_count=1 num_groups=88
+# [63815000] GROUP END: group_count=2 num_groups=88
+# [65435000] GROUP END: group_count=3 num_groups=88
+# [67655000] GROUP END: group_count=4 num_groups=88
+# [69275000] GROUP END: group_count=5 num_groups=88
+# [71495000] GROUP END: group_count=6 num_groups=88
+# [73115000] GROUP END: group_count=7 num_groups=88
+# [75335000] GROUP END: group_count=8 num_groups=88
+# [76955000] GROUP END: group_count=9 num_groups=88
+# [79175000] GROUP END: group_count=10 num_groups=88
+# [80795000] GROUP END: group_count=11 num_groups=88
+# [83015000] GROUP END: group_count=12 num_groups=88
+# [84635000] GROUP END: group_count=13 num_groups=88
+# [86855000] GROUP END: group_count=14 num_groups=88
+# [88475000] GROUP END: group_count=15 num_groups=88
+# [90695000] GROUP END: group_count=16 num_groups=88
+# [92315000] GROUP END: group_count=17 num_groups=88
+# [94535000] GROUP END: group_count=18 num_groups=88
+# [96155000] GROUP END: group_count=19 num_groups=88
+# [98375000] GROUP END: group_count=20 num_groups=88
+# [99995000] GROUP END: group_count=21 num_groups=88
+# [102215000] GROUP END: group_count=22 num_groups=88
+# [103835000] GROUP END: group_count=23 num_groups=88
+# [106055000] GROUP END: group_count=24 num_groups=88
+# [107675000] GROUP END: group_count=25 num_groups=88
+# [109895000] GROUP END: group_count=26 num_groups=88
+# [111515000] GROUP END: group_count=27 num_groups=88
+# [113735000] GROUP END: group_count=28 num_groups=88
+# [115355000] GROUP END: group_count=29 num_groups=88
+# [117575000] GROUP END: group_count=30 num_groups=88
+# [119195000] GROUP END: group_count=31 num_groups=88
+# [121415000] GROUP END: group_count=32 num_groups=88
+# [123035000] GROUP END: group_count=33 num_groups=88
+# [125255000] GROUP END: group_count=34 num_groups=88
+# [126875000] GROUP END: group_count=35 num_groups=88
+# [129095000] GROUP END: group_count=36 num_groups=88
+# [130715000] GROUP END: group_count=37 num_groups=88
+# [132935000] GROUP END: group_count=38 num_groups=88
+# [134555000] GROUP END: group_count=39 num_groups=88
+# [136775000] GROUP END: group_count=40 num_groups=88
+# [138395000] GROUP END: group_count=41 num_groups=88
+# [140615000] GROUP END: group_count=42 num_groups=88
+# [142235000] GROUP END: group_count=43 num_groups=88
+# [144455000] GROUP END: group_count=44 num_groups=88
+# [146075000] GROUP END: group_count=45 num_groups=88
+# [148295000] GROUP END: group_count=46 num_groups=88
+# [149915000] GROUP END: group_count=47 num_groups=88
+# [152135000] GROUP END: group_count=48 num_groups=88
+# [153755000] GROUP END: group_count=49 num_groups=88
+# [155975000] GROUP END: group_count=50 num_groups=88
+# [157595000] GROUP END: group_count=51 num_groups=88
+# [159815000] GROUP END: group_count=52 num_groups=88
+# [161435000] GROUP END: group_count=53 num_groups=88
+# [163655000] GROUP END: group_count=54 num_groups=88
+# [165275000] GROUP END: group_count=55 num_groups=88
+# [167495000] GROUP END: group_count=56 num_groups=88
+# [169115000] GROUP END: group_count=57 num_groups=88
+# [171335000] GROUP END: group_count=58 num_groups=88
+# [172955000] GROUP END: group_count=59 num_groups=88
+# [175175000] GROUP END: group_count=60 num_groups=88
+# [176795000] GROUP END: group_count=61 num_groups=88
+# [179015000] GROUP END: group_count=62 num_groups=88
+# [180635000] GROUP END: group_count=63 num_groups=88
+# [182855000] GROUP END: group_count=64 num_groups=88
+# [184475000] GROUP END: group_count=65 num_groups=88
+# [186695000] GROUP END: group_count=66 num_groups=88
+# [188315000] GROUP END: group_count=67 num_groups=88
+# [190535000] GROUP END: group_count=68 num_groups=88
+# [192155000] GROUP END: group_count=69 num_groups=88
+# [194375000] GROUP END: group_count=70 num_groups=88
+# [195995000] GROUP END: group_count=71 num_groups=88
+# [198215000] GROUP END: group_count=72 num_groups=88
+# [199835000] GROUP END: group_count=73 num_groups=88
+# [202055000] GROUP END: group_count=74 num_groups=88
+# [203675000] GROUP END: group_count=75 num_groups=88
+# [205895000] GROUP END: group_count=76 num_groups=88
+# [207515000] GROUP END: group_count=77 num_groups=88
+# [209735000] GROUP END: group_count=78 num_groups=88
+# [211355000] GROUP END: group_count=79 num_groups=88
+# [213575000] GROUP END: group_count=80 num_groups=88
+# [215195000] GROUP END: group_count=81 num_groups=88
+# [217415000] GROUP END: group_count=82 num_groups=88
+# [219035000] GROUP END: group_count=83 num_groups=88
+# [221255000] GROUP END: group_count=84 num_groups=88
+# [222875000] GROUP END: group_count=85 num_groups=88
+# [225095000] GROUP END: group_count=86 num_groups=88
+# [226715000] GROUP END: group_count=87 num_groups=88
+# ============================================================
+# MATLAB GOLDEN CHECK rate=1 (250 kbps)
+# DQPSK: RTL=352 MATLAB=352 mismatches=0
+# CSS  : RTL=13376 MATLAB-derived=13376 mismatches=0
+# X/Z errors=0
+# RESULT: PASS
+# ============================================================
+# MATLAB GOLDEN REGRESSION COMPLETE
+# ** Note: $finish    : matlab_golden_tb.v(203)
+#    Time: 226775 ns  Iteration: 1  Instance: /matlab_golden_tb
+# 1
+# Break at matlab_golden_tb.v line 203
+# 
+# quit -sim
+# End time: 09:46:32 on Sep 18,2026, Elapsed time: 0:00:25
+# Errors: 0, Warnings: 0
+# 
+# 
+# vlog matlab_stage_debug_tb.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:46:32 on Sep 18,2026
+# vlog -reportprogress 300 matlab_stage_debug_tb.v 
+# -- Compiling module matlab_stage_debug_tb
+# 
+# Top level modules:
+# 	matlab_stage_debug_tb
+# End time: 09:46:32 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c work.matlab_stage_debug_tb
+# vsim -c work.matlab_stage_debug_tb 
+# Start time: 09:46:32 on Sep 18,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.matlab_stage_debug_tb(fast)
+# run -all
+# PPDU #0 RTL=(1,1) MATLAB=(1,1)
+# PPDU #1 RTL=(1,1) MATLAB=(1,1)
+# PPDU #2 RTL=(1,1) MATLAB=(1,1)
+# PPDU #3 RTL=(1,1) MATLAB=(1,1)
+# PPDU #4 RTL=(1,1) MATLAB=(1,1)
+# PPDU #5 RTL=(1,1) MATLAB=(1,1)
+# PPDU #6 RTL=(1,1) MATLAB=(1,1)
+# PPDU #7 RTL=(1,1) MATLAB=(1,1)
+# INT MISMATCH #0 RTL=(00000000000000000000000000001111,00000000000000000000000000001100) MATLAB=(00110001001100010011000100110001,00110000001100000011000100110001)
+# INT #0 RTL=(00000000000000000000000000001111,00000000000000000000000000001100) MATLAB=(00110001001100010011000100110001,00110000001100000011000100110001)
+# PPDU #8 RTL=(1,1) MATLAB=(1,1)
+# PPDU #9 RTL=(1,1) MATLAB=(1,1)
+# PPDU #10 RTL=(1,1) MATLAB=(1,1)
+# PPDU #11 RTL=(1,1) MATLAB=(1,1)
+# PPDU #12 RTL=(1,1) MATLAB=(1,1)
+# PPDU #13 RTL=(1,1) MATLAB=(1,1)
+# INT MISMATCH #1 RTL=(00000000000000000000000000001111,00000000000000000000000000001111) MATLAB=(00110001001100010011000100110001,00110001001100010011000100110001)
+# INT #1 RTL=(00000000000000000000000000001111,00000000000000000000000000001111) MATLAB=(00110001001100010011000100110001,00110001001100010011000100110001)
+# PPDU #14 RTL=(1,1) MATLAB=(1,1)
+# PPDU #15 RTL=(1,1) MATLAB=(1,1)
+# PPDU #16 RTL=(1,1) MATLAB=(1,1)
+# PPDU #17 RTL=(1,1) MATLAB=(1,1)
+# PPDU #18 RTL=(1,1) MATLAB=(1,1)
+# PPDU #19 RTL=(1,1) MATLAB=(1,1)
+# INT MISMATCH #2 RTL=(00000000000000000000000000001100,00000000000000000000000000000110) MATLAB=(00110000001100010011000100110000,00110001001100000011000100110000)
+# INT #2 RTL=(00000000000000000000000000001100,00000000000000000000000000000110) MATLAB=(00110000001100010011000100110000,00110001001100000011000100110000)
+# PPDU #20 RTL=(1,1) MATLAB=(1,1)
+# PPDU #21 RTL=(1,1) MATLAB=(1,1)
+# PPDU #22 RTL=(1,1) MATLAB=(1,1)
+# PPDU #23 RTL=(1,1) MATLAB=(1,1)
+# PPDU #24 RTL=(1,1) MATLAB=(1,1)
+# PPDU #25 RTL=(1,1) MATLAB=(1,1)
+# INT MISMATCH #3 RTL=(00000000000000000000000000000011,00000000000000000000000000000011) MATLAB=(00110001001100000011000000110001,00110001001100000011000100110000)
+# INT #3 RTL=(00000000000000000000000000000011,00000000000000000000000000000011) MATLAB=(00110001001100000011000000110001,00110001001100000011000100110000)
+# PPDU #26 RTL=(1,1) MATLAB=(1,1)
+# PPDU #27 RTL=(1,1) MATLAB=(1,1)
+# PPDU #28 RTL=(1,1) MATLAB=(1,1)
+# PPDU #29 RTL=(1,1) MATLAB=(1,1)
+# PPDU #30 RTL=(1,1) MATLAB=(1,1)
+# PPDU #31 RTL=(1,1) MATLAB=(1,1)
+# INT MISMATCH #4 RTL=(00000000000000000000000000000000,00000000000000000000000000000011) MATLAB=(00110000001100010011000000110001,00110000001100010011000000110001)
+# PPDU #32 RTL=(0,0) MATLAB=(0,0)
+# PPDU #33 RTL=(1,1) MATLAB=(1,1)
+# PPDU #34 RTL=(1,1) MATLAB=(1,1)
+# PPDU #35 RTL=(1,1) MATLAB=(1,1)
+# PPDU #36 RTL=(0,0) MATLAB=(0,0)
+# PPDU #37 RTL=(1,1) MATLAB=(1,1)
+# INT MISMATCH #5 RTL=(00000000000000000000000000001001,00000000000000000000000000000000) MATLAB=(00110001001100000011000100110000,00110000001100000011000000110000)
+# PPDU #38 RTL=(0,0) MATLAB=(0,0)
+# PPDU #39 RTL=(0,0) MATLAB=(0,0)
+# PPDU #40 RTL=(1,1) MATLAB=(1,1)
+# PPDU #41 RTL=(0,0) MATLAB=(0,0)
+# PPDU #42 RTL=(0,0) MATLAB=(0,0)
+# PPDU #43 RTL=(1,1) MATLAB=(1,1)
+# INT MISMATCH #6 RTL=(00000000000000000000000000001001,00000000000000000000000000001001) MATLAB=(00110001001100010011000100110001,00110001001100010011000000110000)
+# PPDU #44 RTL=(1,1) MATLAB=(1,1)
+# PPDU #45 RTL=(1,1) MATLAB=(1,1)
+# PPDU #46 RTL=(0,0) MATLAB=(0,0)
+# PPDU #47 RTL=(0,0) MATLAB=(0,0)
+# PPDU #48 RTL=(1,0) MATLAB=(1,0)
+# PPDU #49 RTL=(1,0) MATLAB=(1,0)
+# INT MISMATCH #7 RTL=(00000000000000000000000000000011,00000000000000000000000000001001) MATLAB=(00110001001100010011000100110001,00110000001100000011000100110001)
+# PPDU #50 RTL=(1,1) MATLAB=(1,1)
+# PPDU #51 RTL=(1,1) MATLAB=(1,1)
+# PPDU #52 RTL=(1,1) MATLAB=(1,1)
+# PPDU #53 RTL=(1,1) MATLAB=(1,1)
+# PPDU #54 RTL=(1,1) MATLAB=(1,1)
+# PPDU #55 RTL=(1,1) MATLAB=(1,1)
+# INT MISMATCH #8 RTL=(00000000000000000000000000001100,00000000000000000000000000001111) MATLAB=(00110000001100010011000000110001,00110000001100000011000100110001)
+# PPDU MISMATCH #56 RTL=(0,0) MATLAB=(0,1)
+# PPDU #56 RTL=(0,0) MATLAB=(0,1)
+# PPDU MISMATCH #57 RTL=(0,1) MATLAB=(1,0)
+# PPDU #57 RTL=(0,1) MATLAB=(1,0)
+# DQ MISMATCH #56 RTL=(-1,1) MATLAB=(1,1)
+# PPDU MISMATCH #59 RTL=(1,0) MATLAB=(0,0)
+# DQ MISMATCH #57 RTL=(-1,-1) MATLAB=(1,1)
+# PPDU MISMATCH #61 RTL=(1,1) MATLAB=(0,0)
+# DQ MISMATCH #59 RTL=(1,-1) MATLAB=(-1,-1)
+# INT MISMATCH #9 RTL=(00000000000000000000000000000110,00000000000000000000000000001001) MATLAB=(00110000001100010011000100110000,00110001001100010011000000110000)
+# PPDU MISMATCH #62 RTL=(0,0) MATLAB=(0,1)
+# DQ MISMATCH #60 RTL=(-1,1) MATLAB=(1,1)
+# PPDU MISMATCH #63 RTL=(0,0) MATLAB=(1,0)
+# PPDU MISMATCH #64 RTL=(0,1) MATLAB=(0,0)
+# DQ MISMATCH #62 RTL=(1,1) MATLAB=(1,-1)
+# PPDU MISMATCH #65 RTL=(0,1) MATLAB=(1,1)
+# PPDU MISMATCH #67 RTL=(0,0) MATLAB=(1,1)
+# DQ MISMATCH #65 RTL=(1,-1) MATLAB=(-1,-1)
+# DQ MISMATCH #66 RTL=(-1,-1) MATLAB=(-1,1)
+# DQ MISMATCH #67 RTL=(1,-1) MATLAB=(-1,1)
+# PPDU MISMATCH #70 RTL=(0,0) MATLAB=(1,0)
+# PPDU MISMATCH #71 RTL=(1,0) MATLAB=(0,0)
+# DQ MISMATCH #69 RTL=(-1,1) MATLAB=(1,1)
+# PPDU MISMATCH #73 RTL=(0,0) MATLAB=(1,1)
+# DQ MISMATCH #71 RTL=(-1,-1) MATLAB=(1,-1)
+# DQ MISMATCH #73 RTL=(1,-1) MATLAB=(1,1)
+# DQ MISMATCH #74 RTL=(-1,-1) MATLAB=(1,-1)
+# DQ MISMATCH #76 RTL=(-1,1) MATLAB=(1,1)
+# DQ MISMATCH #77 RTL=(-1,-1) MATLAB=(1,-1)
+# DQ MISMATCH #78 RTL=(1,1) MATLAB=(1,-1)
+# [1455000] TOP CSK START: expected_symbols=112 expected_groups=28
+# [1465000] SEQUENCER START: num_groups=28 m=1
+# [2985000] GROUP END: group_count=0 num_groups=28
+# [4605000] GROUP END: group_count=1 num_groups=28
+# [6825000] GROUP END: group_count=2 num_groups=28
+# [8445000] GROUP END: group_count=3 num_groups=28
+# [10665000] GROUP END: group_count=4 num_groups=28
+# [12285000] GROUP END: group_count=5 num_groups=28
+# [14505000] GROUP END: group_count=6 num_groups=28
+# [16125000] GROUP END: group_count=7 num_groups=28
+# [18345000] GROUP END: group_count=8 num_groups=28
+# [19965000] GROUP END: group_count=9 num_groups=28
+# [22185000] GROUP END: group_count=10 num_groups=28
+# [23805000] GROUP END: group_count=11 num_groups=28
+# [26025000] GROUP END: group_count=12 num_groups=28
+# [27645000] GROUP END: group_count=13 num_groups=28
+# [29865000] GROUP END: group_count=14 num_groups=28
+# [31485000] GROUP END: group_count=15 num_groups=28
+# [33705000] GROUP END: group_count=16 num_groups=28
+# [35325000] GROUP END: group_count=17 num_groups=28
+# [37545000] GROUP END: group_count=18 num_groups=28
+# [39165000] GROUP END: group_count=19 num_groups=28
+# [41385000] GROUP END: group_count=20 num_groups=28
+# [43005000] GROUP END: group_count=21 num_groups=28
+# [45225000] GROUP END: group_count=22 num_groups=28
+# [46845000] GROUP END: group_count=23 num_groups=28
+# [49065000] GROUP END: group_count=24 num_groups=28
+# [50685000] GROUP END: group_count=25 num_groups=28
+# [52905000] GROUP END: group_count=26 num_groups=28
+# [54525000] GROUP END: group_count=27 num_groups=28
+# 
+# ================ V9 STAGE RESULT ================
+# INTERLEAVER RTL=16 EXP=16  ERR=16
+# PPDU       RTL=112 EXP=112 ERR=39
+# DQPSK      RTL=112 EXP=112 ERR=31
+# ==================================================
+# ** Note: $finish    : matlab_stage_debug_tb.v(97)
+#    Time: 100275 ns  Iteration: 1  Instance: /matlab_stage_debug_tb
+# 1
+# Break at matlab_stage_debug_tb.v line 97
+# 
+# 
+# 
+
+
