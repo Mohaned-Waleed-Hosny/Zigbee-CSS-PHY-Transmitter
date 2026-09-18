@@ -1,0 +1,595 @@
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do run_master_tb.do
+# ** Error (suppressible): (vdel-19) Failed to access library 'work' at "work".
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vdel-57) Library 'work' is missing or is not a valid QuestaSim library.
+# ** Error: C:/questasim64_2021.1/win64/vdel failed.
+# Error in macro ./run_master_tb.do line 1
+# C:/questasim64_2021.1/win64/vdel failed.
+#     while executing
+# "error [FixExecError $msg]"
+#     (procedure "vdel" line 6)
+#     invoked from within
+# "vdel -all"
+vlib work
+vmap work work
+# QuestaSim-64 vmap 2021.1 Lib Mapping Utility 2021.01 Jan 19 2021
+# vmap work work 
+# Copying C:/questasim64_2021.1/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+vlog -sv dqpsk_encoder.v qpsk_mapper.v form_ppdu.v new_controller.v zero_padding.v csk_waveform_selector.v dqpsk_csk_multiplier.v symbol_mapper.v csk_sequencer.v csk_waveform_rom.v demux_iq.v bit_interleaver.v css_phy_tx_top.v master_tb_css_phy_tx_top.v
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 09:31:48 on Sep 18,2026
+# vlog -reportprogress 300 -sv dqpsk_encoder.v qpsk_mapper.v form_ppdu.v new_controller.v zero_padding.v csk_waveform_selector.v dqpsk_csk_multiplier.v symbol_mapper.v csk_sequencer.v csk_waveform_rom.v demux_iq.v bit_interleaver.v css_phy_tx_top.v master_tb_css_phy_tx_top.v 
+# -- Compiling module dqpsk_encoder
+# -- Compiling module qpsk_mapper
+# -- Compiling module form_ppdu
+# -- Compiling module controller
+# -- Compiling module zero_padding
+# -- Compiling module csk_waveform_selector
+# -- Compiling module dqpsk_csk_multiplier
+# -- Compiling module symbol_mapper
+# -- Compiling module csk_sequencer
+# -- Compiling module csk_waveform_rom
+# -- Compiling module demux_iq
+# -- Compiling module bit_interleaver
+# -- Compiling module css_phy_tx_top
+# -- Compiling module master_tb_css_phy_tx_top
+# 
+# Top level modules:
+# 	master_tb_css_phy_tx_top
+# End time: 09:31:48 on Sep 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+vsim -voptargs=+acc work.master_tb_css_phy_tx_top
+# vsim -voptargs="+acc" work.master_tb_css_phy_tx_top 
+# Start time: 09:31:48 on Sep 18,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "csk_sequencer(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "zero_padding(fast)".
+# Loading sv_std.std
+# Loading work.master_tb_css_phy_tx_top(fast)
+# Loading work.css_phy_tx_top(fast)
+# Loading work.controller(fast)
+# Loading work.zero_padding(fast)
+# Loading work.demux_iq(fast)
+# Loading work.symbol_mapper(fast)
+# Loading work.bit_interleaver(fast)
+# Loading work.form_ppdu(fast)
+# Loading work.qpsk_mapper(fast)
+# Loading work.dqpsk_encoder(fast)
+# Loading work.csk_sequencer(fast)
+# Loading work.csk_waveform_selector(fast)
+# Loading work.csk_waveform_rom(fast)
+# Loading work.dqpsk_csk_multiplier(fast)
+
+add wave -r sim:/master_tb_css_phy_tx_top/*
+
+run -all
+# ** Warning: (vsim-7) Failed to open readmem file "../rom/codeword_1Mbs.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : symbol_mapper.v(20)
+#    Time: 0 ps  Iteration: 0  Instance: /master_tb_css_phy_tx_top/dut/u_symbol_mapper
+# ** Warning: (vsim-7) Failed to open readmem file "../rom/codeword_250kbs.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : symbol_mapper.v(21)
+#    Time: 0 ps  Iteration: 0  Instance: /master_tb_css_phy_tx_top/dut/u_symbol_mapper
+# 
+# ================================================================
+# CASE 1
+#   Payload length : 4 bytes
+#   Data rate      :   1 Mbps
+#   Pattern        : 2
+#   Expected DQPSK : 80 symbols
+# ================================================================
+# [1025000] TOP CSK START: expected_symbols=80 expected_groups=20
+# [1025000] PASS: DQPSK symbol count = 80
+# [1035000] SEQUENCER START: num_groups=20 m=1
+# [2555000] GROUP END: group_count=0 num_groups=20
+# [4175000] GROUP END: group_count=1 num_groups=20
+# [6395000] GROUP END: group_count=2 num_groups=20
+# [8015000] GROUP END: group_count=3 num_groups=20
+# [10235000] GROUP END: group_count=4 num_groups=20
+# [11855000] GROUP END: group_count=5 num_groups=20
+# [14075000] GROUP END: group_count=6 num_groups=20
+# [15695000] GROUP END: group_count=7 num_groups=20
+# [17915000] GROUP END: group_count=8 num_groups=20
+# [19535000] GROUP END: group_count=9 num_groups=20
+# [21755000] GROUP END: group_count=10 num_groups=20
+# [23375000] GROUP END: group_count=11 num_groups=20
+# [25595000] GROUP END: group_count=12 num_groups=20
+# [27215000] GROUP END: group_count=13 num_groups=20
+# [29435000] GROUP END: group_count=14 num_groups=20
+# [31055000] GROUP END: group_count=15 num_groups=20
+# [33275000] GROUP END: group_count=16 num_groups=20
+# [34895000] GROUP END: group_count=17 num_groups=20
+# [37115000] GROUP END: group_count=18 num_groups=20
+# [38735000] GROUP END: group_count=19 num_groups=20
+# [38775000] PASS: done_Tx asserted.
+# [38775000] PASS: CSS sample count = 3040.
+# [38775000] PASS: subchirp ticks = 80.
+# [38775000] PASS: completed 38-sample subchirps = 80.
+# 
+# CASE 1 SUMMARY
+#   DQPSK symbols observed : 80
+#   CSS valid samples      : 3040
+#   Subchirp ticks         : 80
+#   Completed 38-sample    : 80
+#   X/Z errors             : 0
+#   Symbol-count errors    : 0
+#   Subchirp errors        : 0
+#   Protocol errors        : 0
+#   Done errors             : 0
+# 
+# ================================================================
+# CASE 2
+#   Payload length : 1 bytes
+#   Data rate      :   1 Mbps
+#   Pattern        : 0
+#   Expected DQPSK : 64 symbols
+# ================================================================
+# [39585000] TOP CSK START: expected_symbols=64 expected_groups=16
+# [39585000] PASS: DQPSK symbol count = 64
+# [39595000] SEQUENCER START: num_groups=16 m=1
+# [41115000] GROUP END: group_count=0 num_groups=16
+# [42735000] GROUP END: group_count=1 num_groups=16
+# [44955000] GROUP END: group_count=2 num_groups=16
+# [46575000] GROUP END: group_count=3 num_groups=16
+# [48795000] GROUP END: group_count=4 num_groups=16
+# [50415000] GROUP END: group_count=5 num_groups=16
+# [52635000] GROUP END: group_count=6 num_groups=16
+# [54255000] GROUP END: group_count=7 num_groups=16
+# [56475000] GROUP END: group_count=8 num_groups=16
+# [58095000] GROUP END: group_count=9 num_groups=16
+# [60315000] GROUP END: group_count=10 num_groups=16
+# [61935000] GROUP END: group_count=11 num_groups=16
+# [64155000] GROUP END: group_count=12 num_groups=16
+# [65775000] GROUP END: group_count=13 num_groups=16
+# [67995000] GROUP END: group_count=14 num_groups=16
+# [69615000] GROUP END: group_count=15 num_groups=16
+# [69655000] PASS: done_Tx asserted.
+# [69655000] PASS: CSS sample count = 2432.
+# [69655000] PASS: subchirp ticks = 64.
+# [69655000] PASS: completed 38-sample subchirps = 64.
+# 
+# CASE 2 SUMMARY
+#   DQPSK symbols observed : 64
+#   CSS valid samples      : 2432
+#   Subchirp ticks         : 64
+#   Completed 38-sample    : 64
+#   X/Z errors             : 0
+#   Symbol-count errors    : 0
+#   Subchirp errors        : 0
+#   Protocol errors        : 0
+#   Done errors             : 0
+# 
+# ================================================================
+# CASE 3
+#   Payload length : 8 bytes
+#   Data rate      :   1 Mbps
+#   Pattern        : 1
+#   Expected DQPSK : 100 symbols
+# ================================================================
+# [70965000] TOP CSK START: expected_symbols=100 expected_groups=25
+# [70965000] PASS: DQPSK symbol count = 100
+# [70975000] SEQUENCER START: num_groups=25 m=1
+# [72495000] GROUP END: group_count=0 num_groups=25
+# [74115000] GROUP END: group_count=1 num_groups=25
+# [76335000] GROUP END: group_count=2 num_groups=25
+# [77955000] GROUP END: group_count=3 num_groups=25
+# [80175000] GROUP END: group_count=4 num_groups=25
+# [81795000] GROUP END: group_count=5 num_groups=25
+# [84015000] GROUP END: group_count=6 num_groups=25
+# [85635000] GROUP END: group_count=7 num_groups=25
+# [87855000] GROUP END: group_count=8 num_groups=25
+# [89475000] GROUP END: group_count=9 num_groups=25
+# [91695000] GROUP END: group_count=10 num_groups=25
+# [93315000] GROUP END: group_count=11 num_groups=25
+# [95535000] GROUP END: group_count=12 num_groups=25
+# [97155000] GROUP END: group_count=13 num_groups=25
+# [99375000] GROUP END: group_count=14 num_groups=25
+# [100995000] GROUP END: group_count=15 num_groups=25
+# [103215000] GROUP END: group_count=16 num_groups=25
+# [104835000] GROUP END: group_count=17 num_groups=25
+# [107055000] GROUP END: group_count=18 num_groups=25
+# [108675000] GROUP END: group_count=19 num_groups=25
+# [110895000] GROUP END: group_count=20 num_groups=25
+# [112515000] GROUP END: group_count=21 num_groups=25
+# [114735000] GROUP END: group_count=22 num_groups=25
+# [116355000] GROUP END: group_count=23 num_groups=25
+# [118575000] GROUP END: group_count=24 num_groups=25
+# [118615000] PASS: done_Tx asserted.
+# [118615000] PASS: CSS sample count = 3800.
+# [118615000] PASS: subchirp ticks = 100.
+# [118615000] PASS: completed 38-sample subchirps = 100.
+# 
+# CASE 3 SUMMARY
+#   DQPSK symbols observed : 100
+#   CSS valid samples      : 3800
+#   Subchirp ticks         : 100
+#   Completed 38-sample    : 100
+#   X/Z errors             : 0
+#   Symbol-count errors    : 0
+#   Subchirp errors        : 0
+#   Protocol errors        : 0
+#   Done errors             : 0
+# 
+# ================================================================
+# CASE 4
+#   Payload length : 3 bytes
+#   Data rate      :   1 Mbps
+#   Pattern        : 3
+#   Expected DQPSK : 76 symbols
+# ================================================================
+# [119585000] TOP CSK START: expected_symbols=76 expected_groups=19
+# [119585000] PASS: DQPSK symbol count = 76
+# [119595000] SEQUENCER START: num_groups=19 m=1
+# [121115000] GROUP END: group_count=0 num_groups=19
+# [122735000] GROUP END: group_count=1 num_groups=19
+# [124955000] GROUP END: group_count=2 num_groups=19
+# [126575000] GROUP END: group_count=3 num_groups=19
+# [128795000] GROUP END: group_count=4 num_groups=19
+# [130415000] GROUP END: group_count=5 num_groups=19
+# [132635000] GROUP END: group_count=6 num_groups=19
+# [134255000] GROUP END: group_count=7 num_groups=19
+# [136475000] GROUP END: group_count=8 num_groups=19
+# [138095000] GROUP END: group_count=9 num_groups=19
+# [140315000] GROUP END: group_count=10 num_groups=19
+# [141935000] GROUP END: group_count=11 num_groups=19
+# [144155000] GROUP END: group_count=12 num_groups=19
+# [145775000] GROUP END: group_count=13 num_groups=19
+# [147995000] GROUP END: group_count=14 num_groups=19
+# [149615000] GROUP END: group_count=15 num_groups=19
+# [151835000] GROUP END: group_count=16 num_groups=19
+# [153455000] GROUP END: group_count=17 num_groups=19
+# [155675000] GROUP END: group_count=18 num_groups=19
+# [155715000] PASS: done_Tx asserted.
+# [155715000] PASS: CSS sample count = 2888.
+# [155715000] PASS: subchirp ticks = 76.
+# [155715000] PASS: completed 38-sample subchirps = 76.
+# 
+# CASE 4 SUMMARY
+#   DQPSK symbols observed : 76
+#   CSS valid samples      : 2888
+#   Subchirp ticks         : 76
+#   Completed 38-sample    : 76
+#   X/Z errors             : 0
+#   Symbol-count errors    : 0
+#   Subchirp errors        : 0
+#   Protocol errors        : 0
+#   Done errors             : 0
+# 
+# ================================================================
+# CASE 5
+#   Payload length : 4 bytes
+#   Data rate      : 250 kbps
+#   Pattern        : 2
+#   Expected DQPSK : 224 symbols
+# ================================================================
+# [158185000] TOP CSK START: expected_symbols=224 expected_groups=56
+# [158185000] PASS: DQPSK symbol count = 224
+# [158195000] SEQUENCER START: num_groups=56 m=1
+# [159715000] GROUP END: group_count=0 num_groups=56
+# [161335000] GROUP END: group_count=1 num_groups=56
+# [163555000] GROUP END: group_count=2 num_groups=56
+# [165175000] GROUP END: group_count=3 num_groups=56
+# [167395000] GROUP END: group_count=4 num_groups=56
+# [169015000] GROUP END: group_count=5 num_groups=56
+# [171235000] GROUP END: group_count=6 num_groups=56
+# [172855000] GROUP END: group_count=7 num_groups=56
+# [175075000] GROUP END: group_count=8 num_groups=56
+# [176695000] GROUP END: group_count=9 num_groups=56
+# [178915000] GROUP END: group_count=10 num_groups=56
+# [180535000] GROUP END: group_count=11 num_groups=56
+# [182755000] GROUP END: group_count=12 num_groups=56
+# [184375000] GROUP END: group_count=13 num_groups=56
+# [186595000] GROUP END: group_count=14 num_groups=56
+# [188215000] GROUP END: group_count=15 num_groups=56
+# [190435000] GROUP END: group_count=16 num_groups=56
+# [192055000] GROUP END: group_count=17 num_groups=56
+# [194275000] GROUP END: group_count=18 num_groups=56
+# [195895000] GROUP END: group_count=19 num_groups=56
+# [198115000] GROUP END: group_count=20 num_groups=56
+# [199735000] GROUP END: group_count=21 num_groups=56
+# [201955000] GROUP END: group_count=22 num_groups=56
+# [203575000] GROUP END: group_count=23 num_groups=56
+# [205795000] GROUP END: group_count=24 num_groups=56
+# [207415000] GROUP END: group_count=25 num_groups=56
+# [209635000] GROUP END: group_count=26 num_groups=56
+# [211255000] GROUP END: group_count=27 num_groups=56
+# [213475000] GROUP END: group_count=28 num_groups=56
+# [215095000] GROUP END: group_count=29 num_groups=56
+# [217315000] GROUP END: group_count=30 num_groups=56
+# [218935000] GROUP END: group_count=31 num_groups=56
+# [221155000] GROUP END: group_count=32 num_groups=56
+# [222775000] GROUP END: group_count=33 num_groups=56
+# [224995000] GROUP END: group_count=34 num_groups=56
+# [226615000] GROUP END: group_count=35 num_groups=56
+# [228835000] GROUP END: group_count=36 num_groups=56
+# [230455000] GROUP END: group_count=37 num_groups=56
+# [232675000] GROUP END: group_count=38 num_groups=56
+# [234295000] GROUP END: group_count=39 num_groups=56
+# [236515000] GROUP END: group_count=40 num_groups=56
+# [238135000] GROUP END: group_count=41 num_groups=56
+# [240355000] GROUP END: group_count=42 num_groups=56
+# [241975000] GROUP END: group_count=43 num_groups=56
+# [244195000] GROUP END: group_count=44 num_groups=56
+# [245815000] GROUP END: group_count=45 num_groups=56
+# [248035000] GROUP END: group_count=46 num_groups=56
+# [249655000] GROUP END: group_count=47 num_groups=56
+# [251875000] GROUP END: group_count=48 num_groups=56
+# [253495000] GROUP END: group_count=49 num_groups=56
+# [255715000] GROUP END: group_count=50 num_groups=56
+# [257335000] GROUP END: group_count=51 num_groups=56
+# [259555000] GROUP END: group_count=52 num_groups=56
+# [261175000] GROUP END: group_count=53 num_groups=56
+# [263395000] GROUP END: group_count=54 num_groups=56
+# [265015000] GROUP END: group_count=55 num_groups=56
+# [265055000] PASS: done_Tx asserted.
+# [265055000] PASS: CSS sample count = 8512.
+# [265055000] PASS: subchirp ticks = 224.
+# [265055000] PASS: completed 38-sample subchirps = 224.
+# 
+# CASE 5 SUMMARY
+#   DQPSK symbols observed : 224
+#   CSS valid samples      : 8512
+#   Subchirp ticks         : 224
+#   Completed 38-sample    : 224
+#   X/Z errors             : 0
+#   Symbol-count errors    : 0
+#   Subchirp errors        : 0
+#   Protocol errors        : 0
+#   Done errors             : 0
+# 
+# ================================================================
+# CASE 6
+#   Payload length : 3 bytes
+#   Data rate      : 250 kbps
+#   Pattern        : 4
+#   Expected DQPSK : 224 symbols
+# ================================================================
+# [267505000] TOP CSK START: expected_symbols=224 expected_groups=56
+# [267505000] PASS: DQPSK symbol count = 224
+# [267515000] SEQUENCER START: num_groups=56 m=1
+# [269035000] GROUP END: group_count=0 num_groups=56
+# [270655000] GROUP END: group_count=1 num_groups=56
+# [272875000] GROUP END: group_count=2 num_groups=56
+# [274495000] GROUP END: group_count=3 num_groups=56
+# [276715000] GROUP END: group_count=4 num_groups=56
+# [278335000] GROUP END: group_count=5 num_groups=56
+# [280555000] GROUP END: group_count=6 num_groups=56
+# [282175000] GROUP END: group_count=7 num_groups=56
+# [284395000] GROUP END: group_count=8 num_groups=56
+# [286015000] GROUP END: group_count=9 num_groups=56
+# [288235000] GROUP END: group_count=10 num_groups=56
+# [289855000] GROUP END: group_count=11 num_groups=56
+# [292075000] GROUP END: group_count=12 num_groups=56
+# [293695000] GROUP END: group_count=13 num_groups=56
+# [295915000] GROUP END: group_count=14 num_groups=56
+# [297535000] GROUP END: group_count=15 num_groups=56
+# [299755000] GROUP END: group_count=16 num_groups=56
+# [301375000] GROUP END: group_count=17 num_groups=56
+# [303595000] GROUP END: group_count=18 num_groups=56
+# [305215000] GROUP END: group_count=19 num_groups=56
+# [307435000] GROUP END: group_count=20 num_groups=56
+# [309055000] GROUP END: group_count=21 num_groups=56
+# [311275000] GROUP END: group_count=22 num_groups=56
+# [312895000] GROUP END: group_count=23 num_groups=56
+# [315115000] GROUP END: group_count=24 num_groups=56
+# [316735000] GROUP END: group_count=25 num_groups=56
+# [318955000] GROUP END: group_count=26 num_groups=56
+# [320575000] GROUP END: group_count=27 num_groups=56
+# [322795000] GROUP END: group_count=28 num_groups=56
+# [324415000] GROUP END: group_count=29 num_groups=56
+# [326635000] GROUP END: group_count=30 num_groups=56
+# [328255000] GROUP END: group_count=31 num_groups=56
+# [330475000] GROUP END: group_count=32 num_groups=56
+# [332095000] GROUP END: group_count=33 num_groups=56
+# [334315000] GROUP END: group_count=34 num_groups=56
+# [335935000] GROUP END: group_count=35 num_groups=56
+# [338155000] GROUP END: group_count=36 num_groups=56
+# [339775000] GROUP END: group_count=37 num_groups=56
+# [341995000] GROUP END: group_count=38 num_groups=56
+# [343615000] GROUP END: group_count=39 num_groups=56
+# [345835000] GROUP END: group_count=40 num_groups=56
+# [347455000] GROUP END: group_count=41 num_groups=56
+# [349675000] GROUP END: group_count=42 num_groups=56
+# [351295000] GROUP END: group_count=43 num_groups=56
+# [353515000] GROUP END: group_count=44 num_groups=56
+# [355135000] GROUP END: group_count=45 num_groups=56
+# [357355000] GROUP END: group_count=46 num_groups=56
+# [358975000] GROUP END: group_count=47 num_groups=56
+# [361195000] GROUP END: group_count=48 num_groups=56
+# [362815000] GROUP END: group_count=49 num_groups=56
+# [365035000] GROUP END: group_count=50 num_groups=56
+# [366655000] GROUP END: group_count=51 num_groups=56
+# [368875000] GROUP END: group_count=52 num_groups=56
+# [370495000] GROUP END: group_count=53 num_groups=56
+# [372715000] GROUP END: group_count=54 num_groups=56
+# [374335000] GROUP END: group_count=55 num_groups=56
+# [374375000] PASS: done_Tx asserted.
+# [374375000] PASS: CSS sample count = 8512.
+# [374375000] PASS: subchirp ticks = 224.
+# [374375000] PASS: completed 38-sample subchirps = 224.
+# 
+# CASE 6 SUMMARY
+#   DQPSK symbols observed : 224
+#   CSS valid samples      : 8512
+#   Subchirp ticks         : 224
+#   Completed 38-sample    : 224
+#   X/Z errors             : 0
+#   Symbol-count errors    : 0
+#   Subchirp errors        : 0
+#   Protocol errors        : 0
+#   Done errors             : 0
+# 
+# ================================================================
+# CASE 7
+#   Payload length : 16 bytes
+#   Data rate      : 250 kbps
+#   Pattern        : 5
+#   Expected DQPSK : 480 symbols
+# ================================================================
+# [379645000] TOP CSK START: expected_symbols=480 expected_groups=120
+# [379645000] PASS: DQPSK symbol count = 480
+# [379655000] SEQUENCER START: num_groups=120 m=1
+# [381175000] GROUP END: group_count=0 num_groups=120
+# [382795000] GROUP END: group_count=1 num_groups=120
+# [385015000] GROUP END: group_count=2 num_groups=120
+# [386635000] GROUP END: group_count=3 num_groups=120
+# [388855000] GROUP END: group_count=4 num_groups=120
+# [390475000] GROUP END: group_count=5 num_groups=120
+# [392695000] GROUP END: group_count=6 num_groups=120
+# [394315000] GROUP END: group_count=7 num_groups=120
+# [396535000] GROUP END: group_count=8 num_groups=120
+# [398155000] GROUP END: group_count=9 num_groups=120
+# [400375000] GROUP END: group_count=10 num_groups=120
+# [401995000] GROUP END: group_count=11 num_groups=120
+# [404215000] GROUP END: group_count=12 num_groups=120
+# [405835000] GROUP END: group_count=13 num_groups=120
+# [408055000] GROUP END: group_count=14 num_groups=120
+# [409675000] GROUP END: group_count=15 num_groups=120
+# [411895000] GROUP END: group_count=16 num_groups=120
+# [413515000] GROUP END: group_count=17 num_groups=120
+# [415735000] GROUP END: group_count=18 num_groups=120
+# [417355000] GROUP END: group_count=19 num_groups=120
+# [419575000] GROUP END: group_count=20 num_groups=120
+# [421195000] GROUP END: group_count=21 num_groups=120
+# [423415000] GROUP END: group_count=22 num_groups=120
+# [425035000] GROUP END: group_count=23 num_groups=120
+# [427255000] GROUP END: group_count=24 num_groups=120
+# [428875000] GROUP END: group_count=25 num_groups=120
+# [431095000] GROUP END: group_count=26 num_groups=120
+# [432715000] GROUP END: group_count=27 num_groups=120
+# [434935000] GROUP END: group_count=28 num_groups=120
+# [436555000] GROUP END: group_count=29 num_groups=120
+# [438775000] GROUP END: group_count=30 num_groups=120
+# [440395000] GROUP END: group_count=31 num_groups=120
+# [442615000] GROUP END: group_count=32 num_groups=120
+# [444235000] GROUP END: group_count=33 num_groups=120
+# [446455000] GROUP END: group_count=34 num_groups=120
+# [448075000] GROUP END: group_count=35 num_groups=120
+# [450295000] GROUP END: group_count=36 num_groups=120
+# [451915000] GROUP END: group_count=37 num_groups=120
+# [454135000] GROUP END: group_count=38 num_groups=120
+# [455755000] GROUP END: group_count=39 num_groups=120
+# [457975000] GROUP END: group_count=40 num_groups=120
+# [459595000] GROUP END: group_count=41 num_groups=120
+# [461815000] GROUP END: group_count=42 num_groups=120
+# [463435000] GROUP END: group_count=43 num_groups=120
+# [465655000] GROUP END: group_count=44 num_groups=120
+# [467275000] GROUP END: group_count=45 num_groups=120
+# [469495000] GROUP END: group_count=46 num_groups=120
+# [471115000] GROUP END: group_count=47 num_groups=120
+# [473335000] GROUP END: group_count=48 num_groups=120
+# [474955000] GROUP END: group_count=49 num_groups=120
+# [477175000] GROUP END: group_count=50 num_groups=120
+# [478795000] GROUP END: group_count=51 num_groups=120
+# [481015000] GROUP END: group_count=52 num_groups=120
+# [482635000] GROUP END: group_count=53 num_groups=120
+# [484855000] GROUP END: group_count=54 num_groups=120
+# [486475000] GROUP END: group_count=55 num_groups=120
+# [488695000] GROUP END: group_count=56 num_groups=120
+# [490315000] GROUP END: group_count=57 num_groups=120
+# [492535000] GROUP END: group_count=58 num_groups=120
+# [494155000] GROUP END: group_count=59 num_groups=120
+# [496375000] GROUP END: group_count=60 num_groups=120
+# [497995000] GROUP END: group_count=61 num_groups=120
+# [500215000] GROUP END: group_count=62 num_groups=120
+# [501835000] GROUP END: group_count=63 num_groups=120
+# [504055000] GROUP END: group_count=64 num_groups=120
+# [505675000] GROUP END: group_count=65 num_groups=120
+# [507895000] GROUP END: group_count=66 num_groups=120
+# [509515000] GROUP END: group_count=67 num_groups=120
+# [511735000] GROUP END: group_count=68 num_groups=120
+# [513355000] GROUP END: group_count=69 num_groups=120
+# [515575000] GROUP END: group_count=70 num_groups=120
+# [517195000] GROUP END: group_count=71 num_groups=120
+# [519415000] GROUP END: group_count=72 num_groups=120
+# [521035000] GROUP END: group_count=73 num_groups=120
+# [523255000] GROUP END: group_count=74 num_groups=120
+# [524875000] GROUP END: group_count=75 num_groups=120
+# [527095000] GROUP END: group_count=76 num_groups=120
+# [528715000] GROUP END: group_count=77 num_groups=120
+# [530935000] GROUP END: group_count=78 num_groups=120
+# [532555000] GROUP END: group_count=79 num_groups=120
+# [534775000] GROUP END: group_count=80 num_groups=120
+# [536395000] GROUP END: group_count=81 num_groups=120
+# [538615000] GROUP END: group_count=82 num_groups=120
+# [540235000] GROUP END: group_count=83 num_groups=120
+# [542455000] GROUP END: group_count=84 num_groups=120
+# [544075000] GROUP END: group_count=85 num_groups=120
+# [546295000] GROUP END: group_count=86 num_groups=120
+# [547915000] GROUP END: group_count=87 num_groups=120
+# [550135000] GROUP END: group_count=88 num_groups=120
+# [551755000] GROUP END: group_count=89 num_groups=120
+# [553975000] GROUP END: group_count=90 num_groups=120
+# [555595000] GROUP END: group_count=91 num_groups=120
+# [557815000] GROUP END: group_count=92 num_groups=120
+# [559435000] GROUP END: group_count=93 num_groups=120
+# [561655000] GROUP END: group_count=94 num_groups=120
+# [563275000] GROUP END: group_count=95 num_groups=120
+# [565495000] GROUP END: group_count=96 num_groups=120
+# [567115000] GROUP END: group_count=97 num_groups=120
+# [569335000] GROUP END: group_count=98 num_groups=120
+# [570955000] GROUP END: group_count=99 num_groups=120
+# [573175000] GROUP END: group_count=100 num_groups=120
+# [574795000] GROUP END: group_count=101 num_groups=120
+# [577015000] GROUP END: group_count=102 num_groups=120
+# [578635000] GROUP END: group_count=103 num_groups=120
+# [580855000] GROUP END: group_count=104 num_groups=120
+# [582475000] GROUP END: group_count=105 num_groups=120
+# [584695000] GROUP END: group_count=106 num_groups=120
+# [586315000] GROUP END: group_count=107 num_groups=120
+# [588535000] GROUP END: group_count=108 num_groups=120
+# [590155000] GROUP END: group_count=109 num_groups=120
+# [592375000] GROUP END: group_count=110 num_groups=120
+# [593995000] GROUP END: group_count=111 num_groups=120
+# [596215000] GROUP END: group_count=112 num_groups=120
+# [597835000] GROUP END: group_count=113 num_groups=120
+# [600055000] GROUP END: group_count=114 num_groups=120
+# [601675000] GROUP END: group_count=115 num_groups=120
+# [603895000] GROUP END: group_count=116 num_groups=120
+# [605515000] GROUP END: group_count=117 num_groups=120
+# [607735000] GROUP END: group_count=118 num_groups=120
+# [609355000] GROUP END: group_count=119 num_groups=120
+# [609395000] PASS: done_Tx asserted.
+# [609395000] PASS: CSS sample count = 18240.
+# [609395000] PASS: subchirp ticks = 480.
+# [609395000] PASS: completed 38-sample subchirps = 480.
+# 
+# CASE 7 SUMMARY
+#   DQPSK symbols observed : 480
+#   CSS valid samples      : 18240
+#   Subchirp ticks         : 480
+#   Completed 38-sample    : 480
+#   X/Z errors             : 0
+#   Symbol-count errors    : 0
+#   Subchirp errors        : 0
+#   Protocol errors        : 0
+#   Done errors             : 0
+# 
+# ================================================================
+# MASTER REGRESSION COMPLETE
+# ================================================================
+# Total hard errors : 0
+# Total warnings    : 0
+# RESULT: PASS
+# ** Note: $finish    : master_tb_css_phy_tx_top.v(721)
+#    Time: 609465 ns  Iteration: 1  Instance: /master_tb_css_phy_tx_top
+# 1
+# Break in Module master_tb_css_phy_tx_top at master_tb_css_phy_tx_top.v line 721
+
+
