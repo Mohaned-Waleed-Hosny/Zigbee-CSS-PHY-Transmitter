@@ -1,0 +1,7 @@
+# ../Scripts/run.do
+# invalid command name "../Scripts/run.do"
+do ../Scripts/run.do
+# Cannot open macro file: ../Scripts/run.do
+pwd
+# D:/EECE/2nd_Year/ITI_Digital/ZigBee_Project/github/Zigbee-CSS-PHY-Transmitter
+quit
