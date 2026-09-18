@@ -15,25 +15,8 @@
 //        -> CSK sequencer / waveform selector / waveform ROM
 //        -> dqpsk_csk_multiplier
 //        -> Tx_real / Tx_imag
-//
-// IMPORTANT:
-//   The supplied csk_generator.v is intentionally not instantiated here.
-//   Its current wrapper feeds every dqpsk_valid pulse directly into the
-//   subchirp hold register, while the DQPSK stream is faster than the 38
-//   samples/subchirp timing.  This top therefore performs the required
-//   4-symbol buffering and supplies exactly one DQPSK symbol per subchirp.
-//
-//   The supplied csk_waveform_rom.v has a registered output.  The top uses
-//   the same ROM module and compensates for its one-cycle latency by delaying
-//   csk_sample_valid by two clocked stages relative to the sequencer.
-//   This preserves the 38 samples/subchirp alignment at subchirp boundaries.
-//
-// CSK_M:
-//   The supplied RTL exposes m as a chirp-sequence index (1..4), but the
-//   project top-level interface does not define m as an external pin.
-//   Therefore it is a parameter. Change CSK_M after confirming the intended
-//   sequence selection with the MATLAB reference/instructor.
-// ============================================================================
+
+
 
 module css_phy_tx_top #(
     parameter [2:0] CSK_M = 3'd1
