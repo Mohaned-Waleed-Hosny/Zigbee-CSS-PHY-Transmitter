@@ -1,9 +1,0 @@
-#@ # 
-#@ # Running icc2_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
-#@ # Date:   Sat Sep 19 05:51:49 2026
-#@ # Run by: ICer@IC_EDA
-#@ 
-
-source -echo -verbose ../script/dlib_script.tcl
-report_clocks
-exit
