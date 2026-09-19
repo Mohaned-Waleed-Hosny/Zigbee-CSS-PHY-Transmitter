@@ -1,0 +1,62 @@
+****************************************
+Report : design
+Design : css_phy_tx_top
+Version: O-2018.06-SP1
+Date   : Sat Sep 19 06:11:44 2026
+****************************************
+
+Total number of std cells in library : 223
+Total number of dont_use lib cells   : 11
+Total number of dont_touch lib cells : 11
+Total number of buffers              : 11
+Total number of inverters            : 15
+Total number of flip-flops           : 46
+Total number of latches              : 12
+Total number of ICGs                 : 0
+
+Cell Instance Type  Count         Area
+--------------------------------------
+TOTAL LEAF CELLS    32533   471070.310
+Standard cells      32533   471070.310
+Hard macro cells        0        0.000
+Soft macro cells        0        0.000
+Always on cells         0        0.000
+Physical only           0        0.000
+Fixed cells             0        0.000
+Moveable cells      32533   471070.310
+Sequential           9748   246445.056
+Buffer/inverter      4450    26650.829
+ICG cells               0        0.000
+
+Logic Hierarchies                    : 36
+Design Masters count                 : 58
+Total Flat nets count                : 32826
+Total FloatingNets count             : 11
+Total no of Ports                    : 51
+Number of Master Clocks in design    : 1
+Number of Generated Clocks in design : 0
+Number of Path Groups in design      : 7 (1 of them Non Default)
+Number of Scan Chains in design      : 0
+List of Modes                        : default
+List of Corners                      : default
+List of Scenarios                    : default
+
+Core Area                            : 824753.664
+Chip Area                            : 861480.064
+Total Site Row Area                  : 824753.664
+Number of Blockages                  : 0
+Total area of Blockages              : 0.000
+Number of Power Domains              : 1
+Number of Voltage Areas              : 1
+Number of Group Bounds               : 0
+Number of Exclusive MoveBounds       : 0
+Number of Hard or Soft MoveBounds    : 0
+Number of Multibit Registers         : 0
+Number of Multibit LS/ISO Cells      : 0
+Number of Top Level RP Groups        : 0
+Number of Tech Layers                : 66 (57 of them have unknown routing dir.)
+
+Total wire length                    : 0.00 micron
+Total number of wires                : 0
+Total number of contacts             : 103958
+1

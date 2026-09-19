@@ -1,0 +1,267 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC_EDA (RHEL64)
+Current time: Fri Sep 18 20:48:23 2026
+
+Loading db file '/home/synopsys/Formality2016/libraries/syn/gtech.db'
+set design css_phy_tx_top
+css_phy_tx_top
+############################# Options ############################# 
+set synopsys_auto_setup true
+true
+########################### SVF File ###########################
+set_svf "../../../syn/results/outputs/css_phy_tx_top_syn.svf"
+SVF set to '../../../syn/results/outputs/css_phy_tx_top_syn.svf'.
+1
+########################### Ref Container ###########################
+read_verilog -container Ref [glob ../../../project/RTL/*.v]
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/bit_interleaver.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_generator.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_selector.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/demux_iq.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/dqpsk_csk_multiplier.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/dqpsk_encoder.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/form_ppdu.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/mux2X1.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_controller.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_zero_padding.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/qpsk_mapper.v'
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/symbol_mapper.v'
+Created container 'Ref'
+Current container set to 'Ref'
+1
+read_db -container Ref "../../../std_cells/saed90nm_max.db"
+Loading db file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/std_cells/saed90nm_max.db'
+1
+set_reference_design "css_phy_tx_top"
+Reference design set to 'Ref:/WORK/css_phy_tx_top'
+1
+set_top "css_phy_tx_top"
+Setting top design to 'Ref:/WORK/css_phy_tx_top'
+Status:   Elaborating design css_phy_tx_top   ...  
+$display output: [t] TOP CSK START: expected_symbols=d expected_groups=d0??
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: dqpsk_mem_real Block: /css_phy_tx_top File: /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v Line: 419)  (FMR_ELAB-147)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: dqpsk_mem_imag Block: /css_phy_tx_top File: /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v Line: 422)  (FMR_ELAB-147)
+Status:   Elaborating design controller   ...  
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: payload_ram Block: /controller File: /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_controller.v Line: 136)  (FMR_ELAB-147)
+Status:   Elaborating design zero_padding   ...  
+Status:   Elaborating design demux_iq   ...  
+Status:   Elaborating design symbol_mapper   ...  
+Status:   Elaborating design bit_interleaver   ...  
+Status:   Elaborating design form_ppdu   ...  
+Status:   Elaborating design qpsk_mapper   ...  
+Status:   Elaborating design dqpsk_encoder   ...  
+Status:   Elaborating design csk_sequencer   ...  
+$display output: [t] SEQUENCER START: num_groups=d m=d0??
+$display output: [t] GROUP END: group_count=d num_groups=d0??
+Status:   Elaborating design csk_waveform_selector   ...  
+Status:   Elaborating design csk_waveform_rom   ...  
+Status:   Elaborating design dqpsk_csk_multiplier   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  60 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design set to 'Ref:/WORK/css_phy_tx_top' with warnings
+   ATTENTION: RTL interpretation messages were produced during link.
+              Verification results may disagree with a logic simulator.
+
+************ RTL Interpretation Summary ************
+************ Design: Ref:/WORK/css_phy_tx_top
+3 FMR_ELAB-147 messages produced    
+
+Please refer to the Formality log file for more details,
+or execute report_hdlin_mismatches.
+****************************************************
+
+Reference design set to 'Ref:/WORK/css_phy_tx_top'
+1
+########################### Imp Container ###########################
+read_verilog -netlist -container Imp "../../../syn/results/outputs/${design}_syn_netlist.v"
+No target library specified, default is WORK
+Loading verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/syn/results/outputs/css_phy_tx_top_syn_netlist.v'
+Created container 'Imp'
+Current container set to 'Imp'
+1
+read_db -container Imp "../../../std_cells/saed90nm_max.db"
+Loading db file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/std_cells/saed90nm_max.db'
+1
+set_implementation_design "css_phy_tx_top"
+Implementation design set to 'Imp:/WORK/css_phy_tx_top'
+1
+set_top "css_phy_tx_top"
+Setting top design to 'Imp:/WORK/css_phy_tx_top'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  60 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Imp:/WORK/css_phy_tx_top'
+Implementation design set to 'Imp:/WORK/css_phy_tx_top'
+1
+############################# Match ############################# 
+match
+Reference design is 'Ref:/WORK/css_phy_tx_top'
+Implementation design is 'Imp:/WORK/css_phy_tx_top'
+Status:  Checking designs...
+    Warning: 4 (133) undriven nets found in reference (implementation) design; see formality.log for list (FM-399)
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+    Set don't verify point 'Ref:/WORK/css_phy_tx_top/SO'
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+environment         :          3          0          0          0          3
+mark                :         46          0          0          0         46
+multiplier          :         13          0          0          0         13
+reg_constant        :         13          0          0          0         13
+replace             :         16          0          0          0         16
+transformation
+   map              :         58          0          0          0         58
+   share            :         11          0          0          0         11
+uniquify            :         12          1          0          0         13
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      ../../../syn/results/outputs/css_phy_tx_top_syn.svf
+
+SVF files produced:
+  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/fm/rtl-syn/run/formality_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 7701 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 28 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 23(0) Unmatched reference(implementation) unread points    
+****************************************************************************************
+
+1
+############################# Verify ############################# 
+set successful [verify]
+Reference design is 'Ref:/WORK/css_phy_tx_top'
+Implementation design is 'Imp:/WORK/css_phy_tx_top'
+    
+*********************************** Matching Results ***********************************    
+ 7701 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 28 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 23(0) Unmatched reference(implementation) unread points    
+****************************************************************************************
+
+Status:  Verifying...
+
+************ RTL Interpretation Summary ************
+************ Design: Ref:/WORK/css_phy_tx_top
+3 FMR_ELAB-147 messages produced    
+
+Please refer to the Formality log file for more details,
+or execute report_hdlin_mismatches.
+****************************************************
+
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+   ATTENTION: RTL interpretation messages were produced during link
+              of reference design.
+              Verification results may disagree with a logic simulator.
+-----------------------------------------------------------------------
+ Reference design: Ref:/WORK/css_phy_tx_top
+ Implementation design: Imp:/WORK/css_phy_tx_top
+ 7701 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0      18    7683       0    7701
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Don't verify                 0       0       0       0       1       0       0       1
+  Unread                       0       0       0       0       0    2062       0    2062
+****************************************************************************************
+1
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+############################# Reports ############################# 
+report_passing_points > ../results/passing_points.rpt
+report_failing_points > ../results/failing_points.rpt
+report_unverified_points > ../results/unverified_points.rpt
+report_aborted_points > ../results/aborted_points.rpt
+start_gui
+     1  source -echo -verbose ../script/fm_script.tcl
+1
+#exit
+fm_shell (verify)> exit
+
+Maximum memory usage for this session: 680984 KB
+CPU usage for this session: 85.23 seconds
+Current time: Fri Sep 18 20:50:01 2026
+Elapsed time: 99 seconds
+
+Thank you for using Formality (R)!

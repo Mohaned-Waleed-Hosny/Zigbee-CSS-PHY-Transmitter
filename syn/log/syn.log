@@ -1,0 +1,1222 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+#################################### Generic Vars ####################################
+set library "saed90nm_max.db"
+saed90nm_max.db
+set design "css_phy_tx_top"
+css_phy_tx_top
+#################################### Open SVF File ####################################
+set_svf "../results/outputs/${design}_syn.svf"
+1
+##################### Define Working Library Directory ######################
+define_design_lib work -path ./work
+1
+#################################### Set DC Variables ####################################
+lappend search_path "../../std_cells"
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver ../../std_cells
+lappend search_path "../../project/RTL"
+. /home/synopsys/syn/O-2018.06-SP1/libraries/syn /home/synopsys/syn/O-2018.06-SP1/minpower/syn /home/synopsys/syn/O-2018.06-SP1/dw/syn_ver /home/synopsys/syn/O-2018.06-SP1/dw/sim_ver ../../std_cells ../../project/RTL
+set target_library "saed90nm_max.db"
+saed90nm_max.db
+set link_library [list "*" "saed90nm_max.db"]
+* saed90nm_max.db
+#################################### Reading RTL Files ####################################
+puts "###############################################"
+###############################################
+puts "############## Reading RTL Files ##############"
+############## Reading RTL Files ##############
+puts "###############################################"
+###############################################
+set file_format "verilog"
+verilog
+read_file -format $file_format [glob ../../project/RTL/*.v]
+Loading db file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/std_cells/saed90nm_max.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'saed90nm_max'
+  Loading link library 'gtech'
+Loading verilog files: '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/bit_interleaver.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_generator.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_selector.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/demux_iq.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/dqpsk_csk_multiplier.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/dqpsk_encoder.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/form_ppdu.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_controller.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_zero_padding.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/qpsk_mapper.v' '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/symbol_mapper.v' 
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/bit_interleaver.v
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_generator.v
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_selector.v
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/demux_iq.v
+Warning:  Little argument or return value checking implemented for system task or function '$time'. (VER-209)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v:369: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v:369: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v:369: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/dqpsk_csk_multiplier.v
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/dqpsk_encoder.v
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/form_ppdu.v
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_controller.v
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_zero_padding.v
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v:60: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v:60: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v:60: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v:79: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v:79: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v:79: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/qpsk_mapper.v
+Compiling source file /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/symbol_mapper.v
+
+Inferred memory devices in process
+	in routine bit_interleaver line 36 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/bit_interleaver.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      i_out_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     q_temp_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     i_temp_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      q_out_reg      | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   wait_second_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine csk_generator line 61 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_generator.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| csk_sample_valid_d_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:22: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:23: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:24: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:25: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:28: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:29: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:30: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:34: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:35: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:36: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:37: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:38: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:42: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:43: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:44: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:45: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:46: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:50: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:51: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:52: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:55: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:56: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:57: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:58: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:62: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:66: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:67: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:68: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:72: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:73: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:74: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:78: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:79: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:80: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:81: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:83: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:84: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:85: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:86: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:90: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:91: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:92: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:96: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:97: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:98: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v:102: unsigned to signed assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 17 in file
+	'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            18            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine csk_waveform_rom line 109 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_rom.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       i_c_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|       q_c_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 14 in file
+	'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/csk_waveform_selector.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            15            |    auto/auto     |
+===============================================
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v:369: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v:369: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v:369: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+$display output: [] TOP CSK START: expected_symbols=00 expected_groups=??
+
+Inferred memory devices in process
+	in routine css_phy_tx_top line 307 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|  dqpsk_wr_count_reg   | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  dqpsk_mem_real_reg   | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+|  dqpsk_mem_imag_reg   | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+| csk_start_pending_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  capture_active_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine css_phy_tx_top line 357 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   csk_running_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| csk_start_pulse_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine css_phy_tx_top line 424 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| csk_symbol_index_reg | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine css_phy_tx_top line 441 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  csk_valid_d1_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  csk_valid_d2_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine css_phy_tx_top line 491 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     done_Tx_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  csk_finished_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    css_seen_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+========================================================
+|  block name/line   | Inputs | Outputs | # sel inputs |
+========================================================
+| css_phy_tx_top/414 |  1024  |    4    |      10      |
+========================================================
+
+Inferred memory devices in process
+	in routine demux_iq line 19 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/demux_iq.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     i_temp_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      q_bit_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      i_bit_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     toggle_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine dqpsk_csk_multiplier line 23 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/dqpsk_csk_multiplier.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   s_imag_held_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   s_real_held_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine dqpsk_csk_multiplier line 42 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/dqpsk_csk_multiplier.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      css_i_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      css_q_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    css_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/dqpsk_encoder.v:26: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/dqpsk_encoder.v:27: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine dqpsk_encoder line 29 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/dqpsk_encoder.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     s_imag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     s_imag_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|    s_real_d_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    s_real_d_reg     | Flip-flop |   4   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    s_imag_d_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    s_imag_d_reg     | Flip-flop |   4   |  Y  | N  | N  | Y  | N  | N  | N  |
+|     s_real_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     s_real_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 26 in file
+	'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/form_ppdu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            34            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine form_ppdu line 26 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/form_ppdu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     wr_ptr_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     i_fifo_reg      | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+|     q_fifo_reg      | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine form_ppdu line 63 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/form_ppdu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rd_ptr_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      q_out_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  total_out_cnt_reg  | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  packet_active_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      i_out_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|   form_ppdu/91   |   32   |   128   |      5       |
+|   form_ppdu/91   |   64   |    2    |      6       |
+======================================================
+
+Statistics for case statements in always block at line 140 in file
+	'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_controller.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           168            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine controller line 91 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_controller.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   payload_ram_reg   | Flip-flop | 1016  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine controller line 140 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_controller.v'.
+=======================================================================================
+|        Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=======================================================================================
+|   payload_length_reg_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      chip_counter_reg       | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+| expected_chip_count_reg_reg | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     total_bits_reg_reg      | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       serial_idx_reg        | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     frame_in_flight_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       feed_state_reg        | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       start_frame_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        valid_in_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|         bit_in_reg          | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|         done_Tx_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=======================================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|  controller/131  |   8    |    1    |      3       |
+|  controller/136  |  128   |    8    |      7       |
+|  controller/136  |   8    |    1    |      3       |
+======================================================
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v:60: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v:60: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v:60: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v:79: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v:79: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v:79: Invalid escape sequence '\0' in call to '$display'. (VER-941)
+
+Statistics for case statements in always block at line 28 in file
+	'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            29            |    auto/auto     |
+===============================================
+$display output: [] SEQUENCER START: num_groups=00 m=??
+$display output: [] GROUP END: group_count=00 num_groups=??
+
+Statistics for case statements in always block at line 37 in file
+	'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            53            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine csk_sequencer line 37 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_csk_sequencer.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+|     k_index_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     even_odd_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   sample_index_reg   | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   gap_counter_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  subchirp_tick_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     finished_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    seq_active_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| csk_sample_valid_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   group_count_reg    | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      state_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Statistics for case statements in always block at line 31 in file
+	'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_zero_padding.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            47            |    auto/auto     |
+|            59            |    auto/auto     |
+|            65            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine zero_padding line 31 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/new_zero_padding.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| data_bit_count_reg  | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  done_padding_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     bit_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  padding_total_reg  | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  padding_count_reg  | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+| total_data_bits_reg | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 15 in file
+	'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/qpsk_mapper.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            24            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine qpsk_mapper line 15 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/qpsk_mapper.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     x_real_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     x_imag_reg      | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/symbol_mapper.v:22: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/symbol_mapper.v:37: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 106 in file
+	'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/symbol_mapper.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            22            |    auto/auto     |
+|            37            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine symbol_mapper line 106 in file
+		'/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/symbol_mapper.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    i_mapped_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    q_mapped_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     q_shift_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     i_shift_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/bit_interleaver.db:bit_interleaver'
+Loaded 14 designs.
+Current design is 'bit_interleaver'.
+bit_interleaver csk_generator csk_waveform_rom csk_waveform_selector css_phy_tx_top demux_iq dqpsk_csk_multiplier dqpsk_encoder form_ppdu controller csk_sequencer zero_padding qpsk_mapper symbol_mapper
+###################### Defining toplevel ###################################
+current_design $design
+Current design is 'css_phy_tx_top'.
+{css_phy_tx_top}
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## Liniking All The Design Parts ########"
+######## Liniking All The Design Parts ########
+puts "###############################################"
+###############################################
+link 
+
+  Linking design 'css_phy_tx_top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (14 designs)              /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/project/RTL/css_phy_tx_top.db, etc
+  saed90nm_max (library)      /mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/std_cells/saed90nm_max.db
+
+1
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## checking design consistency ##########"
+######## checking design consistency ##########
+puts "###############################################"
+###############################################
+check_design
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP1
+Date:        Sat Sep 19 03:32:43 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      8
+    Unconnected ports (LINT-28)                                     5
+    Feedthrough (LINT-29)                                           3
+
+Cells                                                              44
+    Cells do not drive (LINT-1)                                    33
+    Connected to power or ground (LINT-32)                          6
+    Nets connected to multiple pins on same cell (LINT-33)          2
+    Cells have undriven hier pins (LINT-59)                         3
+
+Nets                                                                8
+    Unloaded nets (LINT-2)                                          5
+    Undriven nets (LINT-3)                                          3
+--------------------------------------------------------------------------------
+
+Warning: In design 'css_phy_tx_top', cell 'B_29' does not drive any nets. (LINT-1)
+Warning: In design 'css_phy_tx_top', cell 'B_30' does not drive any nets. (LINT-1)
+Warning: In design 'css_phy_tx_top', cell 'C21234' does not drive any nets. (LINT-1)
+Warning: In design 'css_phy_tx_top', cell 'C21235' does not drive any nets. (LINT-1)
+Warning: In design 'css_phy_tx_top', cell 'C23387' does not drive any nets. (LINT-1)
+Warning: In design 'controller', cell 'B_30' does not drive any nets. (LINT-1)
+Warning: In design 'controller', cell 'B_31' does not drive any nets. (LINT-1)
+Warning: In design 'controller', cell 'C2822' does not drive any nets. (LINT-1)
+Warning: In design 'controller', cell 'C2839' does not drive any nets. (LINT-1)
+Warning: In design 'zero_padding', cell 'C512' does not drive any nets. (LINT-1)
+Warning: In design 'zero_padding', cell 'C521' does not drive any nets. (LINT-1)
+Warning: In design 'zero_padding', cell 'C526' does not drive any nets. (LINT-1)
+Warning: In design 'zero_padding', cell 'C531' does not drive any nets. (LINT-1)
+Warning: In design 'symbol_mapper', cell 'C2413' does not drive any nets. (LINT-1)
+Warning: In design 'symbol_mapper', cell 'C2986' does not drive any nets. (LINT-1)
+Warning: In design 'form_ppdu', cell 'C36386' does not drive any nets. (LINT-1)
+Warning: In design 'form_ppdu', cell 'C36449' does not drive any nets. (LINT-1)
+Warning: In design 'form_ppdu', cell 'C37604' does not drive any nets. (LINT-1)
+Warning: In design 'form_ppdu', cell 'C37612' does not drive any nets. (LINT-1)
+Warning: In design 'form_ppdu', cell 'C37615' does not drive any nets. (LINT-1)
+Warning: In design 'form_ppdu', cell 'C37619' does not drive any nets. (LINT-1)
+Warning: In design 'form_ppdu', cell 'C37623' does not drive any nets. (LINT-1)
+Warning: In design 'form_ppdu', cell 'C37626' does not drive any nets. (LINT-1)
+Warning: In design 'form_ppdu', cell 'C37630' does not drive any nets. (LINT-1)
+Warning: In design 'csk_sequencer', cell 'C546' does not drive any nets. (LINT-1)
+Warning: In design 'csk_sequencer', cell 'C547' does not drive any nets. (LINT-1)
+Warning: In design 'csk_sequencer', cell 'C551' does not drive any nets. (LINT-1)
+Warning: In design 'csk_sequencer', cell 'C552' does not drive any nets. (LINT-1)
+Warning: In design 'csk_sequencer', cell 'C557' does not drive any nets. (LINT-1)
+Warning: In design 'dqpsk_csk_multiplier', cell 'B_2' does not drive any nets. (LINT-1)
+Warning: In design 'dqpsk_csk_multiplier', cell 'B_3' does not drive any nets. (LINT-1)
+Warning: In design 'dqpsk_csk_multiplier', cell 'B_4' does not drive any nets. (LINT-1)
+Warning: In design 'dqpsk_csk_multiplier', cell 'B_5' does not drive any nets. (LINT-1)
+Warning: In design 'css_phy_tx_top', net 'padding_done' driven by pin 'u_zero_padding/done_padding' has no loads. (LINT-2)
+Warning: In design 'css_phy_tx_top', net 'ctrl_done' driven by pin 'u_controller/done_Tx' has no loads. (LINT-2)
+Warning: In design 'css_phy_tx_top', net 'ctrl_valid_to_qpsk' driven by pin 'u_controller/valid_to_qpsk' has no loads. (LINT-2)
+Warning: In design 'css_phy_tx_top', net 'ctrl_q_to_qpsk' driven by pin 'u_controller/q_to_qpsk' has no loads. (LINT-2)
+Warning: In design 'css_phy_tx_top', net 'ctrl_i_to_qpsk' driven by pin 'u_controller/i_to_qpsk' has no loads. (LINT-2)
+Warning: In design 'css_phy_tx_top', net 'ctrl_fp_valid_out' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'css_phy_tx_top', net 'ctrl_fp_q_out' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'css_phy_tx_top', net 'ctrl_fp_i_out' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'controller', port 'payload_addr[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'dqpsk_encoder', port 'x_real[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'csk_waveform_selector', port 'm[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'dqpsk_csk_multiplier', port 's_real[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'dqpsk_csk_multiplier', port 's_imag[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'controller', input port 'fp_i_out' is connected directly to output port 'i_to_qpsk'. (LINT-29)
+Warning: In design 'controller', input port 'fp_q_out' is connected directly to output port 'q_to_qpsk'. (LINT-29)
+Warning: In design 'controller', input port 'fp_valid_out' is connected directly to output port 'valid_to_qpsk'. (LINT-29)
+Warning: In design 'css_phy_tx_top', a pin on submodule 'u_csk_sequencer' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'm[2]' is connected to logic 0. 
+Warning: In design 'css_phy_tx_top', a pin on submodule 'u_csk_sequencer' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'm[1]' is connected to logic 0. 
+Warning: In design 'css_phy_tx_top', a pin on submodule 'u_csk_sequencer' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'm[0]' is connected to logic 1. 
+Warning: In design 'css_phy_tx_top', a pin on submodule 'u_csk_selector' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'm[2]' is connected to logic 0. 
+Warning: In design 'css_phy_tx_top', a pin on submodule 'u_csk_selector' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'm[1]' is connected to logic 0. 
+Warning: In design 'css_phy_tx_top', a pin on submodule 'u_csk_selector' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'm[0]' is connected to logic 1. 
+Warning: In design 'css_phy_tx_top', the same net is connected to more than one pin on submodule 'u_csk_sequencer'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'm[2]', 'm[1]''.
+Warning: In design 'css_phy_tx_top', the same net is connected to more than one pin on submodule 'u_csk_selector'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'm[2]', 'm[1]''.
+Warning: In design 'css_phy_tx_top', input pin 'fp_i_out' of hierarchical cell 'u_controller' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+Warning: In design 'css_phy_tx_top', input pin 'fp_q_out' of hierarchical cell 'u_controller' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+Warning: In design 'css_phy_tx_top', input pin 'fp_valid_out' of hierarchical cell 'u_controller' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+1
+#################### Constraints File #########################
+puts "###############################################"
+###############################################
+puts "################## Compile ####################"
+################## Compile ####################
+puts "###############################################"
+###############################################
+source -e -v "../cons/cons.tcl"
+#################################### Defining Clock ####################################
+set TIGHT_PER 5
+5
+set CLK_PER 50
+50
+#using too tight clk to maximize optimization
+create_clock -name "CLK" -period $TIGHT_PER [get_port clk]
+1
+set_clock_uncertainty 1 [get_clocks "CLK"]
+1
+set_clock_transition 0.1 [get_clocks "CLK"]
+1
+set_clock_latency 0 [get_clocks "CLK"]
+1
+set_dont_touch_network [get_clocks "CLK"]
+1
+set_ideal_network [get_ports {clk reset}]
+1
+#################################### In/Out Delays ####################################
+# 10% of clk period
+set input_delay [expr 0.1 * $CLK_PER]
+5.0
+set output_delay [expr 0.1 * $CLK_PER]
+5.0
+set_input_delay $input_delay -clock [get_clocks "CLK"] [remove_from_collection [all_inputs] [get_ports {clk reset}]]
+1
+set_output_delay $output_delay -clock [get_clocks "CLK"] [all_outputs]
+1
+set_load 1 [all_outputs]
+1
+#################################### Max Values ####################################
+set_max_transition 1.024 [current_design]
+Current design is 'css_phy_tx_top'.
+1
+#################################### Driving Cell ####################################
+set_driving_cell -library "saed90nm_max" -lib_cell IBUFFX2 [remove_from_collection [all_inputs] [get_port clk]]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+#################################### Wire Model ####################################
+set_wire_load_model -library saed90nm_max -name ForQA
+1
+current_design form_ppdu
+Current design is 'form_ppdu'.
+{form_ppdu}
+set_wire_load_model -library saed90nm_max -name ForQA
+1
+current_design controller
+Current design is 'controller'.
+{controller}
+set_wire_load_model -library saed90nm_max -name ForQA
+1
+current_design $design
+Current design is 'css_phy_tx_top'.
+{css_phy_tx_top}
+{css_phy_tx_top}
+#################### Compile #########################
+compile -map_effort high
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 60 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'dqpsk_csk_multiplier'
+  Processing 'csk_waveform_rom'
+  Processing 'csk_waveform_selector'
+  Processing 'csk_sequencer'
+  Processing 'dqpsk_encoder'
+  Processing 'qpsk_mapper'
+  Processing 'form_ppdu'
+  Processing 'bit_interleaver'
+  Processing 'symbol_mapper'
+  Processing 'demux_iq'
+  Processing 'zero_padding'
+Information: The register 'total_data_bits_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'total_data_bits_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'total_data_bits_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'total_data_bits_reg[12]' is a constant and will be removed. (OPT-1206)
+  Processing 'controller'
+  Processing 'css_phy_tx_top'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'css_phy_tx_top_DW01_inc_0'
+  Processing 'css_phy_tx_top_DW01_inc_1'
+  Processing 'css_phy_tx_top_DW01_cmp2_0'
+  Processing 'css_phy_tx_top_DW01_add_0'
+  Processing 'css_phy_tx_top_DW_div_uns_0'
+  Processing 'css_phy_tx_top_DW_div_uns_1'
+  Processing 'css_phy_tx_top_DW01_add_1'
+  Processing 'css_phy_tx_top_DW_div_uns_2'
+  Processing 'css_phy_tx_top_DW01_sub_0'
+  Processing 'css_phy_tx_top_DW_div_uns_3'
+  Processing 'css_phy_tx_top_DW01_add_2'
+  Processing 'css_phy_tx_top_DW01_inc_2'
+  Processing 'dqpsk_csk_multiplier_DW01_add_0'
+  Processing 'dqpsk_csk_multiplier_DW01_sub_0'
+  Processing 'dqpsk_csk_multiplier_DW01_sub_1'
+  Processing 'dqpsk_csk_multiplier_DW01_sub_2'
+  Processing 'csk_sequencer_DW01_dec_0'
+  Processing 'csk_sequencer_DW01_cmp2_0'
+  Processing 'csk_sequencer_DW01_inc_0'
+  Processing 'csk_sequencer_DW01_inc_1'
+  Processing 'csk_sequencer_DW01_cmp2_1'
+  Processing 'csk_sequencer_DW01_inc_2'
+  Processing 'form_ppdu_DW01_add_0'
+  Processing 'form_ppdu_DW01_add_1'
+  Processing 'form_ppdu_DW01_inc_0'
+  Processing 'form_ppdu_DW01_inc_1'
+  Processing 'form_ppdu_DW01_cmp2_0'
+  Processing 'form_ppdu_DW01_cmp2_1'
+  Processing 'form_ppdu_DW01_cmp2_2'
+  Processing 'form_ppdu_DW01_cmp2_3'
+  Processing 'zero_padding_DW01_inc_0'
+  Processing 'zero_padding_DW01_cmp2_0'
+  Processing 'zero_padding_DW01_inc_1'
+  Processing 'zero_padding_DW01_cmp6_0'
+  Processing 'zero_padding_DW01_sub_0'
+  Processing 'zero_padding_DW_div_uns_0'
+  Processing 'zero_padding_DW_div_uns_1'
+  Processing 'zero_padding_DW01_inc_2'
+  Processing 'zero_padding_DW01_add_0'
+  Processing 'zero_padding_DW_div_uns_2'
+  Processing 'zero_padding_DW_div_uns_3'
+  Processing 'zero_padding_DW01_add_1'
+  Processing 'controller_DW01_inc_0'
+  Processing 'controller_DW01_cmp2_0'
+  Processing 'controller_DW01_inc_1'
+  Processing 'controller_DW01_cmp6_0'
+  Processing 'controller_DW01_inc_2'
+  Processing 'controller_DW01_cmp2_1'
+  Processing 'controller_DW01_sub_0'
+  Processing 'controller_DW01_cmp2_2'
+  Processing 'controller_DW01_add_0'
+  Processing 'controller_DW_div_uns_0'
+  Processing 'controller_DW_div_uns_1'
+  Processing 'controller_DW01_add_1'
+  Processing 'controller_DW01_sub_1'
+  Processing 'controller_DW_div_uns_2'
+  Processing 'controller_DW_div_uns_3'
+  Processing 'controller_DW01_add_2'
+  Processing 'csk_waveform_rom_DW01_add_0'
+  Processing 'csk_waveform_rom_DW02_mult_0'
+  Processing 'csk_waveform_rom_DW01_add_1'
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+Information: compile falsified 112 infeasible paths. (OPT-1720)
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:55  503689.4   5275.04 1296626.6     265.0                          
+    0:01:55  503689.4   5275.04 1296626.6     265.0                          
+Information: The register 'u_controller/total_bits_reg_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u_controller/total_bits_reg_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u_controller/expected_chip_count_reg_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u_controller/expected_chip_count_reg_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u_zero_padding/total_data_bits_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u_zero_padding/padding_total_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u_zero_padding/total_data_bits_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u_form_ppdu/wr_ptr_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'u_form_ppdu/wr_ptr_reg[1]' is a constant and will be removed. (OPT-1206)
+    0:02:11  561264.5     79.33  348943.7    9503.9                          
+    0:02:11  561122.6     79.33  348942.6    9503.9                          
+    0:02:11  561122.6     79.33  348942.6    9503.9                          
+    0:02:12  561122.6     79.33  348942.6    9503.9                          
+    0:02:12  561122.6     79.33  348943.4    9503.9                          
+    0:02:23  489314.3     75.00  226797.3       0.0                          
+    0:02:24  489829.5     74.55  224664.2       0.0                          
+    0:02:26  490115.2     74.36  221842.6       0.0                          
+    0:02:28  492761.1     74.36  220741.2       0.0                          
+    0:02:29  492110.4     74.36  220695.3       0.0                          
+    0:02:30  493209.0     74.36  220750.2       0.0                          
+    0:02:31  492202.6     74.36  220693.5       0.0                          
+    0:02:32  493247.7     74.36  220750.0       0.0                          
+    0:02:33  492232.1     74.36  220651.6       0.0                          
+    0:02:34  493311.3     74.36  220750.3       0.0                          
+    0:02:34  493311.3     74.36  220750.3       0.0                          
+    0:02:34  493311.3     74.36  220750.3       0.0                          
+    0:02:34  493311.3     74.36  220750.3       0.0                          
+    0:02:35  493311.3     74.36  220750.3       0.0                          
+    0:02:35  493311.3     74.36  220750.3       0.0                          
+    0:02:35  493311.3     74.36  220750.3       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:02:35  493311.3     74.36  220822.9       0.0                          
+    0:02:35  493402.5     71.67  220745.9       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:35  493478.1     71.44  220741.7      51.9 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:36  493520.5     70.88  220717.4      51.9 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:36  493596.1     68.76  220629.3      51.9 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:36  493630.2     68.12  220591.2      51.9 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:37  493652.3     67.54  220571.5      51.9 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:37  493670.7     67.14  219774.3      51.9 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:37  493688.2     66.65  219756.2      51.9 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:37  493718.6     66.40  219714.0      51.9 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:38  493746.3     65.86  219707.5      51.9 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:38  493807.1     65.00  219660.6      51.9 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:38  493852.3     63.55  219611.2      51.9 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:38  493839.4     62.85  219587.6      51.9 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:38  493865.2     62.41  219564.4      51.9 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:39  493928.8     61.91  219546.1      51.9 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:39  493920.5     61.24  219490.2       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:39  493949.0     61.00  219487.9       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:39  493938.9     60.61  219483.8       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:40  493952.7     60.52  219482.9       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:40  493952.7     60.49  219482.7       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:40  493967.5     60.42  219481.9       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:40  493964.7     60.35  219480.4       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:41  493989.6     59.63  219449.4       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:41  494122.3     54.91  219188.1       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:41  494186.8     53.41  219128.3       0.0 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:41  494218.1     52.90  219118.7       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:41  494254.1     52.25  219103.2       0.0 u_csk_sequencer/group_count_reg[9]/D
+    0:02:41  494304.8     52.03  219044.1       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:42  494344.4     50.92  218985.1       0.0 u_csk_sequencer/group_count_reg[9]/D
+    0:02:42  494408.0     49.30  218908.7       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:42  494487.2     48.12  218858.8       0.0 u_csk_sequencer/group_count_reg[9]/D
+    0:02:42  494557.3     47.78  218845.7       0.0 u_csk_sequencer/group_count_reg[9]/D
+    0:02:42  494581.2     47.31  218824.0       0.0 u_csk_sequencer/group_count_reg[9]/D
+    0:02:43  494619.0     46.58  218793.6       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:43  494662.3     46.34  217968.8       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:43  494714.9     46.24  217963.4       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:43  494795.1     45.82  217945.9       0.0 u_csk_sequencer/group_count_reg[9]/D
+    0:02:43  494858.6     45.41  217918.6       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:43  494909.3     45.16  217912.4       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:02:44  494946.2     44.82  218016.1       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:44  494972.0     44.73  217680.1       0.0 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:44  495041.1     44.25  217650.8       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:44  495080.8     44.07  217643.0       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:44  495119.5     43.88  217637.5       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:44  495154.5     43.60  217625.2       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:45  495199.6     43.45  217605.1       0.0 u_csk_sequencer/group_count_reg[4]/D
+    0:02:45  495213.5     43.37  217601.2       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:45  495242.0     43.30  217597.7       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:45  495249.4     43.26  217594.6       0.0 u_csk_sequencer/gap_counter_reg[5]/D
+    0:02:45  495325.0     42.54  217560.5       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:45  495367.4     42.24  217547.1       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:46  495376.6     41.99  217538.5       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:46  495407.9     41.95  217536.8       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:46  495452.2     41.86  217528.3       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:46  495514.8     40.58  217431.1       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:02:46  495537.9     40.34  217428.5       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:46  495560.9     39.99  217402.7       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:46  495624.5     39.40  217382.8       0.0 u_csk_sequencer/group_count_reg[4]/D
+    0:02:47  495705.6     39.09  217359.5       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:47  495761.8     38.83  217381.0       0.0 u_csk_sequencer/group_count_reg[4]/D
+    0:02:47  495768.3     38.66  217358.4       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:47  495782.1     38.38  217344.6       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:47  495778.4     38.28  217340.5       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:47  495800.5     38.22  217338.0       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:02:47  495852.1     38.16  217335.9       0.0 u_csk_sequencer/gap_counter_reg[6]/D
+    0:02:48  495849.4     38.14  217334.2       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:48  495871.5     38.11  217329.3       0.0 u_csk_sequencer/gap_counter_reg[5]/D
+    0:02:48  495913.9     38.04  217325.7       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:48  495962.7     37.95  217322.1       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:48  495995.0     37.92  217320.6       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:02:48  496000.5     37.86  217318.6       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:02:49  496016.2     37.71  217314.8       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:02:49  496108.3     37.60  217287.7      45.5 u_controller/expected_chip_count_reg_reg[10]/D
+    0:02:49  496133.2     37.52  217284.4      45.5 u_controller/expected_chip_count_reg_reg[10]/D
+    0:02:49  496135.1     37.47  217282.1      45.5 u_csk_sequencer/gap_counter_reg[1]/D
+    0:02:49  496125.8     37.36  217277.7       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:02:49  496179.3     37.27  217273.4       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:02:49  496218.9     37.22  217271.1       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:50  496233.7     37.20  217270.0       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:50  496268.7     37.09  217265.1       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:02:50  496293.6     37.03  217259.2       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:02:50  496335.1     36.92  217257.1       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:50  496324.0     36.83  217252.4       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:50  496317.5     36.80  217252.1       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:51  496319.4     36.78  217251.3       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:51  496371.9     36.74  217249.3       0.0 u_csk_sequencer/group_count_reg[9]/D
+    0:02:51  496370.1     36.73  217248.1       0.0 u_csk_sequencer/group_count_reg[9]/D
+    0:02:51  496375.6     36.71  217247.6       0.0 u_csk_sequencer/group_count_reg[9]/D
+    0:02:51  496381.1     36.69  217246.6       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:02:51  496404.2     36.64  217245.2       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:52  496396.8     36.53  217238.5       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:52  496400.5     36.51  217237.6       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:52  496405.1     36.37  217231.3       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:52  496416.2     36.24  217225.9       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:52  496420.8     36.21  217225.2       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:53  496424.4     36.19  217224.8       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:53  496437.3     36.18  217222.7       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:53  496458.5     36.10  217220.9       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:53  496470.5     36.10  217222.1       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:56  496486.2     36.08  217220.6       0.0                          
+    0:02:57  496484.3     36.05  217220.0       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:57  496486.2     36.05  217220.2       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:57  496520.3     36.02  217218.2       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:02:57  496509.2     35.94  217214.2       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:57  496524.9     35.87  217211.5       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:58  496530.4     35.83  217209.7       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:02:59  496553.5     35.81  217209.3       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:03:03  496507.4     35.78  217207.7       0.0                          
+    0:03:03  496498.2     35.61  217200.2       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:04  496503.7     35.57  217198.1       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:04  496522.1     35.55  205380.2       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:03:05  496569.1     35.41  205375.3       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:05  496510.2     35.37  205373.6       0.0                          
+    0:03:06  496529.5     35.30  205369.9       0.0 u_csk_sequencer/group_count_reg[1]/D
+    0:03:06  496536.0     35.23  205367.0       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:06  496565.5     35.15  205364.0       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:06  496528.6     35.10  205361.6       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:07  496507.4     35.10  205360.3       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:07  496509.2     35.00  205356.5       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:07  496524.0     34.92  205349.9       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:07  496548.9     34.80  205346.4       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:08  496556.2     34.78  205346.3       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:08  496564.5     34.66  205339.3       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:08  496597.7     34.56  205337.0       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:08  496597.7     34.55  205337.0       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:10  496484.3     34.55  205338.2       0.0                          
+    0:03:10  496484.3     34.55  205337.7       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:10  496489.9     34.54  205337.4       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:26  496493.6     34.50  205335.9       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:27  496479.7     34.48  206916.2       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:29  496473.3     34.46  206913.1       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:30  496517.5     34.40  206910.4       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:30  496521.2     34.34  206908.7       0.0 u_csk_sequencer/gap_counter_reg[5]/D
+    0:03:31  496512.0     34.31  206907.9       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:32  496514.8     34.28  206906.9       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:32  496510.2     34.28  206906.9       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:03:33  496517.5     34.27  206908.0       0.0 u_csk_sequencer/group_count_reg[8]/D
+    0:03:34  496534.1     34.26  206907.3       0.0 u_csk_sequencer/group_count_reg[8]/D
+    0:03:34  496532.3     34.25  206907.0       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:34  496548.9     34.25  206906.8       0.0 u_csk_sequencer/group_count_reg[8]/D
+    0:03:34  496549.8     34.24  206906.9       0.0 u_csk_sequencer/gap_counter_reg[5]/D
+    0:03:35  496515.7     34.23  206905.0       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:36  496532.3     34.23  206904.3       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:03:37  496553.5     34.23  206904.2       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:03:37  496561.8     34.22  206904.0       0.0 u_csk_sequencer/gap_counter_reg[6]/D
+    0:03:38  496563.6     34.22  206903.9       0.0 u_csk_sequencer/group_count_reg[8]/D
+    0:03:39  496553.5     34.19  206902.8       0.0 u_csk_sequencer/group_count_reg[8]/D
+    0:03:41  496564.5     34.19  206902.9       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:03:43  496570.1     34.19  206902.8       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:03:43  496571.0     34.18  206900.8       0.0 u_csk_sequencer/gap_counter_reg[0]/D
+    0:03:44  496582.0     34.18  206900.5       0.0 u_csk_sequencer/group_count_reg[8]/D
+    0:03:44  496583.0     34.17  206899.5       0.0 u_csk_sequencer/gap_counter_reg[0]/D
+    0:03:44  496586.6     34.16  205318.1       0.0 u_csk_sequencer/group_count_reg[8]/D
+    0:03:46  496592.2     34.15  205318.0       0.0 u_csk_sequencer/group_count_reg[8]/D
+    0:03:46  496590.3     34.14  205321.7       0.0 u_csk_sequencer/group_count_reg[8]/D
+    0:03:48  496595.9     34.12  205321.3       0.0 u_csk_sequencer/gap_counter_reg[0]/D
+    0:03:49  496602.3     34.12  205321.2       0.0 u_csk_sequencer/gap_counter_reg[0]/D
+    0:03:52  496608.8     34.10  205320.5       0.0 u_csk_sequencer/gap_counter_reg[0]/D
+    0:03:52  496609.7     34.10  205320.4       0.0 u_csk_sequencer/gap_counter_reg[0]/D
+    0:03:52  496606.0     34.09  205319.6       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:03:54  496606.0     34.08  205319.1       0.0 u_csk_sequencer/gap_counter_reg[0]/D
+    0:03:55  496612.5     34.07  205318.7       0.0 u_csk_sequencer/gap_counter_reg[0]/D
+    0:03:56  496618.9     34.06  205317.4       0.0 u_csk_sequencer/gap_counter_reg[0]/D
+    0:04:05  496618.0     34.03  205317.0       0.0                          
+    0:04:08  496236.4     34.03  205303.0       0.0                          
+    0:04:09  496245.7     34.02  205303.6       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:04:09  496255.8     33.98  205302.2       0.0 u_csk_sequencer/group_count_reg[0]/D
+    0:04:09  496258.6     33.92  205300.8       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:04:09  496263.2     33.90  205300.7       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:04:10  496271.5     33.86  205299.0       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:04:10  496270.5     33.85  205299.0       0.0 u_csk_sequencer/gap_counter_reg[2]/D
+    0:04:10  496283.4     33.83  205297.8       0.0 u_csk_sequencer/group_count_reg[10]/D
+    0:04:10  496302.8     33.78  205296.1       0.0 u_csk_sequencer/k_index_reg[1]/D
+    0:04:11  496312.9     33.76  204506.0       0.0 u_csk_sequencer/group_count_reg[9]/D
+    0:04:11  496312.9     33.74  204505.1       0.0 u_csk_sequencer/k_index_reg[1]/D
+    0:04:11  496332.3     33.71  204503.9       0.0 u_csk_sequencer/k_index_reg[1]/D
+    0:04:11  496354.4     33.70  204502.5       0.0 u_csk_sequencer/gap_counter_reg[6]/D
+    0:04:11  496354.4     33.68  204501.8       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:11  496354.4     33.68  204501.8       0.0 u_csk_sequencer/gap_counter_reg[5]/D
+    0:04:12  496352.6     33.68  204501.6       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:14  496344.3     33.65  204498.8       0.0                          
+    0:04:14  496362.7     33.65  204497.2       0.0                          
+    0:04:14  496356.2     33.65  204496.5       0.0                          
+    0:04:15  496356.2     33.60  204499.7       0.0                          
+    0:04:15  496336.9     33.59  204494.7       0.0                          
+    0:04:15  496348.0     33.57  204452.9       0.0                          
+    0:04:16  496362.7     33.53  203709.1       0.0                          
+    0:04:18  496515.7     33.53  196432.9       0.0                          
+    0:04:19  496527.7     33.53  196373.5       0.0                          
+    0:04:19  496558.1     33.53  196358.7       0.0                          
+    0:04:20  496636.4     33.53  196248.5       0.0                          
+    0:04:21  496948.8     33.53  195529.8       0.0                          
+    0:04:21  497077.9     33.53  191867.4       0.0                          
+    0:04:21  497108.3     33.53  191144.8       0.0                          
+    0:04:22  497215.2     33.53  190727.9       0.0                          
+    0:04:23  497377.4     33.53  190690.1       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:04:23  497377.4     33.53  190690.1       0.0                          
+    0:04:23  497377.4     33.53  190690.1       0.0                          
+    0:04:34  496253.9     33.55  185205.8       0.0                          
+    0:04:35  495823.6     33.55  185399.9       0.0                          
+    0:04:35  495663.2     33.55  185398.8       0.0                          
+    0:04:35  495541.6     33.55  185398.8       0.0                          
+    0:04:35  495414.4     33.55  185398.8       0.0                          
+    0:04:35  495298.3     33.55  185398.8       0.0                          
+    0:04:35  495204.2     33.55  185398.8       0.0                          
+    0:04:36  495154.5     33.55  185398.8       0.0                          
+    0:04:36  495132.4     33.55  185398.8       0.0                          
+    0:04:36  495110.2     33.55  185398.8       0.0                          
+    0:04:36  495088.1     33.55  185398.8       0.0                          
+    0:04:36  495066.0     33.55  185398.8       0.0                          
+    0:04:36  495043.9     33.55  185398.8       0.0                          
+    0:04:36  495021.8     33.55  185398.8       0.0                          
+    0:04:36  494999.7     33.55  185398.8       0.0                          
+    0:04:36  494977.5     33.55  185398.8       0.0                          
+    0:04:36  494977.5     33.55  185398.8       0.0                          
+    0:04:37  494977.5     33.55  185398.8       0.0                          
+    0:04:37  494831.0     33.57  185426.1       0.0                          
+    0:04:38  494769.3     33.56  185425.8       0.0                          
+    0:04:38  494766.5     33.58  185426.4       0.0                          
+    0:04:38  494764.6     33.59  185426.7       0.0                          
+    0:04:38  494764.6     33.59  185426.7       0.0                          
+    0:04:38  494764.6     33.59  185426.7       0.0                          
+    0:04:38  494764.6     33.59  185426.7       0.0                          
+    0:04:38  494764.6     33.59  185426.7       0.0                          
+    0:04:38  494753.6     33.52  185424.4       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:38  494770.2     33.46  185455.0       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:38  494770.2     33.45  185454.4       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:39  494780.3     33.41  185453.3       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:39  494809.8     33.37  185450.4       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:39  494811.6     33.37  185450.4       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:39  494838.4     33.31  185447.8       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:04:40  494842.1     33.31  185447.6       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:40  494846.7     33.28  185447.0       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:41  494844.8     33.27  185446.6       0.0 u_csk_sequencer/gap_counter_reg[2]/D
+    0:04:41  494852.2     33.27  185446.2       0.0 u_csk_sequencer/gap_counter_reg[5]/D
+    0:04:41  494846.7     33.27  185446.2       0.0                          
+    0:04:41  494808.9     33.27  185446.2       0.0                          
+    0:04:42  494734.2     33.26  185446.0       0.0                          
+    0:04:42  494773.9     33.25  185445.2       0.0                          
+    0:04:42  494773.9     33.24  185445.2       0.0                          
+    0:04:42  494784.0     33.23  185444.5       0.0                          
+    0:04:43  494811.6     33.20  185442.7       0.0                          
+    0:04:43  494859.6     33.20  185442.5       0.0                          
+    0:04:43  494857.7     33.20  185441.6       0.0                          
+    0:04:43  494862.3     33.20  185440.5       0.0                          
+    0:04:43  494873.4     33.20  185440.3       0.0                          
+    0:04:44  494880.8     33.20  185440.1       0.0                          
+    0:04:44  494890.9     33.20  185427.2       0.0                          
+    0:04:45  495153.6     33.20  184733.4       0.0                          
+    0:04:45  495291.8     33.20  184499.9       0.0                          
+    0:04:45  495505.6     33.20  184262.8       0.0                          
+    0:04:45  495680.7     33.20  184055.8       0.0                          
+    0:04:45  495855.8     33.20  183869.7       0.0                          
+    0:04:46  495871.5     33.20  189241.3       0.0 u_csk_sequencer/k_index_reg[1]/D
+    0:04:46  495878.9     33.19  189240.8       0.0 u_csk_sequencer/k_index_reg[1]/D
+    0:04:46  495896.4     33.19  189240.8       0.0 u_csk_sequencer/gap_counter_reg[4]/D
+    0:04:47  495901.9     33.18  189240.9       0.0 u_csk_sequencer/group_count_reg[7]/D
+    0:04:47  495897.3     33.18  189240.5       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:47  495897.3     33.16  189240.0       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:47  495897.3     33.15  189239.5       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:48  495897.3     33.14  189239.3       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:48  495925.9     33.10  184944.6       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:48  495953.5     33.06  184942.9       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:48  495971.0     33.04  184942.0       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:04:48  495993.1     33.02  184941.1       0.0 u_controller/expected_chip_count_reg_reg[12]/D
+    0:04:48  496022.6     33.01  184940.5       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:49  496023.5     33.00  184940.3       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:49  496045.7     32.98  184939.5       0.0 u_csk_sequencer/gap_counter_reg[1]/D
+    0:04:50  495948.9     32.98  184939.3       0.0                          
+Loading db file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/std_cells/saed90nm_max.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'css_phy_tx_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'u_dqpsk_csk_multiplier/clk': 9745 load(s), 1 driver(s)
+1
+#using real dedicated clk
+create_clock -name "CLK" -period $CLK_PER [get_port clk]
+1
+update_timing
+Information: Updating design information... (UID-85)
+Warning: Design 'css_phy_tx_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
+#################### Outputs #########################
+write_file -format verilog -hierarchy -output ../results/outputs/${design}_syn_netlist.v
+Writing verilog file '/mnt/hgfs/Shared_Folder/Zigbee-CSS-PHY-Transmitter-main/syn/results/outputs/css_phy_tx_top_syn_netlist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 9 nets to module controller using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 5 nets to module zero_padding using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 11 nets to module css_phy_tx_top using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+write_file -format ddc -hierarchy -output ../results/outputs/${design}_syn.ddc
+Writing ddc file '../results/outputs/css_phy_tx_top_syn.ddc'.
+1
+write_sdc ../results/outputs/${design}.sdc
+1
+#################### Reports #########################
+report_clock -attributes > ../results/reports/clock.rpt
+report_timing -max_paths 10 -delay_type max -sort_by slack > ../results/reports/setup_syn.rpt
+report_timing -max_paths 10 -delay_type min -sort_by slack > ../results/reports/hold_syn.rpt
+report_area -hierarchy > ../results/reports/area.rpt
+report_power -hierarchy > ../results/reports/power.rpt
+report_constraint -all_violators > ../results/reports/constraint.rpt
+#################################### Close SVF File ####################################
+set_svf -off
+1
+#gui_start
+#exit
+dc_shell> exit
+
+Memory usage for main task 281 Mbytes.
+Memory usage for this session 281 Mbytes.
+CPU usage for this session 309 seconds ( 0.09 hours ).
+
+Thank you...
