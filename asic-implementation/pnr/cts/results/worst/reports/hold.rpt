@@ -1,0 +1,368 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -report_by design
+Design : css_phy_tx_top
+Version: O-2018.06-SP1
+Date   : Sat Sep 19 06:28:15 2026
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+
+  Startpoint: u_symbol_mapper/i_mapped_reg[19] (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_interleaver/i_temp_reg[19] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.06      1.06
+
+  u_symbol_mapper/i_mapped_reg[19]/CLK (DFFARX1)   0.00      1.06 r
+  u_symbol_mapper/i_mapped_reg[19]/Q (DFFARX1)     0.89      1.95 f
+  u_interleaver/U237/Q (MUX21X1)                   0.30      2.25 f
+  u_interleaver/i_temp_reg[19]/D (DFFARX1)         0.00      2.25 f
+  data arrival time                                          2.25
+
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.19      1.19
+  clock reconvergence pessimism                   -0.03      1.16
+  u_interleaver/i_temp_reg[19]/CLK (DFFARX1)       0.00      1.16 r
+  clock uncertainty                                1.00      2.16
+  library hold time                                0.09      2.25
+  data required time                                         2.25
+  ------------------------------------------------------------------------
+  data required time                                         2.25
+  data arrival time                                         -2.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+
+  Startpoint: u_symbol_mapper/q_mapped_reg[25] (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_interleaver/q_temp_reg[25] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.07      1.07
+
+  u_symbol_mapper/q_mapped_reg[25]/CLK (DFFARX1)   0.00      1.07 r
+  u_symbol_mapper/q_mapped_reg[25]/Q (DFFARX1)     0.89      1.95 f
+  u_interleaver/U133/Q (MUX21X1)                   0.29      2.24 f
+  u_interleaver/q_temp_reg[25]/D (DFFARX1)         0.00      2.24 f
+  data arrival time                                          2.24
+
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.19      1.19
+  clock reconvergence pessimism                   -0.04      1.15
+  u_interleaver/q_temp_reg[25]/CLK (DFFARX1)       0.00      1.15 r
+  clock uncertainty                                1.00      2.15
+  library hold time                                0.09      2.24
+  data required time                                         2.24
+  ------------------------------------------------------------------------
+  data required time                                         2.24
+  data arrival time                                         -2.24
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+
+  Startpoint: u_symbol_mapper/q_mapped_reg[24] (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_interleaver/q_temp_reg[24] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.06      1.06
+
+  u_symbol_mapper/q_mapped_reg[24]/CLK (DFFARX1)   0.00      1.06 r
+  u_symbol_mapper/q_mapped_reg[24]/Q (DFFARX1)     0.90      1.96 f
+  u_interleaver/U135/Q (MUX21X1)                   0.29      2.25 f
+  u_interleaver/q_temp_reg[24]/D (DFFARX1)         0.00      2.25 f
+  data arrival time                                          2.25
+
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.19      1.19
+  clock reconvergence pessimism                   -0.04      1.15
+  u_interleaver/q_temp_reg[24]/CLK (DFFARX1)       0.00      1.15 r
+  clock uncertainty                                1.00      2.15
+  library hold time                                0.09      2.24
+  data required time                                         2.24
+  ------------------------------------------------------------------------
+  data required time                                         2.24
+  data arrival time                                         -2.25
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+
+  Startpoint: u_interleaver/i_out_reg[0] (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_form_ppdu/i_fifo_reg[15][0] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.06      1.06
+
+  u_interleaver/i_out_reg[0]/CLK (DFFARX1)         0.00      1.06 r
+  u_interleaver/i_out_reg[0]/Q (DFFARX1)           1.04      2.10 f
+  u_form_ppdu/U7243/Q (MUX21X1)                    0.36      2.47 f
+  u_form_ppdu/i_fifo_reg[15][0]/D (DFFX1)          0.00      2.47 f
+  data arrival time                                          2.47
+
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.35      1.35
+  clock reconvergence pessimism                   -0.01      1.34
+  u_form_ppdu/i_fifo_reg[15][0]/CLK (DFFX1)        0.00      1.34 r
+  clock uncertainty                                1.00      2.34
+  library hold time                                0.12      2.46
+  data required time                                         2.46
+  ------------------------------------------------------------------------
+  data required time                                         2.46
+  data arrival time                                         -2.47
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+
+  Startpoint: u_interleaver/i_out_reg[0] (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_form_ppdu/i_fifo_reg[14][0] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.06      1.06
+
+  u_interleaver/i_out_reg[0]/CLK (DFFARX1)         0.00      1.06 r
+  u_interleaver/i_out_reg[0]/Q (DFFARX1)           1.04      2.10 f
+  u_form_ppdu/U7367/Q (MUX21X1)                    0.36      2.47 f
+  u_form_ppdu/i_fifo_reg[14][0]/D (DFFX1)          0.00      2.47 f
+  data arrival time                                          2.47
+
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.35      1.35
+  clock reconvergence pessimism                   -0.01      1.34
+  u_form_ppdu/i_fifo_reg[14][0]/CLK (DFFX1)        0.00      1.34 r
+  clock uncertainty                                1.00      2.34
+  library hold time                                0.12      2.46
+  data required time                                         2.46
+  ------------------------------------------------------------------------
+  data required time                                         2.46
+  data arrival time                                         -2.47
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: u_symbol_mapper/q_mapped_reg[19] (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_interleaver/q_temp_reg[19] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.07      1.07
+
+  u_symbol_mapper/q_mapped_reg[19]/CLK (DFFARX1)   0.00      1.07 r
+  u_symbol_mapper/q_mapped_reg[19]/Q (DFFARX1)     0.91      1.97 f
+  u_interleaver/U141/Q (MUX21X1)                   0.30      2.27 f
+  u_interleaver/q_temp_reg[19]/D (DFFARX1)         0.00      2.27 f
+  data arrival time                                          2.27
+
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.21      1.21
+  clock reconvergence pessimism                   -0.04      1.17
+  u_interleaver/q_temp_reg[19]/CLK (DFFARX1)       0.00      1.17 r
+  clock uncertainty                                1.00      2.17
+  library hold time                                0.10      2.26
+  data required time                                         2.26
+  ------------------------------------------------------------------------
+  data required time                                         2.26
+  data arrival time                                         -2.27
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: u_zero_padding/padding_total_reg[1] (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_zero_padding/padding_total_reg[1] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.00      1.00
+
+  u_zero_padding/padding_total_reg[1]/CLK (DFFARX1)
+                                                   0.00      1.00 r
+  u_zero_padding/padding_total_reg[1]/Q (DFFARX1)
+                                                   0.75      1.76 f
+  u_zero_padding/U145/Q (MUX21X1)                  0.26      2.01 f
+  u_zero_padding/padding_total_reg[1]/D (DFFARX1)
+                                                   0.00      2.01 f
+  data arrival time                                          2.01
+
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.06      1.06
+  clock reconvergence pessimism                   -0.06      1.00
+  u_zero_padding/padding_total_reg[1]/CLK (DFFARX1)
+                                                   0.00      1.00 r
+  clock uncertainty                                1.00      2.00
+  library hold time                                0.00      2.01
+  data required time                                         2.01
+  ------------------------------------------------------------------------
+  data required time                                         2.01
+  data arrival time                                         -2.01
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: u_zero_padding/total_data_bits_reg[4] (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_zero_padding/total_data_bits_reg[4] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.00      1.00
+
+  u_zero_padding/total_data_bits_reg[4]/CLK (DFFARX1)
+                                                   0.00      1.00 r
+  u_zero_padding/total_data_bits_reg[4]/Q (DFFARX1)
+                                                   0.75      1.75 f
+  u_zero_padding/U111/Q (MUX21X1)                  0.26      2.00 f
+  u_zero_padding/total_data_bits_reg[4]/D (DFFARX1)
+                                                   0.00      2.00 f
+  data arrival time                                          2.00
+
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.05      1.05
+  clock reconvergence pessimism                   -0.06      1.00
+  u_zero_padding/total_data_bits_reg[4]/CLK (DFFARX1)
+                                                   0.00      1.00 r
+  clock uncertainty                                1.00      2.00
+  library hold time                               -0.00      2.00
+  data required time                                         2.00
+  ------------------------------------------------------------------------
+  data required time                                         2.00
+  data arrival time                                         -2.00
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: u_zero_padding/padding_total_reg[2] (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_zero_padding/padding_total_reg[2] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.00      1.00
+
+  u_zero_padding/padding_total_reg[2]/CLK (DFFARX1)
+                                                   0.00      1.00 r
+  u_zero_padding/padding_total_reg[2]/Q (DFFARX1)
+                                                   0.76      1.76 f
+  u_zero_padding/U147/Q (MUX21X1)                  0.26      2.02 f
+  u_zero_padding/padding_total_reg[2]/D (DFFARX1)
+                                                   0.00      2.02 f
+  data arrival time                                          2.02
+
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.06      1.06
+  clock reconvergence pessimism                   -0.06      1.00
+  u_zero_padding/padding_total_reg[2]/CLK (DFFARX1)
+                                                   0.00      1.00 r
+  clock uncertainty                                1.00      2.00
+  library hold time                                0.00      2.01
+  data required time                                         2.01
+  ------------------------------------------------------------------------
+  data required time                                         2.01
+  data arrival time                                         -2.02
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: u_zero_padding/padding_total_reg[4] (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: u_zero_padding/padding_total_reg[4] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.00      1.00
+
+  u_zero_padding/padding_total_reg[4]/CLK (DFFARX1)
+                                                   0.00      1.00 r
+  u_zero_padding/padding_total_reg[4]/Q (DFFARX1)
+                                                   0.76      1.76 f
+  u_zero_padding/U150/Q (MUX21X1)                  0.25      2.02 f
+  u_zero_padding/padding_total_reg[4]/D (DFFARX1)
+                                                   0.00      2.02 f
+  data arrival time                                          2.02
+
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.06      1.06
+  clock reconvergence pessimism                   -0.06      1.00
+  u_zero_padding/padding_total_reg[4]/CLK (DFFARX1)
+                                                   0.00      1.00 r
+  clock uncertainty                                1.00      2.00
+  library hold time                                0.00      2.01
+  data required time                                         2.01
+  ------------------------------------------------------------------------
+  data required time                                         2.01
+  data arrival time                                         -2.02
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+1

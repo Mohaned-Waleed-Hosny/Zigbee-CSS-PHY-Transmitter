@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="1" majorVersion="1" minorVersion="8" name="__private_meta_data_:css_phy_tx_top_placement_missingVia.err" designName="css_phy_tx_top_placement" info="" checker="check_pg_missing_vias" checkerVersion="" created="1789768617" createdDate="09:19:2026:05:56:57:CST" modified="1789769507" modifiedDate="09:19:2026:06:11:47:CST" interactive="false" internal="false" metaData="true" numTypes="1" numInsts="0"/>

@@ -1,0 +1,1158 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -report_by design
+Design : css_phy_tx_top
+Version: O-2018.06-SP1
+Date   : Sat Sep 19 06:28:15 2026
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+
+  Startpoint: payloadLength[4] (input port clocked by CLK)
+  Endpoint: u_controller/expected_chip_count_reg_reg[12] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      1.19      1.19
+  input external delay                             5.00      6.19
+
+  payloadLength[4] (in)                            0.16      6.36 r
+  U6538/ZN (INVX0)                                 0.25      6.61 f
+  U6586/ZN (INVX0)                                 1.36      7.96 r
+  u_controller/U121/Q (AND3X1)                     1.05      9.02 r
+  u_controller/U68/Q (AND2X1)                      0.28      9.30 r
+  u_controller/U64/Q (AND2X1)                      0.25      9.55 r
+  u_controller/U21/Q (XOR2X1)                      0.36      9.91 r
+  u_controller/rem_101/U25/Q (AND2X1)              0.30     10.21 r
+  u_controller/rem_101/U22/Q (MUX21X1)             0.32     10.53 f
+  u_controller/rem_101/U24/Q (AND2X1)              0.22     10.75 f
+  u_controller/rem_101/U51/Q (OR2X1)               0.22     10.98 f
+  u_controller/rem_101/U3/Q (MUX21X1)              0.31     11.29 f
+  u_controller/rem_101/U48/Q (AND2X1)              0.22     11.50 f
+  u_controller/rem_101/U46/Q (OR2X1)               0.22     11.72 f
+  u_controller/rem_101/U26/Q (MUX21X1)             0.31     12.03 f
+  u_controller/rem_101/U47/Q (AND2X1)              0.23     12.26 f
+  u_controller/rem_101/U38/Q (OR2X1)               0.22     12.48 f
+  u_controller/rem_101/U61/Q (MUX21X1)             0.31     12.79 f
+  u_controller/rem_101/U49/Q (AND2X1)              0.22     13.01 f
+  u_controller/rem_101/U37/Q (OR2X1)               0.22     13.23 f
+  u_controller/rem_101/U27/Q (MUX21X1)             0.31     13.54 f
+  u_controller/rem_101/U40/Q (AND2X1)              0.25     13.78 f
+  u_controller/rem_101/U11/QN (NOR2X0)             0.14     13.93 r
+  u_controller/rem_101/U10/Q (MUX21X1)             0.35     14.27 r
+  u_controller/rem_101/U50/Q (AND2X1)              0.27     14.54 r
+  u_controller/rem_101/U39/Q (OR2X1)               0.22     14.76 r
+  u_controller/rem_101/U64/Q (MUX21X1)             0.28     15.04 f
+  u_controller/rem_101/U36/ZN (INVX0)              0.09     15.13 r
+  u_controller/rem_101/U17/Q (AND2X1)              0.24     15.36 r
+  u_controller/rem_101/U65/Q (MUX21X1)             0.27     15.63 r
+  u_controller/U169/Q (AND2X1)                     0.34     15.97 r
+  u_controller/U66/Q (AO21X1)                      0.30     16.27 r
+  u_controller/U286/ZN (INVX0)                     0.11     16.39 f
+  u_controller/U287/QN (NAND2X1)                   0.10     16.49 r
+  u_controller/U25/QN (NAND2X1)                    0.14     16.63 f
+  u_controller/U455/ZN (INVX0)                     0.10     16.73 r
+  u_controller/U56/Q (AO21X1)                      0.23     16.95 r
+  u_controller/U2303/Q (AO21X1)                    0.25     17.20 r
+  u_controller/U45/Q (AO21X1)                      0.26     17.46 r
+  u_controller/U46/Q (AO21X1)                      0.26     17.72 r
+  u_controller/U49/Q (XNOR3X1)                     0.44     18.15 f
+  u_controller/div_109/U57/ZN (INVX0)              0.19     18.34 r
+  u_controller/div_109/U22/ZN (INVX0)              0.20     18.54 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_7_3/CO (FADDX1)
+                                                   0.38     18.92 f
+  u_controller/div_109/U45/ZN (INVX0)              0.14     19.06 r
+  u_controller/div_109/U44/Q (MUX21X1)             0.33     19.39 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_6_3/CO (FADDX1)
+                                                   0.38     19.77 f
+  u_controller/div_109/U13/Q (OR2X1)               0.26     20.03 f
+  u_controller/div_109/U53/Q (MUX21X1)             0.32     20.35 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_5_3/CO (FADDX1)
+                                                   0.38     20.73 f
+  u_controller/div_109/U1/Q (OR2X1)                0.24     20.97 f
+  u_controller/div_109/U54/Q (MUX21X1)             0.33     21.31 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_4_3/CO (FADDX1)
+                                                   0.39     21.70 f
+  u_controller/div_109/U7/Q (OR2X1)                0.26     21.96 f
+  u_controller/div_109/U26/Q (MUX21X1)             0.32     22.28 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_3_3/CO (FADDX1)
+                                                   0.37     22.65 f
+  u_controller/div_109/U32/Q (OR2X1)               0.26     22.90 f
+  u_controller/div_109/U5/Q (XOR2X1)               0.33     23.24 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_2_3/CO (FADDX1)
+                                                   0.40     23.63 f
+  u_controller/div_109/U25/Q (OR2X1)               0.27     23.91 f
+  u_controller/div_109/U52/Q (MUX21X1)             0.32     24.23 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_1_3/CO (FADDX1)
+                                                   0.37     24.60 f
+  u_controller/div_109/U24/Q (OR2X1)               0.24     24.84 f
+  u_controller/div_109/U73/Q (MUX21X1)             0.28     25.12 r
+  u_controller/div_109/U18/QN (NAND2X1)            0.12     25.23 f
+  u_controller/div_109/U17/QN (NAND2X1)            0.10     25.33 r
+  u_controller/U95/Q (MUX21X1)                     0.29     25.63 r
+  u_controller/U2309/Q (AO21X1)                    0.25     25.88 r
+  u_controller/U2310/Q (AO22X1)                    0.30     26.18 r
+  u_controller/U188/Q (AND3X1)                     0.34     26.52 r
+  u_controller/U92/Q (AND2X1)                      0.26     26.77 r
+  u_controller/U111/QN (NAND2X1)                   0.12     26.90 f
+  u_controller/U110/Q (XOR2X1)                     0.24     27.14 r
+  u_controller/U113/QN (NAND2X1)                   0.12     27.26 f
+  u_controller/U112/QN (NAND2X1)                   0.09     27.34 r
+  u_controller/expected_chip_count_reg_reg[12]/D (DFFARX1)
+                                                   0.00     27.34 r
+  data arrival time                                         27.34
+
+  clock CLK (rise edge)                           50.00     50.00
+  clock network delay (propagated)                 1.09     51.09
+  clock reconvergence pessimism                    0.00     51.09
+  u_controller/expected_chip_count_reg_reg[12]/CLK (DFFARX1)
+                                                   0.00     51.09 r
+  clock uncertainty                               -1.00     50.09
+  library setup time                              -0.23     49.86
+  data required time                                        49.86
+  ------------------------------------------------------------------------
+  data required time                                        49.86
+  data arrival time                                        -27.34
+  ------------------------------------------------------------------------
+  slack (MET)                                               22.52
+
+
+
+  Startpoint: payloadLength[0] (input port clocked by CLK)
+  Endpoint: u_csk_sequencer/k_index_reg[1] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      1.19      1.19
+  input external delay                             5.00      6.19
+
+  payloadLength[0] (in)                            0.42      6.61 r
+  PLACE_HFSINV_3314_2992/ZN (INVX2)                0.71      7.32 f
+  PLACE_HFSINV_658_2987/ZN (INVX0)                 0.63      7.95 r
+  U6369/Q (AND2X1)                                 0.41      8.36 r
+  U6415/Q (AND2X1)                                 0.22      8.57 r
+  U6414/QN (NAND2X1)                               0.11      8.69 f
+  U6552/Q (XOR2X1)                                 0.31      9.00 f
+  rem_282/U76/ZN (INVX0)                           0.16      9.15 r
+  rem_282/U77/ZN (INVX0)                           0.17      9.33 f
+  rem_282/u_div/u_fa_PartRem_0_6_4/CO (FADDX1)     0.37      9.70 f
+  rem_282/U73/ZN (INVX0)                           0.13      9.83 r
+  rem_282/U72/Q (MUX21X1)                          0.30     10.13 r
+  rem_282/U54/ZN (INVX0)                           0.11     10.24 f
+  rem_282/U52/ZN (INVX0)                           0.12     10.36 r
+  rem_282/U51/Q (XOR2X1)                           0.28     10.64 f
+  rem_282/U50/Q (MUX21X1)                          0.30     10.94 f
+  rem_282/U10/QN (NOR2X0)                          0.20     11.14 r
+  rem_282/U19/Q (MUX21X1)                          0.35     11.50 r
+  rem_282/U47/Q (AND2X1)                           0.24     11.74 r
+  rem_282/U60/Q (OR2X1)                            0.22     11.96 r
+  rem_282/U48/Q (MUX21X1)                          0.33     12.30 f
+  rem_282/u_div/u_fa_PartRem_0_2_4/CO (FADDX1)     0.37     12.66 f
+  rem_282/U6/Q (OR2X1)                             0.24     12.90 f
+  rem_282/U12/Q (MUX21X1)                          0.31     13.21 f
+  rem_282/U24/Q (AND2X1)                           0.23     13.44 f
+  rem_282/U1/Q (OR2X1)                             0.23     13.67 f
+  rem_282/U67/Q (MUX21X1)                          0.28     13.95 f
+  rem_282/U64/ZN (INVX0)                           0.11     14.05 r
+  rem_282/U62/Q (XOR2X1)                           0.29     14.35 f
+  rem_282/U63/Q (MUX21X1)                          0.38     14.72 f
+  U6502/ZN (INVX0)                                 0.18     14.90 r
+  U6503/QN (NAND4X0)                               0.19     15.09 f
+  U6500/QN (OAI221X1)                              0.45     15.54 r
+  U6514/Q (AND3X1)                                 0.35     15.90 r
+  U6564/Q (OR2X1)                                  0.21     16.10 r
+  U13020/QN (NAND4X0)                              0.17     16.28 f
+  U13021/Q (OA221X1)                               0.34     16.61 f
+  U6571/QN (OAI21X1)                               0.38     16.99 r
+  div_293/U101/ZN (INVX0)                          0.10     17.09 f
+  div_293/U100/Q (MUX21X1)                         0.30     17.39 f
+  div_293/U82/ZN (INVX0)                           0.17     17.56 r
+  div_293/u_div/u_fa_PartRem_0_6_3/CO (FADDX1)     0.41     17.97 r
+  div_293/U81/Q (OR2X1)                            0.22     18.19 r
+  div_293/U87/Q (MUX21X1)                          0.29     18.47 f
+  div_293/U78/ZN (INVX0)                           0.17     18.64 r
+  div_293/u_div/u_fa_PartRem_0_5_3/CO (FADDX1)     0.40     19.04 r
+  div_293/U76/Q (OR2X1)                            0.22     19.26 r
+  div_293/U107/Q (MUX21X1)                         0.31     19.57 r
+  div_293/U27/Q (OR2X1)                            0.22     19.79 r
+  div_293/U30/ZN (INVX0)                           0.11     19.90 f
+  div_293/U32/QN (NOR2X0)                          0.16     20.06 r
+  div_293/U31/Q (MUX21X1)                          0.33     20.39 r
+  div_293/U41/ZN (INVX0)                           0.14     20.53 f
+  div_293/u_div/u_fa_PartRem_0_3_3/CO (FADDX1)     0.34     20.87 f
+  div_293/U46/Q (OR2X1)                            0.23     21.10 f
+  div_293/U59/Q (MUX21X1)                          0.29     21.39 f
+  div_293/U51/ZN (INVX0)                           0.16     21.55 r
+  div_293/u_div/u_fa_PartRem_0_2_3/CO (FADDX1)     0.40     21.95 r
+  div_293/U16/Q (OR2X1)                            0.22     22.17 r
+  div_293/U70/Q (MUX21X1)                          0.29     22.45 f
+  div_293/U47/ZN (INVX0)                           0.16     22.62 r
+  div_293/u_div/u_fa_PartRem_0_1_3/CO (FADDX1)     0.40     23.02 r
+  div_293/U39/Q (OR2X1)                            0.20     23.22 r
+  U6358/QN (NAND2X1)                               0.11     23.33 f
+  U6360/QN (NAND2X1)                               0.11     23.44 r
+  U6444/QN (NAND2X0)                               0.18     23.62 f
+  U6445/Q (AO21X1)                                 0.35     23.96 f
+  U6491/ZN (INVX0)                                 0.20     24.16 r
+  U6441/QN (NAND2X0)                               0.24     24.40 f
+  U6477/ZN (INVX0)                                 0.15     24.55 r
+  U6478/QN (NAND2X0)                               0.18     24.73 f
+  U6479/ZN (INVX0)                                 0.13     24.86 r
+  U6436/Q (OA222X1)                                0.46     25.32 r
+  u_csk_sequencer/U128/ZN (INVX0)                  0.12     25.44 f
+  u_csk_sequencer/U114/QN (NOR4X0)                 0.25     25.69 r
+  u_csk_sequencer/U100/QN (NAND4X0)                0.32     26.01 f
+  u_csk_sequencer/U58/QN (NAND2X0)                 0.23     26.24 r
+  u_csk_sequencer/U5/QN (NAND3X0)                  0.21     26.45 f
+  u_csk_sequencer/U303/Q (AO21X1)                  0.28     26.73 f
+  u_csk_sequencer/U18/Q (AND2X1)                   0.23     26.96 f
+  u_csk_sequencer/U14/QN (NOR2X0)                  0.15     27.11 r
+  u_csk_sequencer/U15/Q (OR3X1)                    0.29     27.39 r
+  u_csk_sequencer/k_index_reg[1]/D (DFFARX1)       0.00     27.39 r
+  data arrival time                                         27.39
+
+  clock CLK (rise edge)                           50.00     50.00
+  clock network delay (propagated)                 1.13     51.13
+  clock reconvergence pessimism                    0.00     51.13
+  u_csk_sequencer/k_index_reg[1]/CLK (DFFARX1)     0.00     51.13 r
+  clock uncertainty                               -1.00     50.13
+  library setup time                              -0.20     49.93
+  data required time                                        49.93
+  ------------------------------------------------------------------------
+  data required time                                        49.93
+  data arrival time                                        -27.39
+  ------------------------------------------------------------------------
+  slack (MET)                                               22.54
+
+
+
+  Startpoint: payloadLength[4] (input port clocked by CLK)
+  Endpoint: u_controller/expected_chip_count_reg_reg[11] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      1.19      1.19
+  input external delay                             5.00      6.19
+
+  payloadLength[4] (in)                            0.16      6.36 r
+  U6538/ZN (INVX0)                                 0.25      6.61 f
+  U6586/ZN (INVX0)                                 1.36      7.96 r
+  u_controller/U121/Q (AND3X1)                     1.05      9.02 r
+  u_controller/U68/Q (AND2X1)                      0.28      9.30 r
+  u_controller/U64/Q (AND2X1)                      0.25      9.55 r
+  u_controller/U21/Q (XOR2X1)                      0.36      9.91 r
+  u_controller/rem_101/U25/Q (AND2X1)              0.30     10.21 r
+  u_controller/rem_101/U22/Q (MUX21X1)             0.32     10.53 f
+  u_controller/rem_101/U24/Q (AND2X1)              0.22     10.75 f
+  u_controller/rem_101/U51/Q (OR2X1)               0.22     10.98 f
+  u_controller/rem_101/U3/Q (MUX21X1)              0.31     11.29 f
+  u_controller/rem_101/U48/Q (AND2X1)              0.22     11.50 f
+  u_controller/rem_101/U46/Q (OR2X1)               0.22     11.72 f
+  u_controller/rem_101/U26/Q (MUX21X1)             0.31     12.03 f
+  u_controller/rem_101/U47/Q (AND2X1)              0.23     12.26 f
+  u_controller/rem_101/U38/Q (OR2X1)               0.22     12.48 f
+  u_controller/rem_101/U61/Q (MUX21X1)             0.31     12.79 f
+  u_controller/rem_101/U49/Q (AND2X1)              0.22     13.01 f
+  u_controller/rem_101/U37/Q (OR2X1)               0.22     13.23 f
+  u_controller/rem_101/U27/Q (MUX21X1)             0.31     13.54 f
+  u_controller/rem_101/U40/Q (AND2X1)              0.25     13.78 f
+  u_controller/rem_101/U11/QN (NOR2X0)             0.14     13.93 r
+  u_controller/rem_101/U10/Q (MUX21X1)             0.35     14.27 r
+  u_controller/rem_101/U50/Q (AND2X1)              0.27     14.54 r
+  u_controller/rem_101/U39/Q (OR2X1)               0.22     14.76 r
+  u_controller/rem_101/U64/Q (MUX21X1)             0.28     15.04 f
+  u_controller/rem_101/U36/ZN (INVX0)              0.09     15.13 r
+  u_controller/rem_101/U17/Q (AND2X1)              0.24     15.36 r
+  u_controller/rem_101/U65/Q (MUX21X1)             0.27     15.63 r
+  u_controller/U169/Q (AND2X1)                     0.34     15.97 r
+  u_controller/U66/Q (AO21X1)                      0.30     16.27 r
+  u_controller/U286/ZN (INVX0)                     0.11     16.39 f
+  u_controller/U287/QN (NAND2X1)                   0.10     16.49 r
+  u_controller/U25/QN (NAND2X1)                    0.14     16.63 f
+  u_controller/U455/ZN (INVX0)                     0.10     16.73 r
+  u_controller/U56/Q (AO21X1)                      0.23     16.95 r
+  u_controller/U2303/Q (AO21X1)                    0.25     17.20 r
+  u_controller/U45/Q (AO21X1)                      0.26     17.46 r
+  u_controller/U46/Q (AO21X1)                      0.26     17.72 r
+  u_controller/U49/Q (XNOR3X1)                     0.44     18.15 f
+  u_controller/div_109/U57/ZN (INVX0)              0.19     18.34 r
+  u_controller/div_109/U22/ZN (INVX0)              0.20     18.54 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_7_3/CO (FADDX1)
+                                                   0.38     18.92 f
+  u_controller/div_109/U45/ZN (INVX0)              0.14     19.06 r
+  u_controller/div_109/U44/Q (MUX21X1)             0.33     19.39 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_6_3/CO (FADDX1)
+                                                   0.38     19.77 f
+  u_controller/div_109/U13/Q (OR2X1)               0.26     20.03 f
+  u_controller/div_109/U53/Q (MUX21X1)             0.32     20.35 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_5_3/CO (FADDX1)
+                                                   0.38     20.73 f
+  u_controller/div_109/U1/Q (OR2X1)                0.24     20.97 f
+  u_controller/div_109/U54/Q (MUX21X1)             0.33     21.31 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_4_3/CO (FADDX1)
+                                                   0.39     21.70 f
+  u_controller/div_109/U7/Q (OR2X1)                0.26     21.96 f
+  u_controller/div_109/U26/Q (MUX21X1)             0.32     22.28 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_3_3/CO (FADDX1)
+                                                   0.37     22.65 f
+  u_controller/div_109/U32/Q (OR2X1)               0.26     22.90 f
+  u_controller/div_109/U5/Q (XOR2X1)               0.33     23.24 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_2_3/CO (FADDX1)
+                                                   0.40     23.63 f
+  u_controller/div_109/U25/Q (OR2X1)               0.27     23.91 f
+  u_controller/div_109/U52/Q (MUX21X1)             0.32     24.23 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_1_3/CO (FADDX1)
+                                                   0.37     24.60 f
+  u_controller/div_109/U24/Q (OR2X1)               0.24     24.84 f
+  u_controller/div_109/U73/Q (MUX21X1)             0.28     25.12 r
+  u_controller/div_109/U18/QN (NAND2X1)            0.12     25.23 f
+  u_controller/div_109/U17/QN (NAND2X1)            0.10     25.33 r
+  u_controller/U95/Q (MUX21X1)                     0.29     25.63 r
+  u_controller/U2309/Q (AO21X1)                    0.25     25.88 r
+  u_controller/U2310/Q (AO22X1)                    0.30     26.18 r
+  u_controller/U188/Q (AND3X1)                     0.34     26.52 r
+  u_controller/U92/Q (AND2X1)                      0.26     26.77 r
+  u_controller/U2319/Q (XOR2X1)                    0.28     27.06 r
+  u_controller/U2320/Q (MUX21X1)                   0.27     27.32 r
+  u_controller/expected_chip_count_reg_reg[11]/D (DFFARX1)
+                                                   0.00     27.32 r
+  data arrival time                                         27.32
+
+  clock CLK (rise edge)                           50.00     50.00
+  clock network delay (propagated)                 1.09     51.09
+  clock reconvergence pessimism                    0.00     51.09
+  u_controller/expected_chip_count_reg_reg[11]/CLK (DFFARX1)
+                                                   0.00     51.09 r
+  clock uncertainty                               -1.00     50.09
+  library setup time                              -0.22     49.87
+  data required time                                        49.87
+  ------------------------------------------------------------------------
+  data required time                                        49.87
+  data arrival time                                        -27.32
+  ------------------------------------------------------------------------
+  slack (MET)                                               22.55
+
+
+
+  Startpoint: payloadLength[0] (input port clocked by CLK)
+  Endpoint: u_csk_sequencer/sample_index_reg[2] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      1.19      1.19
+  input external delay                             5.00      6.19
+
+  payloadLength[0] (in)                            0.42      6.61 r
+  PLACE_HFSINV_3314_2992/ZN (INVX2)                0.71      7.32 f
+  PLACE_HFSINV_658_2987/ZN (INVX0)                 0.63      7.95 r
+  U6369/Q (AND2X1)                                 0.41      8.36 r
+  U6415/Q (AND2X1)                                 0.22      8.57 r
+  U6414/QN (NAND2X1)                               0.11      8.69 f
+  U6552/Q (XOR2X1)                                 0.31      9.00 f
+  rem_282/U76/ZN (INVX0)                           0.16      9.15 r
+  rem_282/U77/ZN (INVX0)                           0.17      9.33 f
+  rem_282/u_div/u_fa_PartRem_0_6_4/CO (FADDX1)     0.37      9.70 f
+  rem_282/U73/ZN (INVX0)                           0.13      9.83 r
+  rem_282/U72/Q (MUX21X1)                          0.30     10.13 r
+  rem_282/U54/ZN (INVX0)                           0.11     10.24 f
+  rem_282/U52/ZN (INVX0)                           0.12     10.36 r
+  rem_282/U51/Q (XOR2X1)                           0.28     10.64 f
+  rem_282/U50/Q (MUX21X1)                          0.30     10.94 f
+  rem_282/U10/QN (NOR2X0)                          0.20     11.14 r
+  rem_282/U19/Q (MUX21X1)                          0.35     11.50 r
+  rem_282/U47/Q (AND2X1)                           0.24     11.74 r
+  rem_282/U60/Q (OR2X1)                            0.22     11.96 r
+  rem_282/U48/Q (MUX21X1)                          0.33     12.30 f
+  rem_282/u_div/u_fa_PartRem_0_2_4/CO (FADDX1)     0.37     12.66 f
+  rem_282/U6/Q (OR2X1)                             0.24     12.90 f
+  rem_282/U12/Q (MUX21X1)                          0.31     13.21 f
+  rem_282/U24/Q (AND2X1)                           0.23     13.44 f
+  rem_282/U1/Q (OR2X1)                             0.23     13.67 f
+  rem_282/U67/Q (MUX21X1)                          0.28     13.95 f
+  rem_282/U64/ZN (INVX0)                           0.11     14.05 r
+  rem_282/U62/Q (XOR2X1)                           0.29     14.35 f
+  rem_282/U63/Q (MUX21X1)                          0.38     14.72 f
+  U6502/ZN (INVX0)                                 0.18     14.90 r
+  U6503/QN (NAND4X0)                               0.19     15.09 f
+  U6500/QN (OAI221X1)                              0.45     15.54 r
+  U6514/Q (AND3X1)                                 0.35     15.90 r
+  U6564/Q (OR2X1)                                  0.21     16.10 r
+  U13020/QN (NAND4X0)                              0.17     16.28 f
+  U13021/Q (OA221X1)                               0.34     16.61 f
+  U6571/QN (OAI21X1)                               0.38     16.99 r
+  div_293/U101/ZN (INVX0)                          0.10     17.09 f
+  div_293/U100/Q (MUX21X1)                         0.30     17.39 f
+  div_293/U82/ZN (INVX0)                           0.17     17.56 r
+  div_293/u_div/u_fa_PartRem_0_6_3/CO (FADDX1)     0.41     17.97 r
+  div_293/U81/Q (OR2X1)                            0.22     18.19 r
+  div_293/U87/Q (MUX21X1)                          0.29     18.47 f
+  div_293/U78/ZN (INVX0)                           0.17     18.64 r
+  div_293/u_div/u_fa_PartRem_0_5_3/CO (FADDX1)     0.40     19.04 r
+  div_293/U76/Q (OR2X1)                            0.22     19.26 r
+  div_293/U107/Q (MUX21X1)                         0.31     19.57 r
+  div_293/U27/Q (OR2X1)                            0.22     19.79 r
+  div_293/U30/ZN (INVX0)                           0.11     19.90 f
+  div_293/U32/QN (NOR2X0)                          0.16     20.06 r
+  div_293/U31/Q (MUX21X1)                          0.33     20.39 r
+  div_293/U41/ZN (INVX0)                           0.14     20.53 f
+  div_293/u_div/u_fa_PartRem_0_3_3/CO (FADDX1)     0.34     20.87 f
+  div_293/U46/Q (OR2X1)                            0.23     21.10 f
+  div_293/U59/Q (MUX21X1)                          0.29     21.39 f
+  div_293/U51/ZN (INVX0)                           0.16     21.55 r
+  div_293/u_div/u_fa_PartRem_0_2_3/CO (FADDX1)     0.40     21.95 r
+  div_293/U16/Q (OR2X1)                            0.22     22.17 r
+  div_293/U70/Q (MUX21X1)                          0.29     22.45 f
+  div_293/U47/ZN (INVX0)                           0.16     22.62 r
+  div_293/u_div/u_fa_PartRem_0_1_3/CO (FADDX1)     0.40     23.02 r
+  div_293/U39/Q (OR2X1)                            0.20     23.22 r
+  U6358/QN (NAND2X1)                               0.11     23.33 f
+  U6360/QN (NAND2X1)                               0.11     23.44 r
+  U6444/QN (NAND2X0)                               0.18     23.62 f
+  U6445/Q (AO21X1)                                 0.35     23.96 f
+  U6491/ZN (INVX0)                                 0.20     24.16 r
+  U6441/QN (NAND2X0)                               0.24     24.40 f
+  U6477/ZN (INVX0)                                 0.15     24.55 r
+  U6478/QN (NAND2X0)                               0.18     24.73 f
+  U6479/ZN (INVX0)                                 0.13     24.86 r
+  U6436/Q (OA222X1)                                0.46     25.32 r
+  u_csk_sequencer/U128/ZN (INVX0)                  0.12     25.44 f
+  u_csk_sequencer/U114/QN (NOR4X0)                 0.25     25.69 r
+  u_csk_sequencer/U100/QN (NAND4X0)                0.32     26.01 f
+  u_csk_sequencer/U58/QN (NAND2X0)                 0.23     26.24 r
+  u_csk_sequencer/U5/QN (NAND3X0)                  0.21     26.45 f
+  u_csk_sequencer/U190/ZN (INVX0)                  0.14     26.59 r
+  u_csk_sequencer/U231/QN (AOI22X1)                0.38     26.98 f
+  u_csk_sequencer/U299/QN (OAI22X1)                0.38     27.36 r
+  u_csk_sequencer/sample_index_reg[2]/D (DFFARX1)
+                                                   0.00     27.36 r
+  data arrival time                                         27.36
+
+  clock CLK (rise edge)                           50.00     50.00
+  clock network delay (propagated)                 1.13     51.13
+  clock reconvergence pessimism                    0.00     51.13
+  u_csk_sequencer/sample_index_reg[2]/CLK (DFFARX1)
+                                                   0.00     51.13 r
+  clock uncertainty                               -1.00     50.13
+  library setup time                              -0.20     49.93
+  data required time                                        49.93
+  ------------------------------------------------------------------------
+  data required time                                        49.93
+  data arrival time                                        -27.36
+  ------------------------------------------------------------------------
+  slack (MET)                                               22.57
+
+
+
+  Startpoint: payloadLength[0] (input port clocked by CLK)
+  Endpoint: u_csk_sequencer/gap_counter_reg[1] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      1.19      1.19
+  input external delay                             5.00      6.19
+
+  payloadLength[0] (in)                            0.42      6.61 r
+  PLACE_HFSINV_3314_2992/ZN (INVX2)                0.71      7.32 f
+  PLACE_HFSINV_658_2987/ZN (INVX0)                 0.63      7.95 r
+  U6369/Q (AND2X1)                                 0.41      8.36 r
+  U6415/Q (AND2X1)                                 0.22      8.57 r
+  U6414/QN (NAND2X1)                               0.11      8.69 f
+  U6552/Q (XOR2X1)                                 0.31      9.00 f
+  rem_282/U76/ZN (INVX0)                           0.16      9.15 r
+  rem_282/U77/ZN (INVX0)                           0.17      9.33 f
+  rem_282/u_div/u_fa_PartRem_0_6_4/CO (FADDX1)     0.37      9.70 f
+  rem_282/U73/ZN (INVX0)                           0.13      9.83 r
+  rem_282/U72/Q (MUX21X1)                          0.30     10.13 r
+  rem_282/U54/ZN (INVX0)                           0.11     10.24 f
+  rem_282/U52/ZN (INVX0)                           0.12     10.36 r
+  rem_282/U51/Q (XOR2X1)                           0.28     10.64 f
+  rem_282/U50/Q (MUX21X1)                          0.30     10.94 f
+  rem_282/U10/QN (NOR2X0)                          0.20     11.14 r
+  rem_282/U19/Q (MUX21X1)                          0.35     11.50 r
+  rem_282/U47/Q (AND2X1)                           0.24     11.74 r
+  rem_282/U60/Q (OR2X1)                            0.22     11.96 r
+  rem_282/U48/Q (MUX21X1)                          0.33     12.30 f
+  rem_282/u_div/u_fa_PartRem_0_2_4/CO (FADDX1)     0.37     12.66 f
+  rem_282/U6/Q (OR2X1)                             0.24     12.90 f
+  rem_282/U12/Q (MUX21X1)                          0.31     13.21 f
+  rem_282/U24/Q (AND2X1)                           0.23     13.44 f
+  rem_282/U1/Q (OR2X1)                             0.23     13.67 f
+  rem_282/U67/Q (MUX21X1)                          0.28     13.95 f
+  rem_282/U64/ZN (INVX0)                           0.11     14.05 r
+  rem_282/U62/Q (XOR2X1)                           0.29     14.35 f
+  rem_282/U63/Q (MUX21X1)                          0.38     14.72 f
+  U6502/ZN (INVX0)                                 0.18     14.90 r
+  U6503/QN (NAND4X0)                               0.19     15.09 f
+  U6500/QN (OAI221X1)                              0.45     15.54 r
+  U6514/Q (AND3X1)                                 0.35     15.90 r
+  U6564/Q (OR2X1)                                  0.21     16.10 r
+  U13020/QN (NAND4X0)                              0.17     16.28 f
+  U13021/Q (OA221X1)                               0.34     16.61 f
+  U6571/QN (OAI21X1)                               0.38     16.99 r
+  div_293/U101/ZN (INVX0)                          0.10     17.09 f
+  div_293/U100/Q (MUX21X1)                         0.30     17.39 f
+  div_293/U82/ZN (INVX0)                           0.17     17.56 r
+  div_293/u_div/u_fa_PartRem_0_6_3/CO (FADDX1)     0.41     17.97 r
+  div_293/U81/Q (OR2X1)                            0.22     18.19 r
+  div_293/U87/Q (MUX21X1)                          0.29     18.47 f
+  div_293/U78/ZN (INVX0)                           0.17     18.64 r
+  div_293/u_div/u_fa_PartRem_0_5_3/CO (FADDX1)     0.40     19.04 r
+  div_293/U76/Q (OR2X1)                            0.22     19.26 r
+  div_293/U107/Q (MUX21X1)                         0.31     19.57 r
+  div_293/U27/Q (OR2X1)                            0.22     19.79 r
+  div_293/U30/ZN (INVX0)                           0.11     19.90 f
+  div_293/U32/QN (NOR2X0)                          0.16     20.06 r
+  div_293/U31/Q (MUX21X1)                          0.33     20.39 r
+  div_293/U41/ZN (INVX0)                           0.14     20.53 f
+  div_293/u_div/u_fa_PartRem_0_3_3/CO (FADDX1)     0.34     20.87 f
+  div_293/U46/Q (OR2X1)                            0.23     21.10 f
+  div_293/U59/Q (MUX21X1)                          0.29     21.39 f
+  div_293/U51/ZN (INVX0)                           0.16     21.55 r
+  div_293/u_div/u_fa_PartRem_0_2_3/CO (FADDX1)     0.40     21.95 r
+  div_293/U16/Q (OR2X1)                            0.22     22.17 r
+  div_293/U70/Q (MUX21X1)                          0.29     22.45 f
+  div_293/U47/ZN (INVX0)                           0.16     22.62 r
+  div_293/u_div/u_fa_PartRem_0_1_3/CO (FADDX1)     0.40     23.02 r
+  div_293/U39/Q (OR2X1)                            0.20     23.22 r
+  U6358/QN (NAND2X1)                               0.11     23.33 f
+  U6360/QN (NAND2X1)                               0.11     23.44 r
+  U6444/QN (NAND2X0)                               0.18     23.62 f
+  U6445/Q (AO21X1)                                 0.35     23.96 f
+  U6426/ZN (INVX0)                                 0.13     24.09 r
+  U6490/ZN (INVX0)                                 0.12     24.21 f
+  U6487/Q (OR3X1)                                  0.27     24.48 f
+  U8887/ZN (INVX0)                                 0.10     24.58 r
+  U9182/QN (AOI22X1)                               0.39     24.97 f
+  U6412/Q (OR3X1)                                  0.30     25.26 f
+  u_csk_sequencer/U11/Q (OR2X1)                    0.23     25.49 f
+  u_csk_sequencer/U187/Q (AND2X1)                  0.21     25.70 f
+  u_csk_sequencer/U158/QN (NAND2X0)                0.12     25.82 r
+  u_csk_sequencer/U169/Q (AND3X1)                  0.34     26.16 r
+  u_csk_sequencer/U182/Q (AND2X1)                  0.24     26.40 r
+  u_csk_sequencer/U168/QN (NAND2X0)                0.16     26.57 f
+  u_csk_sequencer/U249/ZN (INVX0)                  0.17     26.74 r
+  u_csk_sequencer/U66/QN (NAND2X0)                 0.18     26.92 f
+  u_csk_sequencer/U65/Q (AND2X1)                   0.23     27.14 f
+  u_csk_sequencer/U63/QN (NAND2X1)                 0.09     27.23 r
+  u_csk_sequencer/gap_counter_reg[1]/D (DFFARX1)   0.00     27.23 r
+  data arrival time                                         27.23
+
+  clock CLK (rise edge)                           50.00     50.00
+  clock network delay (propagated)                 1.06     51.06
+  clock reconvergence pessimism                    0.00     51.06
+  u_csk_sequencer/gap_counter_reg[1]/CLK (DFFARX1)
+                                                   0.00     51.06 r
+  clock uncertainty                               -1.00     50.06
+  library setup time                              -0.25     49.81
+  data required time                                        49.81
+  ------------------------------------------------------------------------
+  data required time                                        49.81
+  data arrival time                                        -27.23
+  ------------------------------------------------------------------------
+  slack (MET)                                               22.58
+
+
+
+  Startpoint: payloadLength[0] (input port clocked by CLK)
+  Endpoint: u_csk_sequencer/group_count_reg[9] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      1.19      1.19
+  input external delay                             5.00      6.19
+
+  payloadLength[0] (in)                            0.42      6.61 r
+  PLACE_HFSINV_3314_2992/ZN (INVX2)                0.71      7.32 f
+  PLACE_HFSINV_658_2987/ZN (INVX0)                 0.63      7.95 r
+  U6369/Q (AND2X1)                                 0.41      8.36 r
+  U6415/Q (AND2X1)                                 0.22      8.57 r
+  U6414/QN (NAND2X1)                               0.11      8.69 f
+  U6552/Q (XOR2X1)                                 0.31      9.00 f
+  rem_282/U76/ZN (INVX0)                           0.16      9.15 r
+  rem_282/U77/ZN (INVX0)                           0.17      9.33 f
+  rem_282/u_div/u_fa_PartRem_0_6_4/CO (FADDX1)     0.37      9.70 f
+  rem_282/U73/ZN (INVX0)                           0.13      9.83 r
+  rem_282/U72/Q (MUX21X1)                          0.30     10.13 r
+  rem_282/U54/ZN (INVX0)                           0.11     10.24 f
+  rem_282/U52/ZN (INVX0)                           0.12     10.36 r
+  rem_282/U51/Q (XOR2X1)                           0.28     10.64 f
+  rem_282/U50/Q (MUX21X1)                          0.30     10.94 f
+  rem_282/U10/QN (NOR2X0)                          0.20     11.14 r
+  rem_282/U19/Q (MUX21X1)                          0.35     11.50 r
+  rem_282/U47/Q (AND2X1)                           0.24     11.74 r
+  rem_282/U60/Q (OR2X1)                            0.22     11.96 r
+  rem_282/U48/Q (MUX21X1)                          0.33     12.30 f
+  rem_282/u_div/u_fa_PartRem_0_2_4/CO (FADDX1)     0.37     12.66 f
+  rem_282/U6/Q (OR2X1)                             0.24     12.90 f
+  rem_282/U12/Q (MUX21X1)                          0.31     13.21 f
+  rem_282/U24/Q (AND2X1)                           0.23     13.44 f
+  rem_282/U1/Q (OR2X1)                             0.23     13.67 f
+  rem_282/U67/Q (MUX21X1)                          0.28     13.95 f
+  rem_282/U64/ZN (INVX0)                           0.11     14.05 r
+  rem_282/U62/Q (XOR2X1)                           0.29     14.35 f
+  rem_282/U63/Q (MUX21X1)                          0.38     14.72 f
+  U6502/ZN (INVX0)                                 0.18     14.90 r
+  U6503/QN (NAND4X0)                               0.19     15.09 f
+  U6500/QN (OAI221X1)                              0.45     15.54 r
+  U6514/Q (AND3X1)                                 0.35     15.90 r
+  U6564/Q (OR2X1)                                  0.21     16.10 r
+  U13020/QN (NAND4X0)                              0.17     16.28 f
+  U13021/Q (OA221X1)                               0.34     16.61 f
+  U6571/QN (OAI21X1)                               0.38     16.99 r
+  div_293/U101/ZN (INVX0)                          0.10     17.09 f
+  div_293/U100/Q (MUX21X1)                         0.30     17.39 f
+  div_293/U82/ZN (INVX0)                           0.17     17.56 r
+  div_293/u_div/u_fa_PartRem_0_6_3/CO (FADDX1)     0.41     17.97 r
+  div_293/U81/Q (OR2X1)                            0.22     18.19 r
+  div_293/U87/Q (MUX21X1)                          0.29     18.47 f
+  div_293/U78/ZN (INVX0)                           0.17     18.64 r
+  div_293/u_div/u_fa_PartRem_0_5_3/CO (FADDX1)     0.40     19.04 r
+  div_293/U76/Q (OR2X1)                            0.22     19.26 r
+  div_293/U107/Q (MUX21X1)                         0.31     19.57 r
+  div_293/U27/Q (OR2X1)                            0.22     19.79 r
+  div_293/U30/ZN (INVX0)                           0.11     19.90 f
+  div_293/U32/QN (NOR2X0)                          0.16     20.06 r
+  div_293/U31/Q (MUX21X1)                          0.33     20.39 r
+  div_293/U41/ZN (INVX0)                           0.14     20.53 f
+  div_293/u_div/u_fa_PartRem_0_3_3/CO (FADDX1)     0.34     20.87 f
+  div_293/U46/Q (OR2X1)                            0.23     21.10 f
+  div_293/U59/Q (MUX21X1)                          0.29     21.39 f
+  div_293/U51/ZN (INVX0)                           0.16     21.55 r
+  div_293/u_div/u_fa_PartRem_0_2_3/CO (FADDX1)     0.40     21.95 r
+  div_293/U16/Q (OR2X1)                            0.22     22.17 r
+  div_293/U70/Q (MUX21X1)                          0.29     22.45 f
+  div_293/U47/ZN (INVX0)                           0.16     22.62 r
+  div_293/u_div/u_fa_PartRem_0_1_3/CO (FADDX1)     0.40     23.02 r
+  div_293/U39/Q (OR2X1)                            0.20     23.22 r
+  U6358/QN (NAND2X1)                               0.11     23.33 f
+  U6360/QN (NAND2X1)                               0.11     23.44 r
+  U6444/QN (NAND2X0)                               0.18     23.62 f
+  U6445/Q (AO21X1)                                 0.35     23.96 f
+  U6491/ZN (INVX0)                                 0.20     24.16 r
+  U6441/QN (NAND2X0)                               0.24     24.40 f
+  U6431/ZN (INVX0)                                 0.16     24.56 r
+  U6432/ZN (INVX0)                                 0.11     24.67 f
+  U6488/Q (OA21X1)                                 0.24     24.91 f
+  U6436/Q (OA222X1)                                0.43     25.35 f
+  u_csk_sequencer/U128/ZN (INVX0)                  0.11     25.46 r
+  u_csk_sequencer/U114/QN (NOR4X0)                 0.18     25.63 f
+  u_csk_sequencer/U100/QN (NAND4X0)                0.23     25.87 r
+  u_csk_sequencer/U58/QN (NAND2X0)                 0.24     26.11 f
+  u_csk_sequencer/U59/Q (AND2X1)                   0.30     26.41 f
+  u_csk_sequencer/PLACE_HFSINV_393_1357/ZN (INVX0)
+                                                   0.36     26.76 r
+  u_csk_sequencer/U92/QN (NAND3X0)                 0.23     26.99 f
+  u_csk_sequencer/U88/QN (OAI21X1)                 0.36     27.36 r
+  u_csk_sequencer/group_count_reg[9]/D (DFFARX1)   0.00     27.36 r
+  data arrival time                                         27.36
+
+  clock CLK (rise edge)                           50.00     50.00
+  clock network delay (propagated)                 1.13     51.13
+  clock reconvergence pessimism                    0.00     51.13
+  u_csk_sequencer/group_count_reg[9]/CLK (DFFARX1)
+                                                   0.00     51.13 r
+  clock uncertainty                               -1.00     50.13
+  library setup time                              -0.19     49.94
+  data required time                                        49.94
+  ------------------------------------------------------------------------
+  data required time                                        49.94
+  data arrival time                                        -27.36
+  ------------------------------------------------------------------------
+  slack (MET)                                               22.58
+
+
+
+  Startpoint: payloadLength[0] (input port clocked by CLK)
+  Endpoint: u_csk_sequencer/group_count_reg[7] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      1.19      1.19
+  input external delay                             5.00      6.19
+
+  payloadLength[0] (in)                            0.42      6.61 r
+  PLACE_HFSINV_3314_2992/ZN (INVX2)                0.71      7.32 f
+  PLACE_HFSINV_658_2987/ZN (INVX0)                 0.63      7.95 r
+  U6369/Q (AND2X1)                                 0.41      8.36 r
+  U6415/Q (AND2X1)                                 0.22      8.57 r
+  U6414/QN (NAND2X1)                               0.11      8.69 f
+  U6552/Q (XOR2X1)                                 0.31      9.00 f
+  rem_282/U76/ZN (INVX0)                           0.16      9.15 r
+  rem_282/U77/ZN (INVX0)                           0.17      9.33 f
+  rem_282/u_div/u_fa_PartRem_0_6_4/CO (FADDX1)     0.37      9.70 f
+  rem_282/U73/ZN (INVX0)                           0.13      9.83 r
+  rem_282/U72/Q (MUX21X1)                          0.30     10.13 r
+  rem_282/U54/ZN (INVX0)                           0.11     10.24 f
+  rem_282/U52/ZN (INVX0)                           0.12     10.36 r
+  rem_282/U51/Q (XOR2X1)                           0.28     10.64 f
+  rem_282/U50/Q (MUX21X1)                          0.30     10.94 f
+  rem_282/U10/QN (NOR2X0)                          0.20     11.14 r
+  rem_282/U19/Q (MUX21X1)                          0.35     11.50 r
+  rem_282/U47/Q (AND2X1)                           0.24     11.74 r
+  rem_282/U60/Q (OR2X1)                            0.22     11.96 r
+  rem_282/U48/Q (MUX21X1)                          0.33     12.30 f
+  rem_282/u_div/u_fa_PartRem_0_2_4/CO (FADDX1)     0.37     12.66 f
+  rem_282/U6/Q (OR2X1)                             0.24     12.90 f
+  rem_282/U12/Q (MUX21X1)                          0.31     13.21 f
+  rem_282/U24/Q (AND2X1)                           0.23     13.44 f
+  rem_282/U1/Q (OR2X1)                             0.23     13.67 f
+  rem_282/U67/Q (MUX21X1)                          0.28     13.95 f
+  rem_282/U64/ZN (INVX0)                           0.11     14.05 r
+  rem_282/U62/Q (XOR2X1)                           0.29     14.35 f
+  rem_282/U63/Q (MUX21X1)                          0.38     14.72 f
+  U6502/ZN (INVX0)                                 0.18     14.90 r
+  U6503/QN (NAND4X0)                               0.19     15.09 f
+  U6500/QN (OAI221X1)                              0.45     15.54 r
+  U6514/Q (AND3X1)                                 0.35     15.90 r
+  U6564/Q (OR2X1)                                  0.21     16.10 r
+  U13020/QN (NAND4X0)                              0.17     16.28 f
+  U13021/Q (OA221X1)                               0.34     16.61 f
+  U6571/QN (OAI21X1)                               0.38     16.99 r
+  div_293/U101/ZN (INVX0)                          0.10     17.09 f
+  div_293/U100/Q (MUX21X1)                         0.30     17.39 f
+  div_293/U82/ZN (INVX0)                           0.17     17.56 r
+  div_293/u_div/u_fa_PartRem_0_6_3/CO (FADDX1)     0.41     17.97 r
+  div_293/U81/Q (OR2X1)                            0.22     18.19 r
+  div_293/U87/Q (MUX21X1)                          0.29     18.47 f
+  div_293/U78/ZN (INVX0)                           0.17     18.64 r
+  div_293/u_div/u_fa_PartRem_0_5_3/CO (FADDX1)     0.40     19.04 r
+  div_293/U76/Q (OR2X1)                            0.22     19.26 r
+  div_293/U107/Q (MUX21X1)                         0.31     19.57 r
+  div_293/U27/Q (OR2X1)                            0.22     19.79 r
+  div_293/U30/ZN (INVX0)                           0.11     19.90 f
+  div_293/U32/QN (NOR2X0)                          0.16     20.06 r
+  div_293/U31/Q (MUX21X1)                          0.33     20.39 r
+  div_293/U41/ZN (INVX0)                           0.14     20.53 f
+  div_293/u_div/u_fa_PartRem_0_3_3/CO (FADDX1)     0.34     20.87 f
+  div_293/U46/Q (OR2X1)                            0.23     21.10 f
+  div_293/U59/Q (MUX21X1)                          0.29     21.39 f
+  div_293/U51/ZN (INVX0)                           0.16     21.55 r
+  div_293/u_div/u_fa_PartRem_0_2_3/CO (FADDX1)     0.40     21.95 r
+  div_293/U16/Q (OR2X1)                            0.22     22.17 r
+  div_293/U70/Q (MUX21X1)                          0.29     22.45 f
+  div_293/U47/ZN (INVX0)                           0.16     22.62 r
+  div_293/u_div/u_fa_PartRem_0_1_3/CO (FADDX1)     0.40     23.02 r
+  div_293/U39/Q (OR2X1)                            0.20     23.22 r
+  U6358/QN (NAND2X1)                               0.11     23.33 f
+  U6360/QN (NAND2X1)                               0.11     23.44 r
+  U6444/QN (NAND2X0)                               0.18     23.62 f
+  U6445/Q (AO21X1)                                 0.35     23.96 f
+  U6491/ZN (INVX0)                                 0.20     24.16 r
+  U6441/QN (NAND2X0)                               0.24     24.40 f
+  U6477/ZN (INVX0)                                 0.15     24.55 r
+  U6478/QN (NAND2X0)                               0.18     24.73 f
+  U6479/ZN (INVX0)                                 0.13     24.86 r
+  U6436/Q (OA222X1)                                0.46     25.32 r
+  u_csk_sequencer/U128/ZN (INVX0)                  0.12     25.44 f
+  u_csk_sequencer/U114/QN (NOR4X0)                 0.25     25.69 r
+  u_csk_sequencer/U100/QN (NAND4X0)                0.32     26.01 f
+  u_csk_sequencer/U58/QN (NAND2X0)                 0.23     26.24 r
+  u_csk_sequencer/U59/Q (AND2X1)                   0.33     26.57 r
+  u_csk_sequencer/PLACE_HFSINV_393_1357/ZN (INVX0)
+                                                   0.32     26.89 f
+  u_csk_sequencer/U220/QN (OAI21X1)                0.45     27.34 r
+  u_csk_sequencer/group_count_reg[7]/D (DFFARX1)   0.00     27.34 r
+  data arrival time                                         27.34
+
+  clock CLK (rise edge)                           50.00     50.00
+  clock network delay (propagated)                 1.13     51.13
+  clock reconvergence pessimism                    0.00     51.13
+  u_csk_sequencer/group_count_reg[7]/CLK (DFFARX1)
+                                                   0.00     51.13 r
+  clock uncertainty                               -1.00     50.13
+  library setup time                              -0.19     49.94
+  data required time                                        49.94
+  ------------------------------------------------------------------------
+  data required time                                        49.94
+  data arrival time                                        -27.34
+  ------------------------------------------------------------------------
+  slack (MET)                                               22.60
+
+
+
+  Startpoint: payloadLength[4] (input port clocked by CLK)
+  Endpoint: u_controller/expected_chip_count_reg_reg[10] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      1.19      1.19
+  input external delay                             5.00      6.19
+
+  payloadLength[4] (in)                            0.16      6.36 r
+  U6538/ZN (INVX0)                                 0.25      6.61 f
+  U6586/ZN (INVX0)                                 1.36      7.96 r
+  u_controller/U121/Q (AND3X1)                     1.05      9.02 r
+  u_controller/U68/Q (AND2X1)                      0.28      9.30 r
+  u_controller/U64/Q (AND2X1)                      0.25      9.55 r
+  u_controller/U21/Q (XOR2X1)                      0.36      9.91 r
+  u_controller/rem_101/U25/Q (AND2X1)              0.30     10.21 r
+  u_controller/rem_101/U22/Q (MUX21X1)             0.32     10.53 f
+  u_controller/rem_101/U24/Q (AND2X1)              0.22     10.75 f
+  u_controller/rem_101/U51/Q (OR2X1)               0.22     10.98 f
+  u_controller/rem_101/U3/Q (MUX21X1)              0.31     11.29 f
+  u_controller/rem_101/U48/Q (AND2X1)              0.22     11.50 f
+  u_controller/rem_101/U46/Q (OR2X1)               0.22     11.72 f
+  u_controller/rem_101/U26/Q (MUX21X1)             0.31     12.03 f
+  u_controller/rem_101/U47/Q (AND2X1)              0.23     12.26 f
+  u_controller/rem_101/U38/Q (OR2X1)               0.22     12.48 f
+  u_controller/rem_101/U61/Q (MUX21X1)             0.31     12.79 f
+  u_controller/rem_101/U49/Q (AND2X1)              0.22     13.01 f
+  u_controller/rem_101/U37/Q (OR2X1)               0.22     13.23 f
+  u_controller/rem_101/U27/Q (MUX21X1)             0.31     13.54 f
+  u_controller/rem_101/U40/Q (AND2X1)              0.25     13.78 f
+  u_controller/rem_101/U11/QN (NOR2X0)             0.14     13.93 r
+  u_controller/rem_101/U10/Q (MUX21X1)             0.35     14.27 r
+  u_controller/rem_101/U50/Q (AND2X1)              0.27     14.54 r
+  u_controller/rem_101/U39/Q (OR2X1)               0.22     14.76 r
+  u_controller/rem_101/U64/Q (MUX21X1)             0.28     15.04 f
+  u_controller/rem_101/U36/ZN (INVX0)              0.09     15.13 r
+  u_controller/rem_101/U17/Q (AND2X1)              0.24     15.36 r
+  u_controller/rem_101/U65/Q (MUX21X1)             0.27     15.63 r
+  u_controller/U169/Q (AND2X1)                     0.34     15.97 r
+  u_controller/U66/Q (AO21X1)                      0.30     16.27 r
+  u_controller/U286/ZN (INVX0)                     0.11     16.39 f
+  u_controller/U287/QN (NAND2X1)                   0.10     16.49 r
+  u_controller/U25/QN (NAND2X1)                    0.14     16.63 f
+  u_controller/U455/ZN (INVX0)                     0.10     16.73 r
+  u_controller/U56/Q (AO21X1)                      0.23     16.95 r
+  u_controller/U2303/Q (AO21X1)                    0.25     17.20 r
+  u_controller/U45/Q (AO21X1)                      0.26     17.46 r
+  u_controller/U46/Q (AO21X1)                      0.26     17.72 r
+  u_controller/U49/Q (XNOR3X1)                     0.44     18.15 f
+  u_controller/div_109/U57/ZN (INVX0)              0.19     18.34 r
+  u_controller/div_109/U22/ZN (INVX0)              0.20     18.54 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_7_3/CO (FADDX1)
+                                                   0.38     18.92 f
+  u_controller/div_109/U45/ZN (INVX0)              0.14     19.06 r
+  u_controller/div_109/U44/Q (MUX21X1)             0.33     19.39 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_6_3/CO (FADDX1)
+                                                   0.38     19.77 f
+  u_controller/div_109/U13/Q (OR2X1)               0.26     20.03 f
+  u_controller/div_109/U53/Q (MUX21X1)             0.32     20.35 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_5_3/CO (FADDX1)
+                                                   0.38     20.73 f
+  u_controller/div_109/U1/Q (OR2X1)                0.24     20.97 f
+  u_controller/div_109/U54/Q (MUX21X1)             0.33     21.31 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_4_3/CO (FADDX1)
+                                                   0.39     21.70 f
+  u_controller/div_109/U7/Q (OR2X1)                0.26     21.96 f
+  u_controller/div_109/U26/Q (MUX21X1)             0.32     22.28 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_3_3/CO (FADDX1)
+                                                   0.37     22.65 f
+  u_controller/div_109/U32/Q (OR2X1)               0.26     22.90 f
+  u_controller/div_109/U5/Q (XOR2X1)               0.33     23.24 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_2_3/CO (FADDX1)
+                                                   0.40     23.63 f
+  u_controller/div_109/U25/Q (OR2X1)               0.27     23.91 f
+  u_controller/div_109/U52/Q (MUX21X1)             0.32     24.23 f
+  u_controller/div_109/u_div/u_fa_PartRem_0_1_3/CO (FADDX1)
+                                                   0.37     24.60 f
+  u_controller/div_109/U24/Q (OR2X1)               0.24     24.84 f
+  u_controller/div_109/U73/Q (MUX21X1)             0.28     25.12 r
+  u_controller/div_109/U18/QN (NAND2X1)            0.12     25.23 f
+  u_controller/div_109/U17/QN (NAND2X1)            0.10     25.33 r
+  u_controller/U95/Q (MUX21X1)                     0.29     25.63 r
+  u_controller/U2309/Q (AO21X1)                    0.25     25.88 r
+  u_controller/U2310/Q (AO22X1)                    0.30     26.18 r
+  u_controller/U188/Q (AND3X1)                     0.34     26.52 r
+  u_controller/U189/Q (AND2X1)                     0.24     26.76 r
+  u_controller/U17/Q (XOR2X1)                      0.24     27.00 r
+  u_controller/U2318/Q (MUX21X1)                   0.27     27.27 r
+  u_controller/expected_chip_count_reg_reg[10]/D (DFFARX1)
+                                                   0.00     27.27 r
+  data arrival time                                         27.27
+
+  clock CLK (rise edge)                           50.00     50.00
+  clock network delay (propagated)                 1.09     51.09
+  clock reconvergence pessimism                    0.00     51.09
+  u_controller/expected_chip_count_reg_reg[10]/CLK (DFFARX1)
+                                                   0.00     51.09 r
+  clock uncertainty                               -1.00     50.09
+  library setup time                              -0.22     49.87
+  data required time                                        49.87
+  ------------------------------------------------------------------------
+  data required time                                        49.87
+  data arrival time                                        -27.27
+  ------------------------------------------------------------------------
+  slack (MET)                                               22.60
+
+
+
+  Startpoint: payloadLength[0] (input port clocked by CLK)
+  Endpoint: u_csk_sequencer/group_count_reg[6] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      1.19      1.19
+  input external delay                             5.00      6.19
+
+  payloadLength[0] (in)                            0.42      6.61 r
+  PLACE_HFSINV_3314_2992/ZN (INVX2)                0.71      7.32 f
+  PLACE_HFSINV_658_2987/ZN (INVX0)                 0.63      7.95 r
+  U6369/Q (AND2X1)                                 0.41      8.36 r
+  U6415/Q (AND2X1)                                 0.22      8.57 r
+  U6414/QN (NAND2X1)                               0.11      8.69 f
+  U6552/Q (XOR2X1)                                 0.31      9.00 f
+  rem_282/U76/ZN (INVX0)                           0.16      9.15 r
+  rem_282/U77/ZN (INVX0)                           0.17      9.33 f
+  rem_282/u_div/u_fa_PartRem_0_6_4/CO (FADDX1)     0.37      9.70 f
+  rem_282/U73/ZN (INVX0)                           0.13      9.83 r
+  rem_282/U72/Q (MUX21X1)                          0.30     10.13 r
+  rem_282/U54/ZN (INVX0)                           0.11     10.24 f
+  rem_282/U52/ZN (INVX0)                           0.12     10.36 r
+  rem_282/U51/Q (XOR2X1)                           0.28     10.64 f
+  rem_282/U50/Q (MUX21X1)                          0.30     10.94 f
+  rem_282/U10/QN (NOR2X0)                          0.20     11.14 r
+  rem_282/U19/Q (MUX21X1)                          0.35     11.50 r
+  rem_282/U47/Q (AND2X1)                           0.24     11.74 r
+  rem_282/U60/Q (OR2X1)                            0.22     11.96 r
+  rem_282/U48/Q (MUX21X1)                          0.33     12.30 f
+  rem_282/u_div/u_fa_PartRem_0_2_4/CO (FADDX1)     0.37     12.66 f
+  rem_282/U6/Q (OR2X1)                             0.24     12.90 f
+  rem_282/U12/Q (MUX21X1)                          0.31     13.21 f
+  rem_282/U24/Q (AND2X1)                           0.23     13.44 f
+  rem_282/U1/Q (OR2X1)                             0.23     13.67 f
+  rem_282/U67/Q (MUX21X1)                          0.28     13.95 f
+  rem_282/U64/ZN (INVX0)                           0.11     14.05 r
+  rem_282/U62/Q (XOR2X1)                           0.29     14.35 f
+  rem_282/U63/Q (MUX21X1)                          0.38     14.72 f
+  U6502/ZN (INVX0)                                 0.18     14.90 r
+  U6503/QN (NAND4X0)                               0.19     15.09 f
+  U6500/QN (OAI221X1)                              0.45     15.54 r
+  U6514/Q (AND3X1)                                 0.35     15.90 r
+  U6564/Q (OR2X1)                                  0.21     16.10 r
+  U13020/QN (NAND4X0)                              0.17     16.28 f
+  U13021/Q (OA221X1)                               0.34     16.61 f
+  U6571/QN (OAI21X1)                               0.38     16.99 r
+  div_293/U101/ZN (INVX0)                          0.10     17.09 f
+  div_293/U100/Q (MUX21X1)                         0.30     17.39 f
+  div_293/U82/ZN (INVX0)                           0.17     17.56 r
+  div_293/u_div/u_fa_PartRem_0_6_3/CO (FADDX1)     0.41     17.97 r
+  div_293/U81/Q (OR2X1)                            0.22     18.19 r
+  div_293/U87/Q (MUX21X1)                          0.29     18.47 f
+  div_293/U78/ZN (INVX0)                           0.17     18.64 r
+  div_293/u_div/u_fa_PartRem_0_5_3/CO (FADDX1)     0.40     19.04 r
+  div_293/U76/Q (OR2X1)                            0.22     19.26 r
+  div_293/U107/Q (MUX21X1)                         0.31     19.57 r
+  div_293/U27/Q (OR2X1)                            0.22     19.79 r
+  div_293/U30/ZN (INVX0)                           0.11     19.90 f
+  div_293/U32/QN (NOR2X0)                          0.16     20.06 r
+  div_293/U31/Q (MUX21X1)                          0.33     20.39 r
+  div_293/U41/ZN (INVX0)                           0.14     20.53 f
+  div_293/u_div/u_fa_PartRem_0_3_3/CO (FADDX1)     0.34     20.87 f
+  div_293/U46/Q (OR2X1)                            0.23     21.10 f
+  div_293/U59/Q (MUX21X1)                          0.29     21.39 f
+  div_293/U51/ZN (INVX0)                           0.16     21.55 r
+  div_293/u_div/u_fa_PartRem_0_2_3/CO (FADDX1)     0.40     21.95 r
+  div_293/U16/Q (OR2X1)                            0.22     22.17 r
+  div_293/U70/Q (MUX21X1)                          0.29     22.45 f
+  div_293/U47/ZN (INVX0)                           0.16     22.62 r
+  div_293/u_div/u_fa_PartRem_0_1_3/CO (FADDX1)     0.40     23.02 r
+  div_293/U39/Q (OR2X1)                            0.20     23.22 r
+  U6358/QN (NAND2X1)                               0.11     23.33 f
+  U6360/QN (NAND2X1)                               0.11     23.44 r
+  U6444/QN (NAND2X0)                               0.18     23.62 f
+  U6445/Q (AO21X1)                                 0.35     23.96 f
+  U6491/ZN (INVX0)                                 0.20     24.16 r
+  U6441/QN (NAND2X0)                               0.24     24.40 f
+  U6477/ZN (INVX0)                                 0.15     24.55 r
+  U6478/QN (NAND2X0)                               0.18     24.73 f
+  U6479/ZN (INVX0)                                 0.13     24.86 r
+  U6436/Q (OA222X1)                                0.46     25.32 r
+  u_csk_sequencer/U128/ZN (INVX0)                  0.12     25.44 f
+  u_csk_sequencer/U114/QN (NOR4X0)                 0.25     25.69 r
+  u_csk_sequencer/U100/QN (NAND4X0)                0.32     26.01 f
+  u_csk_sequencer/U58/QN (NAND2X0)                 0.23     26.24 r
+  u_csk_sequencer/U59/Q (AND2X1)                   0.33     26.57 r
+  u_csk_sequencer/PLACE_HFSINV_393_1357/ZN (INVX0)
+                                                   0.32     26.89 f
+  u_csk_sequencer/U263/QN (OAI21X1)                0.45     27.34 r
+  u_csk_sequencer/group_count_reg[6]/D (DFFARX1)   0.00     27.34 r
+  data arrival time                                         27.34
+
+  clock CLK (rise edge)                           50.00     50.00
+  clock network delay (propagated)                 1.13     51.13
+  clock reconvergence pessimism                    0.00     51.13
+  u_csk_sequencer/group_count_reg[6]/CLK (DFFARX1)
+                                                   0.00     51.13 r
+  clock uncertainty                               -1.00     50.13
+  library setup time                              -0.19     49.94
+  data required time                                        49.94
+  ------------------------------------------------------------------------
+  data required time                                        49.94
+  data arrival time                                        -27.34
+  ------------------------------------------------------------------------
+  slack (MET)                                               22.60
+
+
+
+  Startpoint: payloadLength[0] (input port clocked by CLK)
+  Endpoint: u_csk_sequencer/group_count_reg[5] (rising edge-triggered flip-flop clocked by CLK)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: CLK
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      1.19      1.19
+  input external delay                             5.00      6.19
+
+  payloadLength[0] (in)                            0.42      6.61 r
+  PLACE_HFSINV_3314_2992/ZN (INVX2)                0.71      7.32 f
+  PLACE_HFSINV_658_2987/ZN (INVX0)                 0.63      7.95 r
+  U6369/Q (AND2X1)                                 0.41      8.36 r
+  U6415/Q (AND2X1)                                 0.22      8.57 r
+  U6414/QN (NAND2X1)                               0.11      8.69 f
+  U6552/Q (XOR2X1)                                 0.31      9.00 f
+  rem_282/U76/ZN (INVX0)                           0.16      9.15 r
+  rem_282/U77/ZN (INVX0)                           0.17      9.33 f
+  rem_282/u_div/u_fa_PartRem_0_6_4/CO (FADDX1)     0.37      9.70 f
+  rem_282/U73/ZN (INVX0)                           0.13      9.83 r
+  rem_282/U72/Q (MUX21X1)                          0.30     10.13 r
+  rem_282/U54/ZN (INVX0)                           0.11     10.24 f
+  rem_282/U52/ZN (INVX0)                           0.12     10.36 r
+  rem_282/U51/Q (XOR2X1)                           0.28     10.64 f
+  rem_282/U50/Q (MUX21X1)                          0.30     10.94 f
+  rem_282/U10/QN (NOR2X0)                          0.20     11.14 r
+  rem_282/U19/Q (MUX21X1)                          0.35     11.50 r
+  rem_282/U47/Q (AND2X1)                           0.24     11.74 r
+  rem_282/U60/Q (OR2X1)                            0.22     11.96 r
+  rem_282/U48/Q (MUX21X1)                          0.33     12.30 f
+  rem_282/u_div/u_fa_PartRem_0_2_4/CO (FADDX1)     0.37     12.66 f
+  rem_282/U6/Q (OR2X1)                             0.24     12.90 f
+  rem_282/U12/Q (MUX21X1)                          0.31     13.21 f
+  rem_282/U24/Q (AND2X1)                           0.23     13.44 f
+  rem_282/U1/Q (OR2X1)                             0.23     13.67 f
+  rem_282/U67/Q (MUX21X1)                          0.28     13.95 f
+  rem_282/U64/ZN (INVX0)                           0.11     14.05 r
+  rem_282/U62/Q (XOR2X1)                           0.29     14.35 f
+  rem_282/U63/Q (MUX21X1)                          0.38     14.72 f
+  U6502/ZN (INVX0)                                 0.18     14.90 r
+  U6503/QN (NAND4X0)                               0.19     15.09 f
+  U6500/QN (OAI221X1)                              0.45     15.54 r
+  U6514/Q (AND3X1)                                 0.35     15.90 r
+  U6564/Q (OR2X1)                                  0.21     16.10 r
+  U13020/QN (NAND4X0)                              0.17     16.28 f
+  U13021/Q (OA221X1)                               0.34     16.61 f
+  U6571/QN (OAI21X1)                               0.38     16.99 r
+  div_293/U101/ZN (INVX0)                          0.10     17.09 f
+  div_293/U100/Q (MUX21X1)                         0.30     17.39 f
+  div_293/U82/ZN (INVX0)                           0.17     17.56 r
+  div_293/u_div/u_fa_PartRem_0_6_3/CO (FADDX1)     0.41     17.97 r
+  div_293/U81/Q (OR2X1)                            0.22     18.19 r
+  div_293/U87/Q (MUX21X1)                          0.29     18.47 f
+  div_293/U78/ZN (INVX0)                           0.17     18.64 r
+  div_293/u_div/u_fa_PartRem_0_5_3/CO (FADDX1)     0.40     19.04 r
+  div_293/U76/Q (OR2X1)                            0.22     19.26 r
+  div_293/U107/Q (MUX21X1)                         0.31     19.57 r
+  div_293/U27/Q (OR2X1)                            0.22     19.79 r
+  div_293/U30/ZN (INVX0)                           0.11     19.90 f
+  div_293/U32/QN (NOR2X0)                          0.16     20.06 r
+  div_293/U31/Q (MUX21X1)                          0.33     20.39 r
+  div_293/U41/ZN (INVX0)                           0.14     20.53 f
+  div_293/u_div/u_fa_PartRem_0_3_3/CO (FADDX1)     0.34     20.87 f
+  div_293/U46/Q (OR2X1)                            0.23     21.10 f
+  div_293/U59/Q (MUX21X1)                          0.29     21.39 f
+  div_293/U51/ZN (INVX0)                           0.16     21.55 r
+  div_293/u_div/u_fa_PartRem_0_2_3/CO (FADDX1)     0.40     21.95 r
+  div_293/U16/Q (OR2X1)                            0.22     22.17 r
+  div_293/U70/Q (MUX21X1)                          0.29     22.45 f
+  div_293/U47/ZN (INVX0)                           0.16     22.62 r
+  div_293/u_div/u_fa_PartRem_0_1_3/CO (FADDX1)     0.40     23.02 r
+  div_293/U39/Q (OR2X1)                            0.20     23.22 r
+  U6358/QN (NAND2X1)                               0.11     23.33 f
+  U6360/QN (NAND2X1)                               0.11     23.44 r
+  U6444/QN (NAND2X0)                               0.18     23.62 f
+  U6445/Q (AO21X1)                                 0.35     23.96 f
+  U6491/ZN (INVX0)                                 0.20     24.16 r
+  U6441/QN (NAND2X0)                               0.24     24.40 f
+  U6477/ZN (INVX0)                                 0.15     24.55 r
+  U6478/QN (NAND2X0)                               0.18     24.73 f
+  U6479/ZN (INVX0)                                 0.13     24.86 r
+  U6436/Q (OA222X1)                                0.46     25.32 r
+  u_csk_sequencer/U128/ZN (INVX0)                  0.12     25.44 f
+  u_csk_sequencer/U114/QN (NOR4X0)                 0.25     25.69 r
+  u_csk_sequencer/U100/QN (NAND4X0)                0.32     26.01 f
+  u_csk_sequencer/U58/QN (NAND2X0)                 0.23     26.24 r
+  u_csk_sequencer/U59/Q (AND2X1)                   0.33     26.57 r
+  u_csk_sequencer/PLACE_HFSINV_393_1357/ZN (INVX0)
+                                                   0.32     26.89 f
+  u_csk_sequencer/U264/QN (OAI21X1)                0.45     27.34 r
+  u_csk_sequencer/group_count_reg[5]/D (DFFARX1)   0.00     27.34 r
+  data arrival time                                         27.34
+
+  clock CLK (rise edge)                           50.00     50.00
+  clock network delay (propagated)                 1.13     51.13
+  clock reconvergence pessimism                    0.00     51.13
+  u_csk_sequencer/group_count_reg[5]/CLK (DFFARX1)
+                                                   0.00     51.13 r
+  clock uncertainty                               -1.00     50.13
+  library setup time                              -0.19     49.94
+  data required time                                        49.94
+  ------------------------------------------------------------------------
+  data required time                                        49.94
+  data arrival time                                        -27.34
+  ------------------------------------------------------------------------
+  slack (MET)                                               22.60
+
+
+1
