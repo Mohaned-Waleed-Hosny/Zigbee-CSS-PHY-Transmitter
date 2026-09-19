@@ -344,7 +344,7 @@ The same RTL is wrapped and implemented on two vendor toolchains.
 
 Open the `.qpf` in Quartus Prime and run *Compile Design*. Timing and resource numbers are in `output_files/*.rpt` and `*.summary`.
 
-### 7.2 AMD Vivado — [`FPGA_FLOW_Vivado/`](FPGA_FLOW_Vivado)
+### 7.2 AMD Vivado — [`FPGA_Flow_Vivado/`](FPGA_Flow_Vivado)
 
 | Item | Path |
 |---|---|
@@ -360,7 +360,7 @@ Open `project_1.xpr`, then run *Synthesis → Implementation → Generate Bitstr
 
 ## 8. ASIC Flow
 
-[`asic-implementation/`](asic-implementation) contains a scripted Synopsys digital flow targeting the **SAED 90 nm** educational standard-cell library (`std_cells/`: `.lib` / `.db`, `.lef`, `.tluplus`, `tech2itf.map`, `astroTechFile.tf`).
+[`ASIC_Flow/`](ASIC_Flow) contains a scripted Synopsys digital flow targeting the **SAED 90 nm** educational standard-cell library (`std_cells/`: `.lib` / `.db`, `.lef`, `.tluplus`, `tech2itf.map`, `astroTechFile.tf`).
 
 Every stage has the same layout: `script/` (Tcl), `log/`, and `results/` (netlists, DEF, SDC, reports).
 
@@ -378,9 +378,9 @@ Every stage has the same layout: `script/` (Tcl), `log/`, and `results/` (netlis
 
 | Placement cell density | CTS levels |
 |---|---|
-| ![Cell density](asic-implementation/placement/Cell_Density.png) | ![CTS levels](asic-implementation/cts/CTS_Levels.png) |
+| ![Cell density](ASIC_Flow/placement/Cell_Density.png) | ![CTS levels](ASIC_Flow/cts/CTS_Levels.png) |
 
-The `pnr/design_lib/dlib/` folder holds a design-library snapshot after each physical-design stage (`_floorplan`, `_placement`, `_powerplan`, `_cts`, `_routing`), so any stage can be reopened without re-running the ones before it. `asic-implementation/project/` is a working copy of the RTL, MATLAB model, testbenches and vectors used alongside the ASIC flow.
+The `pnr/design_lib/dlib/` folder holds a design-library snapshot after each physical-design stage (`_floorplan`, `_placement`, `_powerplan`, `_cts`, `_routing`), so any stage can be reopened without re-running the ones before it. `ASIC_Flow/project/` is a working copy of the RTL, MATLAB model, testbenches and vectors used alongside the ASIC flow.
 
 ---
 
@@ -426,8 +426,8 @@ Zigbee-CSS-PHY-Transmitter/
 │   └── transmitter/                   # ChirpSpreadSpectrum_Tx.m, chirpModulation.m
 ├── Test_Vectors/                      # Phase_1 ... Phase_6 vectors and golden testbenches
 ├── FPGA_Flow_Quartus/                 # Quartus project, wrapper, SDC, reports, .sof
-├── FPGA_FLOW_Vivado/                  # Vivado project, Nexys wrapper, clk_wiz_0, XDC, PDF guide
-└── asic-implementation/               # Synopsys flow on SAED 90 nm
+├── FPGA_Flow_Vivado/                  # Vivado project, Nexys wrapper, clk_wiz_0, XDC, PDF guide
+└── ASIC_Flow/               # Synopsys flow on SAED 90 nm
     ├── std_cells/                     # library, LEF, TLU+, tech files
     ├── syn/  ndm/  pnr/design_lib/    # synthesis, NDM libraries, design library
     ├── floorplan/  placement/  powerplan/  cts/  routing/
@@ -489,11 +489,11 @@ Other entry points:
 ### Step 3: FPGA
 
 - **Quartus:** open `FPGA_Flow_Quartus/css_phy_tx_top_wrapper.qpf` → *Compile Design*.
-- **Vivado:** open `FPGA_FLOW_Vivado/project_1.xpr` → *Run Synthesis → Run Implementation → Generate Bitstream*.
+- **Vivado:** open `FPGA_Flow_Vivado/project_1.xpr` → *Run Synthesis → Run Implementation → Generate Bitstream*.
 
 ### Step 4: ASIC (Synopsys)
 
-Run the stages in order from inside `asic-implementation/`, with the SAED 90 nm libraries set up in your environment:
+Run the stages in order from inside `ASIC_Flow/`, with the SAED 90 nm libraries set up in your environment:
 
 ```bash
 dc_shell      -f syn/script/syn_script.tcl                   # synthesis
